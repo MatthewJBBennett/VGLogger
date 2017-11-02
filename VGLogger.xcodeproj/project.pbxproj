@@ -16,6 +16,9 @@
 		34A3876A1FABC435006C4434 /* VGLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387691FABC435006C4434 /* VGLoggerTests.swift */; };
 		34A387751FABC435006C4434 /* VGLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387741FABC435006C4434 /* VGLoggerUITests.swift */; };
 		34A387831FABC5FE006C4434 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387821FABC5FE006C4434 /* ThirdViewController.swift */; };
+		34A387871FABCE7D006C4434 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387861FABCE7D006C4434 /* Download.swift */; };
+		34A387881FABCF6D006C4434 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387891FABCF6D006C4434 /* Alamofire.framework */; };
+		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A3874F1FABC434006C4434 /* VGLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A387521FABC434006C4434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34A387541FABC434006C4434 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +55,11 @@
 		34A387741FABC435006C4434 /* VGLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VGLoggerUITests.swift; sourceTree = "<group>"; };
 		34A387761FABC435006C4434 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34A387821FABC5FE006C4434 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		34A387851FABCE59006C4434 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A387861FABCE7D006C4434 /* Download.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Download.swift; sourceTree = "<group>"; };
+		34A387891FABCF6D006C4434 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
+		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A387881FABCF6D006C4434 /* Alamofire.framework in Frameworks */,
+				FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +96,8 @@
 				34A387681FABC435006C4434 /* VGLoggerTests */,
 				34A387731FABC435006C4434 /* VGLoggerUITests */,
 				34A387501FABC434006C4434 /* Products */,
+				DBA568C52C3B4402C548F576 /* Pods */,
+				97C8C36D533886E93EDD26B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +118,7 @@
 				34A387541FABC434006C4434 /* FirstViewController.swift */,
 				34A387561FABC434006C4434 /* SecondViewController.swift */,
 				34A387821FABC5FE006C4434 /* ThirdViewController.swift */,
+				34A387861FABCE7D006C4434 /* Download.swift */,
 				34A387581FABC434006C4434 /* Main.storyboard */,
 				34A3875B1FABC434006C4434 /* Assets.xcassets */,
 				34A3875D1FABC434006C4434 /* LaunchScreen.storyboard */,
@@ -131,6 +145,25 @@
 			path = VGLoggerUITests;
 			sourceTree = "<group>";
 		};
+		97C8C36D533886E93EDD26B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34A387891FABCF6D006C4434 /* Alamofire.framework */,
+				34A387851FABCE59006C4434 /* Alamofire.framework */,
+				2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBA568C52C3B4402C548F576 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */,
+				B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +171,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34A387791FABC435006C4434 /* Build configuration list for PBXNativeTarget "VGLogger" */;
 			buildPhases = (
+				AF49B6233D8D560A9BC6999C /* [CP] Check Pods Manifest.lock */,
 				34A3874B1FABC434006C4434 /* Sources */,
 				34A3874C1FABC434006C4434 /* Frameworks */,
 				34A3874D1FABC434006C4434 /* Resources */,
+				465B1A417A2ECBDAA2F8CC17 /* [CP] Embed Pods Frameworks */,
+				6DC45DAD86C7D39049FCD520 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,6 +296,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		465B1A417A2ECBDAA2F8CC17 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DC45DAD86C7D39049FCD520 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF49B6233D8D560A9BC6999C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VGLogger-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34A3874B1FABC434006C4434 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -269,6 +359,7 @@
 				34A387531FABC434006C4434 /* AppDelegate.swift in Sources */,
 				34A387831FABC5FE006C4434 /* ThirdViewController.swift in Sources */,
 				34A387551FABC434006C4434 /* FirstViewController.swift in Sources */,
+				34A387871FABCE7D006C4434 /* Download.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +523,7 @@
 		};
 		34A3877A1FABC435006C4434 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -446,6 +538,7 @@
 		};
 		34A3877B1FABC435006C4434 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
