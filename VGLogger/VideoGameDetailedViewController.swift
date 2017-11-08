@@ -13,17 +13,32 @@ class VideoGameDetailedViewController: UIViewController {
     var videogame: VideoGame?
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var coverImage: UIImageView!
+    @IBOutlet weak var summaryLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var ratingLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //titleLabel.text! = getName
         // Do any additional setup after loading the view.
+        scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.frame.height+2000)//CGSize(width: self.view.frame.width, height: self.view.frame.height+2000)
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let a = videogame {
+            titleLabel.adjustsFontSizeToFitWidth = true
+            summaryLabel.lineBreakMode = .byWordWrapping
+            summaryLabel.numberOfLines = 0;
+        
             self.titleLabel.text = a.videoGameName()
+            self.summaryLabel.text = a.videoGameSummary()
+            ratingLabel.text = "\(a.videoGameTotalRating() ?? 0.0)"
+        }
+        if let aImage = videogame?.videoGameCoverImage()  {
+            coverImage.contentMode = .scaleAspectFit
+            coverImage.clipsToBounds = true
+            coverImage.image = aImage
         }
     }
     

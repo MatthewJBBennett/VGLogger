@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // This area is to customize the look of the tab bar at the bottom of the app
+        ////////////
+        //let tbController = self.window!.rootViewController as! UITabBarController
+        //tbController.tabBar.barTintColor = UIColor.lightGray
+        ////////
+        
         return true
     }
 

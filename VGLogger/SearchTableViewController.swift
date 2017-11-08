@@ -67,7 +67,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoGameCell", for: indexPath)
-        //cell.textLabel?.text = tableData[indexPath.row]
         // Configure the cell...
         
         
@@ -80,12 +79,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
     func apiCall(params: String) {
         let UrlString :String = params.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
-        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?search=" + "\(UrlString)" + "&fields=*") {
+        // Limit is set at 10, change later when more results are needed
+        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?search=" + "\(UrlString)" + "&limit=10&fields=*") {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-                
+            
+
             Alamofire.request(urlRequest).responseJSON { response in
                 if let JSON = response.result.value as? [AnyObject]  {
                     self.videogamesDS = VideoGameDataSource(dataSource: JSON)
@@ -94,6 +95,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 //debugPrint(response)
                 print(response)
             }
+            
             //debugPrint(request)
         }
     }
@@ -140,13 +142,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        print("Here")
+        
         if segue.identifier == "ShowVideoGameDetails" {
-            /*
-            let vc = segue.destination as! VideoGameDetailedViewController
-            vc.getName = "Hello"
- */
-            print("In here")
             let cell = sender as! VideoGameTableViewCell
             if let indexPath = tableView.indexPath(for: cell), let ds = videogamesDS {
                 let detailedVC = segue.destination as! VideoGameDetailedViewController
