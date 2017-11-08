@@ -16,13 +16,14 @@ class VideoGameDataSource: NSObject {
         videogames = dataSource
         super.init()
     }
-    
+ 
+ 
     func numVideoGames() -> Int{
         return videogames.count
     }
     
     func videoGameAt(_ index: Int) -> VideoGame {
-        let videogame = VideoGame( videogame: videogames[index] )
+        let videogame = VideoGame( videoGameData: videogames[index] )
         return videogame
     }
     
