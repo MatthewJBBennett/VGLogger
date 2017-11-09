@@ -148,6 +148,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             if let indexPath = tableView.indexPath(for: cell), let ds = videogamesDS {
                 let detailedVC = segue.destination as! VideoGameDetailedViewController
                 detailedVC.videoGameForThisView(ds.videoGameAt(indexPath.row))
+                let backItem = UIBarButtonItem()
+                backItem.title = "Search"
+                navigationItem.backBarButtonItem = backItem
             }
             
         }

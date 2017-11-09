@@ -33,7 +33,8 @@ class VideoGameDetailedViewController: UIViewController {
         
             self.titleLabel.text = a.videoGameName()
             self.summaryLabel.text = a.videoGameSummary()
-            ratingLabel.text = "\(a.videoGameTotalRating() ?? 0.0)"
+            let rating = Int((a.videoGameTotalRating()?.rounded())!)
+            ratingLabel.text = "Rating: \(rating) / 100"
         }
         if let aImage = videogame?.videoGameCoverImage()  {
             coverImage.contentMode = .scaleAspectFit
