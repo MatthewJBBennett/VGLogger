@@ -22,6 +22,7 @@
 		34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387901FAE7FD0006C4434 /* VideoGameDataSource.swift */; };
 		34A387941FAE8230006C4434 /* VideoGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387931FAE8230006C4434 /* VideoGame.swift */; };
 		34A387961FAFE654006C4434 /* VideoGameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387951FAFE654006C4434 /* VideoGameTableViewCell.swift */; };
+		3F135E8C1FB3D1800008BBFF /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F135E8B1FB3D1800008BBFF /* WishlistTableViewController.swift */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		34A387901FAE7FD0006C4434 /* VideoGameDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameDataSource.swift; sourceTree = "<group>"; };
 		34A387931FAE8230006C4434 /* VideoGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGame.swift; sourceTree = "<group>"; };
 		34A387951FAFE654006C4434 /* VideoGameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoGameTableViewCell.swift; sourceTree = "<group>"; };
+		3F135E8B1FB3D1800008BBFF /* WishlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +131,7 @@
 				34A3878E1FAE74D6006C4434 /* VideoGameDetailedViewController.swift */,
 				34A387821FABC5FE006C4434 /* ThirdViewController.swift */,
 				34A387861FABCE7D006C4434 /* Download.swift */,
+				3F135E8B1FB3D1800008BBFF /* WishlistTableViewController.swift */,
 				34A387921FAE8009006C4434 /* Models */,
 				34A387581FABC434006C4434 /* Main.storyboard */,
 				34A3875B1FABC434006C4434 /* Assets.xcassets */,
@@ -381,6 +384,7 @@
 				34A387961FAFE654006C4434 /* VideoGameTableViewCell.swift in Sources */,
 				34A387941FAE8230006C4434 /* VideoGame.swift in Sources */,
 				34A3878F1FAE74D6006C4434 /* VideoGameDetailedViewController.swift in Sources */,
+				3F135E8C1FB3D1800008BBFF /* WishlistTableViewController.swift in Sources */,
 				34A387551FABC434006C4434 /* FirstViewController.swift in Sources */,
 				34A387871FABCE7D006C4434 /* Download.swift in Sources */,
 				34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */,
@@ -552,6 +556,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VGLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SSU470.VGLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -567,6 +572,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VGLogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SSU470.VGLogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
