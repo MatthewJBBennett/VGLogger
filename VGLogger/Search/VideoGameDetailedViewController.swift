@@ -27,13 +27,14 @@ class VideoGameDetailedViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if let a = videogame {
-            titleLabel.adjustsFontSizeToFitWidth = true
-            summaryLabel.lineBreakMode = .byWordWrapping
-            summaryLabel.numberOfLines = 0;
+            self.titleLabel.adjustsFontSizeToFitWidth = true
+            self.summaryLabel.lineBreakMode = .byWordWrapping
+            self.summaryLabel.numberOfLines = 0;
         
             self.titleLabel.text = a.videoGameName()
             self.summaryLabel.text = a.videoGameSummary()
-            ratingLabel.text = "\(a.videoGameTotalRating() ?? 0.0)"
+            let rating = Int((a.videoGameTotalRating()?.rounded())!)
+            self.ratingLabel.text = "Rating: \(rating) / 100"
         }
         if let aImage = videogame?.videoGameCoverImage()  {
             coverImage.contentMode = .scaleAspectFit

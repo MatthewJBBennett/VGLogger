@@ -11,7 +11,6 @@ import Alamofire
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     let searchBar = UISearchBar()
-    let tableData = ["Halo", "Call of Duty", "Battlefield 1", "Super Mario", "Minesweeper", "Tetris", "GTA V", "Doom", "Super Smash Bros"]
     let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
     var videogamesDS: VideoGameDataSource?
 
@@ -148,6 +147,9 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             if let indexPath = tableView.indexPath(for: cell), let ds = videogamesDS {
                 let detailedVC = segue.destination as! VideoGameDetailedViewController
                 detailedVC.videoGameForThisView(ds.videoGameAt(indexPath.row))
+                let backItem = UIBarButtonItem()
+                backItem.title = "Search"
+                navigationItem.backBarButtonItem = backItem
             }
             
         }
