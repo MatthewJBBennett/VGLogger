@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Alamofire
 
 
 class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
@@ -17,7 +18,9 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-    var qrCodeFrameView:UIView?
+    var codeFrameView:UIView?
+   // var barcodeDS: BarCodeDataSource?
+    var upcString: String?
     
     let supportedCodeTypes =  [AVMetadataObject.ObjectType.upce,
                               AVMetadataObject.ObjectType.code39,
@@ -73,14 +76,14 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             view.bringSubview(toFront: messageLabel)
             view.bringSubview(toFront: topbar)
             
-            // Initialize QR Code Frame to highlight the QR code
-            qrCodeFrameView = UIView()
+            // Initialize Code Frame to highlight the barcode
+            codeFrameView = UIView()
             
-            if let qrCodeFrameView = qrCodeFrameView {
-                qrCodeFrameView.layer.borderColor = UIColor.green.cgColor
-                qrCodeFrameView.layer.borderWidth = 2
-                view.addSubview(qrCodeFrameView)
-                view.bringSubview(toFront: qrCodeFrameView)
+            if let codeFrameView = codeFrameView {
+                codeFrameView.layer.borderColor = UIColor.blue.cgColor
+                codeFrameView.layer.borderWidth = 2
+                view.addSubview(codeFrameView)
+                view.bringSubview(toFront: codeFrameView)
             }
             
         } catch {
@@ -88,6 +91,25 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             print(error)
             return
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if captureSession != nil {
+            captureSession!.startRunning()
+            view.bringSubview(toFront: messageLabel)
+            view.bringSubview(toFront: topbar)
+            
+            // Initialize Code Frame to highlight the barcode
+            codeFrameView = UIView()
+            
+            if let codeFrameView = codeFrameView {
+                codeFrameView.layer.borderColor = UIColor.blue.cgColor
+                codeFrameView.layer.borderWidth = 2
+                view.addSubview(codeFrameView)
+                view.bringSubview(toFront: codeFrameView)
+            }
+        }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,11 +120,10 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
      func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
-//    func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
-            qrCodeFrameView?.frame = CGRect.zero
+            codeFrameView?.frame = CGRect.zero
             messageLabel.text = "No barcode is detected"
             return
         }
@@ -113,11 +134,51 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if supportedCodeTypes.contains(metadataObj.type) {
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
-            qrCodeFrameView?.frame = barCodeObject!.bounds
+            codeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                upcString = metadataObj.stringValue
+                self.performSegue(withIdentifier: "ShowScannedItem", sender: nil)
+                self.captureSession?.stopRunning()
+                messageLabel.text = "No barcode is detected"
+                codeFrameView?.layer.borderColor = UIColor.clear.cgColor
+               // codeFrameView?.removeFromSuperview()
+               
+               
+                }
             }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowScannedItem") {
+            //get a reference to the destination view controller
+            let destinationVC = segue.destination as!  BarCodeTableViewController
+            
+            //set properties on the destination view controller
+            destinationVC.upc = upcString
+            //self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }
+    
+
+/*
+    func apiCall(params: String) {
+        if let url = URL(String: "https://api.upcitemdb.com/prod/trial/lookup?upc=" + "\(params)") {
+            var urlRequest = URLRequest(url: url)
+            URLRequest.httpMethod = HTTPMethod.get.rawValue
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+        
+            Alamofire.request(urlRequest).responseJSON { response in
+                if let JSON = response.result.value as? [AnyObject]  {
+                    self.barcodeDS = BarCodeDataSource(dataSource: JSON)
+                    //self.tableView.reloadData()
+                }
+                //debugPrint(response)
+                print(response)
+            }
+        
+            //debugPrint(request)
+        }
+    }
+ */
 }

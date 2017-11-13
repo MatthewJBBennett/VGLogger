@@ -77,7 +77,7 @@
                         <segue destination="g3K-fC-WW4" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="Ulx-1E-bA3" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="nUO-jV-18u" kind="relationship" relationship="viewControllers" id="Y0j-0c-gfl"/>
-                        <segue destination="ut9-8K-2yV" kind="relationship" relationship="viewControllers" id="ycZ-FW-OgY"/>
+                        <segue destination="peR-WL-KuE" kind="relationship" relationship="viewControllers" id="ycZ-FW-OgY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -161,14 +161,14 @@
                                         <rect key="frame" x="20" y="20" width="343" height="207"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nE-Rq-eMA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8nE-Rq-eMA">
                                         <rect key="frame" x="20" y="235" width="343" height="47"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Summary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-iU-pHC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-iU-pHC">
                                         <rect key="frame" x="20" y="305" width="343" height="875"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -220,7 +220,7 @@
             </objects>
             <point key="canvasLocation" x="828.79999999999995" y="-49.475262368815599"/>
         </scene>
-        <!--Scan-->
+        <!--Bar Code View Controller-->
         <scene sceneID="hGj-28-U1y">
             <objects>
                 <viewController id="ut9-8K-2yV" customClass="BarCodeViewController" customModule="VGLogger" customModuleProvider="target" sceneMemberID="viewController">
@@ -238,7 +238,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="os6-4b-ebh">
                                         <rect key="frame" x="165.5" y="23" width="44" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -271,15 +271,91 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5Ct-N7-aZs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan" image="icons8-barcode" id="chf-5U-31d"/>
+                    <navigationItem key="navigationItem" id="AjS-e2-JR8"/>
                     <connections>
                         <outlet property="messageLabel" destination="QBT-i3-4Ys" id="Wlc-yd-pdk"/>
                         <outlet property="topbar" destination="Gdj-e4-cfa" id="4d1-Z8-Z8l"/>
+                        <segue destination="WKw-5F-Akh" kind="show" identifier="ShowScannedItem" id="OyZ-Tm-fp2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u21-PS-VFB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-215" y="-1175"/>
+            <point key="canvasLocation" x="492" y="-1549"/>
+        </scene>
+        <!--Bar Code Table View Controller-->
+        <scene sceneID="H2C-O1-vxw">
+            <objects>
+                <tableViewController id="WKw-5F-Akh" customClass="BarCodeTableViewController" customModule="VGLogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="83" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DxW-CX-zc1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BarCodeCell" rowHeight="83" id="cfW-HL-qy6" customClass="BarCodeTableViewCell" customModule="VGLogger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="83"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cfW-HL-qy6" id="Tir-7c-ldr">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="82.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nd-9t-LUv">
+                                            <rect key="frame" x="16" y="11" width="278" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1j-ch-PTR">
+                                            <rect key="frame" x="297" y="10" width="62" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Merchant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dh-0M-CwO">
+                                            <rect key="frame" x="16" y="40" width="343" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="merchantCell" destination="4dh-0M-CwO" id="qUK-sE-Ycs"/>
+                                    <outlet property="priceCell" destination="a1j-ch-PTR" id="3RK-RZ-MxR"/>
+                                    <outlet property="titleCell" destination="8Nd-9t-LUv" id="lRC-Rg-uRw"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WKw-5F-Akh" id="Lt3-AA-Y9u"/>
+                            <outlet property="delegate" destination="WKw-5F-Akh" id="iNQ-xb-nTp"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Or5-DF-G9J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1308" y="-1549.4752623688157"/>
+        </scene>
+        <!--Scan-->
+        <scene sceneID="CyB-3J-Icd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="peR-WL-KuE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scan" image="icons8-barcode" id="chf-5U-31d"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PRP-4p-Dpc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ut9-8K-2yV" kind="relationship" relationship="rootViewController" id="MxD-Qm-M0d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BQ0-2q-2Sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-283.19999999999999" y="-1549.0254872563719"/>
         </scene>
     </scenes>
     <resources>

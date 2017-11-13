@@ -11,7 +11,6 @@ import Alamofire
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     let searchBar = UISearchBar()
-    let tableData = ["Halo", "Call of Duty", "Battlefield 1", "Super Mario", "Minesweeper", "Tetris", "GTA V", "Doom", "Super Smash Bros"]
     let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
     var videogamesDS: VideoGameDataSource?
 
