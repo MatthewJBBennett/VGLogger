@@ -9,12 +9,14 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SafariServices
 
 class BarCodeTableViewController: UITableViewController {
     
     var upc: String?
     var barcodeDS: BarCodeDataSource?
     var json: JSON = JSON.null
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +62,20 @@ class BarCodeTableViewController: UITableViewController {
         }
  */
         //return 0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let a = self.json["items"][0]["offers"].arrayValue
+        if let startUrl = a[indexPath.item]["link"].string {
+            let newUrl = startUrl.replacingOccurrences(of: "\"", with: "", options: NSString.CompareOptions.literal, range:nil)
+            if let url = URL(string: newUrl) {
+                let config = SFSafariViewController.Configuration()
+                config.entersReaderIfAvailable = true
+            
+                let vc = SFSafariViewController(url: url, configuration: config)
+                present(vc, animated: true)
+            }
+        }
     }
 
     func setUPC(upc: String) {
