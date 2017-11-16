@@ -5,6 +5,7 @@ use_frameworks!
 target 'VGLogger' do
     pod 'Alamofire', '~> 4.5'
     pod 'SwiftyJSON'
+    pod 'SideMenu'
 end
 
 

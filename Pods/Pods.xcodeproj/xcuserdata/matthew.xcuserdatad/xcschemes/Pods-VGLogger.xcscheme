@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB2B37DA300EBA586248792F79A6D813"
+               BlueprintIdentifier = "62BA276D704B55905916E9583A85B2E5"
                BuildableName = "Pods_VGLogger.framework"
                BlueprintName = "Pods-VGLogger"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BB2B37DA300EBA586248792F79A6D813"
+            BlueprintIdentifier = "62BA276D704B55905916E9583A85B2E5"
             BuildableName = "Pods_VGLogger.framework"
             BlueprintName = "Pods-VGLogger"
             ReferencedContainer = "container:Pods.xcodeproj">

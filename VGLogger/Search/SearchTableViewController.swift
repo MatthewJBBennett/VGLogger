@@ -13,7 +13,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     let searchBar = UISearchBar()
     let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
     var videogamesDS: VideoGameDataSource?
-
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         createSearchBar()
@@ -75,6 +76,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
         return cell
     }
+    
+    //filter[rating][gte]=80
     
     func apiCall(params: String) {
         let UrlString :String = params.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
