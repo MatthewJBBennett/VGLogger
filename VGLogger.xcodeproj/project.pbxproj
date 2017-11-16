@@ -28,6 +28,7 @@
 		34A387A21FB78532006C4434 /* BarCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387A11FB78532006C4434 /* BarCode.swift */; };
 		34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */; };
 		34A387A51FB7C6A3006C4434 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */; };
+		3FF0767F1FBD45FA00924CF6 /* PopularGamesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0767E1FBD45FA00924CF6 /* PopularGamesCell.swift */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		34A387A11FB78532006C4434 /* BarCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCode.swift; sourceTree = "<group>"; };
 		34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeTableViewCell.swift; sourceTree = "<group>"; };
 		34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FF0767E1FBD45FA00924CF6 /* PopularGamesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularGamesCell.swift; sourceTree = "<group>"; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,9 +137,9 @@
 		34A387511FABC434006C4434 /* VGLogger */ = {
 			isa = PBXGroup;
 			children = (
+				3FF0767D1FBD458700924CF6 /* HomeFeed */,
 				34A387971FB3B957006C4434 /* Search */,
 				34A387521FABC434006C4434 /* AppDelegate.swift */,
-				34A387541FABC434006C4434 /* FeedTableViewController.swift */,
 				34A3879C1FB77AD9006C4434 /* Scanner */,
 				34A387821FABC5FE006C4434 /* ThirdViewController.swift */,
 				34A387861FABCE7D006C4434 /* Download.swift */,
@@ -197,6 +199,15 @@
 				34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */,
 			);
 			path = Scanner;
+			sourceTree = "<group>";
+		};
+		3FF0767D1FBD458700924CF6 /* HomeFeed */ = {
+			isa = PBXGroup;
+			children = (
+				34A387541FABC434006C4434 /* FeedTableViewController.swift */,
+				3FF0767E1FBD45FA00924CF6 /* PopularGamesCell.swift */,
+			);
+			path = HomeFeed;
 			sourceTree = "<group>";
 		};
 		97C8C36D533886E93EDD26B3 /* Frameworks */ = {
@@ -422,6 +433,7 @@
 				34A3878F1FAE74D6006C4434 /* VideoGameDetailedViewController.swift in Sources */,
 				34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */,
 				34A387551FABC434006C4434 /* FeedTableViewController.swift in Sources */,
+				3FF0767F1FBD45FA00924CF6 /* PopularGamesCell.swift in Sources */,
 				34A387871FABCE7D006C4434 /* Download.swift in Sources */,
 				34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */,
 				34A387991FB3BA91006C4434 /* BarCodeViewController.swift in Sources */,

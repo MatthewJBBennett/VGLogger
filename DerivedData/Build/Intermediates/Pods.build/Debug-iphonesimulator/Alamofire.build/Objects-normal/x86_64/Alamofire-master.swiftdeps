@@ -1,0 +1,21 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
+options: "94f1eb177ae7ee1f14c81579900d4443"
+build_time: [1510794363, 440122000]
+inputs:
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/AFError.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Alamofire.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/MultipartFormData.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/NetworkReachabilityManager.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Notifications.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/ParameterEncoding.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Request.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Response.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/ResponseSerialization.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Result.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/ServerTrustPolicy.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/SessionDelegate.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/SessionManager.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/TaskDelegate.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Timeline.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/Pods/Alamofire/Source/Validation.swift": [1510794280, 0]

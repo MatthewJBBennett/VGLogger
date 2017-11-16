@@ -1,0 +1,6 @@
+framework module Pods_VGLogger {
+  umbrella header "Pods-VGLogger-umbrella.h"
+
+  export *
+  module * { export * }
+}

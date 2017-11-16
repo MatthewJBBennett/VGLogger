@@ -1,0 +1,19 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
+options: "50dde2add0289b1eb3d54822ad53de00"
+build_time: [1510807046, 915468000]
+inputs:
+  "/Users/student/Desktop/VGLogger/VGLogger/Search/SearchTableViewController.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Models/BarCodeDataSource.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/AppDelegate.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/ThirdViewController.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Search/VideoGameTableViewCell.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Models/VideoGame.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Models/BarCode.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Search/VideoGameDetailedViewController.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Scanner/BarCodeTableViewCell.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/HomeFeed/FeedTableViewController.swift": [1510807046, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/HomeFeed/PopularGamesCell.swift": [1510805114, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Download.swift": [1510805012, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Models/VideoGameDataSource.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Scanner/BarCodeViewController.swift": [1510794280, 0]
+  "/Users/student/Desktop/VGLogger/VGLogger/Scanner/BarCodeTableViewController.swift": [1510794280, 0]
