@@ -1,0 +1,5 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65.2 clang-900.0.37)"
+options: "c3ebbbf09df72dc68bd0f2f574b17f7c"
+build_time: [1510794377, 279053000]
+inputs:
+  "/Users/student/Desktop/VGLogger/Pods/SwiftyJSON/Source/SwiftyJSON.swift": [1510794280, 0]

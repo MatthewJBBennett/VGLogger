@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SwiftyJSON-Swift.h</key>
 		<data>
-		FzfG9MPcAFfEFt7PSNdBnkh9+FE=
+		bmuIBX/vYbLHROHMx+0aDtzFbc8=
 		</data>
 		<key>Headers/SwiftyJSON-umbrella.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		IXRXn0XqvsAimNOi7BMB/MjPXqk=
+		vDTF6dJd4mkXPkENlurYYpsNAIc=
 		</data>
 		<key>Modules/SwiftyJSON.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		V+SRYLzQ8RzSAsN/BUQxyPoRjcw=
+		TEWcRZQY+bVtBduo8lLDHgCf7qk=
 		</data>
 		<key>Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		YMUuwA6v2dKN+g+z7hyL2UA+6Nk=
+		zQEocotXP4U0UpQrVNCp43N1l2s=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -35,11 +35,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FzfG9MPcAFfEFt7PSNdBnkh9+FE=
+			bmuIBX/vYbLHROHMx+0aDtzFbc8=
 			</data>
 			<key>hash2</key>
 			<data>
-			FlvYQXXJlRS4eeUQMW/CPr1Aj4lDgq45nbOxamgMHzg=
+			g+/OMUV9WIs7tnjvDnoENjJIAbIbubSNqFE0J3XIhHE=
 			</data>
 		</dict>
 		<key>Headers/SwiftyJSON-umbrella.h</key>
@@ -57,22 +57,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			V+SRYLzQ8RzSAsN/BUQxyPoRjcw=
+			TEWcRZQY+bVtBduo8lLDHgCf7qk=
 			</data>
 			<key>hash2</key>
 			<data>
-			Js/XQIhLa78MSeQya3yIEj5/neKy3ZfZ2XRgwzBR8xc=
+			hqvScLqJPpP+AITfP2gImo3574UYjZuHHvn/LjhOylI=
 			</data>
 		</dict>
 		<key>Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			YMUuwA6v2dKN+g+z7hyL2UA+6Nk=
+			zQEocotXP4U0UpQrVNCp43N1l2s=
 			</data>
 			<key>hash2</key>
 			<data>
-			sHoLyvDRmMWoynyk+lukVSlhYO3IjsE9GOyhqR1XVEs=
+			nwHtEM+9cc2MChyzdGCm4XXFU5pmlLyhjjyVnAJVXlg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

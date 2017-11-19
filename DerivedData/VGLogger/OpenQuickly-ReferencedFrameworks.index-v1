@@ -4,8 +4,8 @@
 <array>
 	<string>AVFoundation</string>
 	<string>SwiftyJSON</string>
-	<string>Dispatch</string>
 	<string>CoreServices</string>
+	<string>Dispatch</string>
 	<string>Alamofire</string>
 	<string>XCTest</string>
 	<string>MobileCoreServices</string>

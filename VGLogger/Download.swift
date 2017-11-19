@@ -28,7 +28,7 @@ class Download: NSObject {
                     //self.vgDS = VideoGameDataSource(dataSource: self.dataFromServer!)
                 }
                     debugPrint(response)
-                    print(response)
+                    //print(response)
             }
             debugPrint(request)
 

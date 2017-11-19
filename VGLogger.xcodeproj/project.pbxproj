@@ -137,7 +137,7 @@
 		34A387511FABC434006C4434 /* VGLogger */ = {
 			isa = PBXGroup;
 			children = (
-				3FF0767D1FBD458700924CF6 /* HomeFeed */,
+				3FF0767D1FBD458700924CF6 /* Home */,
 				34A387971FB3B957006C4434 /* Search */,
 				34A387521FABC434006C4434 /* AppDelegate.swift */,
 				34A3879C1FB77AD9006C4434 /* Scanner */,
@@ -201,13 +201,13 @@
 			path = Scanner;
 			sourceTree = "<group>";
 		};
-		3FF0767D1FBD458700924CF6 /* HomeFeed */ = {
+		3FF0767D1FBD458700924CF6 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				34A387541FABC434006C4434 /* FeedTableViewController.swift */,
 				3FF0767E1FBD45FA00924CF6 /* PopularGamesCell.swift */,
 			);
-			path = HomeFeed;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		97C8C36D533886E93EDD26B3 /* Frameworks */ = {
