@@ -14,6 +14,8 @@ class FeedTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.backgroundColor = UIColor(hex: "#C0C5CD")
+        self.title = "News"
         // Do any additional setup after loading the view, typically from a nib.
        // downloadAssistant.downloadData()
     }

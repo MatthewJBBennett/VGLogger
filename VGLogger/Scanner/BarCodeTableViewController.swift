@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Hex
 import SwiftyJSON
 import SafariServices
 
@@ -20,7 +21,7 @@ class BarCodeTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.tableView.backgroundColor = UIColor(hex: "#C0C5CD") 
         
         if let upc = upc {
             apiCall(params: upc)
@@ -135,7 +136,7 @@ class BarCodeTableViewController: UITableViewController {
         if let theCell = cell as? BarCodeTableViewCell, let artist = barcodeDS?.barCodeItemAt(indexPath.row) {
             theCell.useBarCode(artist)
         }
-        
+        cell.backgroundColor = UIColor(hex: "#C0C5CD")
         return cell
     }
     
@@ -183,6 +184,7 @@ class BarCodeTableViewController: UITableViewController {
         
         let backItem = UIBarButtonItem()
         backItem.title = "Scan"
+        backItem.tintColor = UIColor(hex: "#86B86B")
         navigationItem.backBarButtonItem = backItem
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hex
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // This area is to customize the look of the tab bar at the bottom of the app
         ////////////
-        //let tbController = self.window!.rootViewController as! UITabBarController
-        //tbController.tabBar.barTintColor = UIColor.lightGray
+        let tbController = self.window!.rootViewController as! UITabBarController
+        tbController.tabBar.barTintColor = UIColor(hex: "#65799B") // blue
+        tbController.tabBar.tintColor = UIColor(hex: "#86B86B") // green
+        tbController.tabBar.unselectedItemTintColor = UIColor(hex: "#ffffff") // white
         ////////
+        UINavigationBar.appearance().barStyle = UIBarStyle.default
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "#65799B") // blue
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         return true
     }
@@ -34,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -46,6 +53,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        /*
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "switchON")
+        defaults.removeObject(forKey: "slidON")
+ */
     }
 
 

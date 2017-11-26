@@ -164,6 +164,15 @@ class VideoGame: NSObject {
         return nil
     }
     
+    func videoGameEsrb() -> Int? {
+        if let dict = videogame["esrb"] {
+            if let dictionary = dict as? Dictionary<String, AnyObject> {
+                return dictionary["rating"] as? Int
+            }
+        }
+        return nil
+    }
+    
     /*
     func videoGameCoverImageID() -> String? {
         if let dict = videogame["cover"] {
