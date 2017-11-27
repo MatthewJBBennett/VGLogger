@@ -43,6 +43,8 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         //let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
         //let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)//AVCaptureDevice.default(for: .video)
         
+        //TODO: Catch exceptions if there's no access to camera
+        
         do {
             // Get an instance of the AVCaptureDeviceInput class using the previous device object.
             let input = try AVCaptureDeviceInput(device: captureDevice!)

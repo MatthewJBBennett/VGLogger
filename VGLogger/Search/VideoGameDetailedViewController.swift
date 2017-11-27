@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hex
 
 class VideoGameDetailedViewController: UIViewController {
 
@@ -17,10 +18,14 @@ class VideoGameDetailedViewController: UIViewController {
     @IBOutlet weak var summaryLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var ratingLabel: UILabel!
+    @IBOutlet weak var platformLabel: UILabel!
+    @IBOutlet weak var esrbLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(hex: "#C0C5CD")
         // Do any additional setup after loading the view.
+        self.scrollView.frame = self.view.bounds
         scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.frame.height+2000)//CGSize(width: self.view.frame.width, height: self.view.frame.height+2000)
     }
 
@@ -39,8 +44,38 @@ class VideoGameDetailedViewController: UIViewController {
         if let aImage = videogame?.videoGameCoverImage()  {
             coverImage.contentMode = .scaleAspectFit
             coverImage.clipsToBounds = true
+            
             coverImage.image = aImage
         }
+        if let esrb = videogame?.videoGameEsrb() {
+            esrbLabel.text = getEsrb(esrb: esrb)
+        }
+    }
+    
+    func getEsrb(esrb: Int) -> String {
+        var esrbString = ""
+        if esrb == 1 {
+            esrbString = "RP"
+        }
+        else if esrb == 2 {
+            esrbString = "EC"
+        }
+        else if esrb == 3 {
+            esrbString = "E"
+        }
+        else if esrb == 4 {
+            esrbString = "E10+"
+        }
+        else if esrb == 5 {
+            esrbString = "T"
+        }
+        else if esrb == 6 {
+            esrbString = "M"
+        }
+        else if esrb == 7 {
+            esrbString = "AO"
+        }
+        return esrbString
     }
     
     override func didReceiveMemoryWarning() {

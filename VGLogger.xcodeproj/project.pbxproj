@@ -28,6 +28,10 @@
 		34A387A21FB78532006C4434 /* BarCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387A11FB78532006C4434 /* BarCode.swift */; };
 		34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */; };
 		34A387A51FB7C6A3006C4434 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */; };
+		34A387AE1FBCDEC4006C4434 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387AF1FBCDEC4006C4434 /* SideMenu.framework */; };
+		34A387B11FBCE19D006C4434 /* FilterSideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387B01FBCE19D006C4434 /* FilterSideBarTableViewController.swift */; };
+		34A387C11FBD5442006C4434 /* FilterSideBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387C01FBD5442006C4434 /* FilterSideBarTableViewCell.swift */; };
+		34A387C21FC939FB006C4434 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387C31FC939FB006C4434 /* Hex.framework */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +82,10 @@
 		34A387A11FB78532006C4434 /* BarCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCode.swift; sourceTree = "<group>"; };
 		34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeTableViewCell.swift; sourceTree = "<group>"; };
 		34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A387AF1FBCDEC4006C4434 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		34A387B01FBCE19D006C4434 /* FilterSideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSideBarTableViewController.swift; sourceTree = "<group>"; };
+		34A387C01FBD5442006C4434 /* FilterSideBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSideBarTableViewCell.swift; sourceTree = "<group>"; };
+		34A387C31FC939FB006C4434 /* Hex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Hex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34A387C21FC939FB006C4434 /* Hex.framework in Frameworks */,
+				34A387AE1FBCDEC4006C4434 /* SideMenu.framework in Frameworks */,
 				34A387A51FB7C6A3006C4434 /* SwiftyJSON.framework in Frameworks */,
 				34A387881FABCF6D006C4434 /* Alamofire.framework in Frameworks */,
 				FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */,
@@ -135,9 +145,9 @@
 		34A387511FABC434006C4434 /* VGLogger */ = {
 			isa = PBXGroup;
 			children = (
-				34A387971FB3B957006C4434 /* Search */,
 				34A387521FABC434006C4434 /* AppDelegate.swift */,
 				34A387541FABC434006C4434 /* FeedTableViewController.swift */,
+				34A387971FB3B957006C4434 /* Search */,
 				34A3879C1FB77AD9006C4434 /* Scanner */,
 				34A387821FABC5FE006C4434 /* ThirdViewController.swift */,
 				34A387861FABCE7D006C4434 /* Download.swift */,
@@ -183,6 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				34A3878A1FAE68CA006C4434 /* SearchTableViewController.swift */,
+				34A387B01FBCE19D006C4434 /* FilterSideBarTableViewController.swift */,
+				34A387C01FBD5442006C4434 /* FilterSideBarTableViewCell.swift */,
 				34A387951FAFE654006C4434 /* VideoGameTableViewCell.swift */,
 				34A3878E1FAE74D6006C4434 /* VideoGameDetailedViewController.swift */,
 			);
@@ -202,6 +214,8 @@
 		97C8C36D533886E93EDD26B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				34A387C31FC939FB006C4434 /* Hex.framework */,
+				34A387AF1FBCDEC4006C4434 /* SideMenu.framework */,
 				34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */,
 				34A387891FABCF6D006C4434 /* Alamofire.framework */,
 				34A387851FABCE59006C4434 /* Alamofire.framework */,
@@ -360,11 +374,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Hex/Hex.framework",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34A3878B1FAE68CA006C4434 /* SearchTableViewController.swift in Sources */,
+				34A387B11FBCE19D006C4434 /* FilterSideBarTableViewController.swift in Sources */,
 				34A387A01FB784C4006C4434 /* BarCodeDataSource.swift in Sources */,
 				34A387531FABC434006C4434 /* AppDelegate.swift in Sources */,
 				34A387831FABC5FE006C4434 /* ThirdViewController.swift in Sources */,
@@ -423,6 +442,7 @@
 				34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */,
 				34A387551FABC434006C4434 /* FeedTableViewController.swift in Sources */,
 				34A387871FABCE7D006C4434 /* Download.swift in Sources */,
+				34A387C11FBD5442006C4434 /* FilterSideBarTableViewCell.swift in Sources */,
 				34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */,
 				34A387991FB3BA91006C4434 /* BarCodeViewController.swift in Sources */,
 				34A3879E1FB77B08006C4434 /* BarCodeTableViewController.swift in Sources */,
