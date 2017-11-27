@@ -44,6 +44,7 @@ class VideoGameDetailedViewController: UIViewController {
         if let aImage = videogame?.videoGameCoverImage()  {
             coverImage.contentMode = .scaleAspectFit
             coverImage.clipsToBounds = true
+            
             coverImage.image = aImage
         }
         if let esrb = videogame?.videoGameEsrb() {

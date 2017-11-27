@@ -100,7 +100,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         if defaults.value(forKey: "switchON") != nil {
             optionsList = defaults.value(forKey: "switchON") as! [Bool]
-            print("Here " + "\(optionsList)")
+            //print("Here " + "\(optionsList)")
             
             
         }
@@ -108,7 +108,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         if defaults.value(forKey: "slidON") != nil {
             let rating = defaults.value(forKey: "slidON") as! Int
             ratingParameter = "&filter[rating][gte]=" + "\(rating)"
-            print("Here " + "\(ratingParameter)")
+            //print("Here " + "\(ratingParameter)")
         }
       
         counter = 0

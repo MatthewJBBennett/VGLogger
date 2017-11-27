@@ -21,6 +21,8 @@ class FilterSideBarTableViewCell: UITableViewCell {
         // Initialization code
     }
     
+    
+    
     @IBAction func switchToggled(_ sender: UISwitch) {
         //section 0 contains platforms
         if index.section == 0 {
@@ -46,8 +48,6 @@ class FilterSideBarTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }

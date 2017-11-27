@@ -31,20 +31,8 @@ class FilterSideBarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Search Options"
-        
-        
-        
-        /*
-        ////
-        if defaults.value(forKey: "switchON") != nil {
-            for i in optionsList {
-                if i == true {
-                    cell?.sideBarSwitch.setOn(true, animated: false)
-                }
-            }
-        }
-        */
-        
+        optionsList = defaults.array(forKey: "switchON")  as? [Bool] ?? [Bool]()
+
         for _ in 0..<25 {
             optionsList.append(false)
         }
@@ -69,14 +57,6 @@ class FilterSideBarTableViewController: UITableViewController {
             if ratingOn {
                 ratingSwitch.setOn(true, animated: false)
             }
-        cell?.sideBarSwitch.setOn(true, animated: false)
-        if defaults.value(forKey: "switchON") != nil {
-            for i in optionsList {
-                if i == true {
-                    cell?.sideBarSwitch.setOn(true, animated: false)
-                }
-            }
-        }
     }
 
     @IBAction func ratingSwitched(_ sender: Any) {
@@ -103,7 +83,6 @@ class FilterSideBarTableViewController: UITableViewController {
         if optionsList[index] == false {
             print("Toggled to true at ", index)
             optionsList[index] = true
-            
         }
         else {
             print("Toggled to false at ", index)
@@ -144,7 +123,7 @@ class FilterSideBarTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sideBarCell", for: indexPath) as! FilterSideBarTableViewCell
-
+        
         // Configure the cell...
         if(indexPath.section == 0) {
             
@@ -165,7 +144,7 @@ class FilterSideBarTableViewController: UITableViewController {
         cell.selectionStyle = .none
         return cell
     }
- 
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -213,8 +192,7 @@ class FilterSideBarTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let VC = segue.destination as! SearchTableViewController
-        VC.makeURLOptions()
+     
         
         
         
