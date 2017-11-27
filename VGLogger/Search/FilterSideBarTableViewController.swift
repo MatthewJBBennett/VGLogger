@@ -20,10 +20,10 @@ class FilterSideBarTableViewController: UITableViewController {
     let esrb: [String] = ["RP", "E", "E10+", "T", "M"]
     
     let defaults = UserDefaults.standard
-    var cell: FilterSideBarTableViewCell?
+    //var cell: FilterSideBarTableViewCell?
     
     //Switch variables
-    var ratingOn = false
+    var ratingOn: Bool = false
     var ratingValue: Int = 0
     
     var optionsList: [Bool] = []
@@ -31,42 +31,55 @@ class FilterSideBarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Search Options"
-        optionsList = defaults.array(forKey: "switchON")  as? [Bool] ?? [Bool]()
-
-        for _ in 0..<25 {
-            optionsList.append(false)
-        }
         
-        ratingSlider.alpha = 0
-        ratingLabel.alpha = 0
+        //view.backgroundColor = UIColor(hex: "#C0C5CD")
+        if defaults.array(forKey: "switchON") != nil {
+            optionsList = defaults.array(forKey: "switchON")  as? [Bool] ?? [Bool]()
+        }
+        //print(optionsList)
+        else {
+            //25
+            for _ in 0..<23 {
+                optionsList.append(false)
+            }
+        }
+        print(optionsList)
+        print(ratingOn)
+        
+      
+        
+        ratingOn = defaults.bool(forKey: "ratingON")
         ratingSwitch.isOn = ratingOn
         
-        //ratingSlider.value = Float(ratingLabel)
-        /*
-        if ratingSwitch.isOn {
-            ratingLabel.text = String(Int(ratingSlider.value)) + " & Up"
+        
+        if ratingOn {
+            if defaults.value(forKey: "slidON") != nil {
+                let rating = defaults.value(forKey: "slidON") as! Int
+                ratingLabel.text = String(rating) + " & Up"
+                ratingSlider.value = Float(rating)
+            }
         }
         else {
-            ratingLabel.text = "None"
+            ratingLabel.text = ""
+            ratingSlider.alpha = 0
         }
-        */
+        
        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-            if ratingOn {
-                ratingSwitch.setOn(true, animated: false)
-            }
     }
 
     @IBAction func ratingSwitched(_ sender: Any) {
         if ratingSwitch.isOn {
             ratingOn = true
             ratingSlider.alpha = 1
+            //ratingLabel.text = String("0 & Up")
+            ratingLabel.text = String(Int(ratingSlider.value)) + " & Up"
+            defaults.set(ratingOn, forKey: "ratingON")
         }
         else {
             ratingOn = false
             ratingSlider.alpha = 0
+            ratingLabel.alpha = 0
+            defaults.set(ratingOn, forKey: "ratingON")
             defaults.set(0, forKey: "slidON")
         }
     }
@@ -142,6 +155,8 @@ class FilterSideBarTableViewController: UITableViewController {
             cell.sideBarSwitch.isOn = optionsList[indexPath.row + platforms.count + genres.count]
         }
         cell.selectionStyle = .none
+        //cell.backgroundColor = UIColor(hex: "#86B86B")
+        //cell.backgroundColor = UIColor(hex: "#C0C5CD")
         return cell
     }
     

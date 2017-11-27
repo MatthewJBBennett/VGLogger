@@ -17,7 +17,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
     let defaults = UserDefaults.standard
     let valueIds: [Int] = [48, 49, 130, 41, 6, 9, 12, 5, 37, 46, 13, 14, 15, 31, 4, 5, 9, 10, 12, 1, 3, 4, 5, 6]
-    var cell: FilterSideBarTableViewCell?
+    //var cell: FilterSideBarTableViewCell?
     
     let options: [String] = ["Platform", "Genre", "ESRB"]
     let platformOptions: [String] = ["PS4", "Xbox One", "Nintendo Switch", "Wii U", "PC", "Playstation 3", "Xbox 360", "Wii", "Nintendo 3DS", "PS Vita"]
@@ -57,8 +57,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         */
         
         
-        
-        for _ in 0..<25 {
+        //25
+        for _ in 0..<23 {
             optionsList.append(false)
         }
        
@@ -108,7 +108,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         if defaults.value(forKey: "slidON") != nil {
             let rating = defaults.value(forKey: "slidON") as! Int
             ratingParameter = "&filter[rating][gte]=" + "\(rating)"
-            //print("Here " + "\(ratingParameter)")
+            print("Here " + "\(ratingParameter)")
         }
       
         counter = 0
@@ -159,6 +159,8 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     //filter[genres][eq]=14
     //filter[esrb][eq]=3
     
+    // Can only have 1 filter keyword?
+    
     
     func apiCall(params: String) {
         let UrlString :String = params.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
@@ -192,6 +194,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             print("Here " + "\(optionsList)")
         }
         */
+        print("OptionsList: \(optionsList)")
         
         //iterate through each list of options, appending appropriate strings
         //to the url as needed
@@ -217,7 +220,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         for i in catagory3List {
             if i == true {
                 //print(courseOptions.count)
-                esrbParameter += "&filter[esrb][eq]=" + String(valueIds[counter + platformOptions.count + genresOptions.count])// + esrbOptions[counter]
+                esrbParameter += "&filter[esrb.rating][eq]=" + String(valueIds[counter + platformOptions.count + genresOptions.count])// + esrbOptions[counter]
                 print("ESRB: \(esrbParameter)")
             }
             counter += 1
