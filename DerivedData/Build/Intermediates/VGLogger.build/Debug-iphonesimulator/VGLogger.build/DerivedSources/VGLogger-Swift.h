@@ -272,8 +272,9 @@ SWIFT_CLASS("_TtC8VGLogger8Download")
 @end
 
 
-SWIFT_CLASS("_TtC8VGLogger23FeedTableViewController")
-@interface FeedTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+SWIFT_CLASS("_TtC8VGLogger18FeedViewController")
+@interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified newsTable;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
 - (UITableViewCell * _Nonnull)tableView:(UITableView * _Nonnull)tableView cellForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath SWIFT_WARN_UNUSED_RESULT;
 - (void)viewDidLoad;
@@ -282,9 +283,22 @@ SWIFT_CLASS("_TtC8VGLogger23FeedTableViewController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImageView;
 
-SWIFT_CLASS("_TtC8VGLogger16PopularGamesCell")
-@interface PopularGamesCell : UITableViewCell
+SWIFT_CLASS("_TtC8VGLogger8NewsCell")
+@interface NewsCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified articleTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified authorLabel;
+@property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified articleImage;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8VGLogger15PopularGameCell")
+@interface PopularGameCell : UITableViewCell
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
@@ -330,7 +344,6 @@ SWIFT_CLASS("_TtC8VGLogger19VideoGameDataSource")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 @end
 
-@class UIImageView;
 
 SWIFT_CLASS("_TtC8VGLogger31VideoGameDetailedViewController")
 @interface VideoGameDetailedViewController : UIViewController

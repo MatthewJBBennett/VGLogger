@@ -15,8 +15,11 @@ class Download: NSObject {
     
     @objc dynamic var dataFromServer: [AnyObject]?
     
+    //URL for popular game data
+    //https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc
+    
     func downloadData() {
-        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc") {
+        if let url = URL(string: "https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc") {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")

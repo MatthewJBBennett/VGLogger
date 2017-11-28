@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "71538d63d726cec0d8050e85ceb66389"
-build_time: [1511063190, 98025000]
+build_time: [1511848298, 775246000]
 inputs:
   "/Users/student/VGLogger/VGLogger/Search/SearchTableViewController.swift": [1511055546, 0]
   "/Users/student/VGLogger/VGLogger/Models/BarCodeDataSource.swift": [1511055546, 0]
@@ -11,9 +11,9 @@ inputs:
   "/Users/student/VGLogger/VGLogger/Models/BarCode.swift": [1511055546, 0]
   "/Users/student/VGLogger/VGLogger/Search/VideoGameDetailedViewController.swift": [1511055546, 0]
   "/Users/student/VGLogger/VGLogger/Scanner/BarCodeTableViewCell.swift": [1511055546, 0]
-  "/Users/student/VGLogger/VGLogger/Home/FeedTableViewController.swift": [1511062708, 0]
-  "/Users/student/VGLogger/VGLogger/Home/PopularGamesCell.swift": [1511055546, 0]
-  "/Users/student/VGLogger/VGLogger/Download.swift": [1511062855, 0]
+  "/Users/student/VGLogger/VGLogger/Homepage/FeedViewController.swift": !dirty [1511848298, 0]
+  "/Users/student/VGLogger/VGLogger/Homepage/FeedCell.swift": [1511843706, 0]
+  "/Users/student/VGLogger/VGLogger/Download.swift": [1511839106, 0]
   "/Users/student/VGLogger/VGLogger/Models/VideoGameDataSource.swift": [1511055546, 0]
   "/Users/student/VGLogger/VGLogger/Scanner/BarCodeViewController.swift": [1511055546, 0]
   "/Users/student/VGLogger/VGLogger/Scanner/BarCodeTableViewController.swift": [1511055546, 0]
