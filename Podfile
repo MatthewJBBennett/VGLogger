@@ -7,6 +7,7 @@ target 'VGLogger' do
     pod 'SwiftyJSON'
     pod 'SideMenu'
     pod 'Hex'
+    pod 'SQLite.swift', '~> 0.11.4'
 end
 
 

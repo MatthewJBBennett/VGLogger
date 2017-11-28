@@ -33,6 +33,7 @@
 		34A387C11FBD5442006C4434 /* FilterSideBarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387C01FBD5442006C4434 /* FilterSideBarTableViewCell.swift */; };
 		34A387C21FC939FB006C4434 /* Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387C31FC939FB006C4434 /* Hex.framework */; };
 		3F1ED1471FCCD8D300F0AA96 /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */; };
+		3F1ED1491FCCDD3200F0AA96 /* WishlistDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1ED1481FCCDD3200F0AA96 /* WishlistDatabase.swift */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +89,7 @@
 		34A387C01FBD5442006C4434 /* FilterSideBarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSideBarTableViewCell.swift; sourceTree = "<group>"; };
 		34A387C31FC939FB006C4434 /* Hex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Hex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
+		3F1ED1481FCCDD3200F0AA96 /* WishlistDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistDatabase.swift; sourceTree = "<group>"; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */,
+				3F1ED1481FCCDD3200F0AA96 /* WishlistDatabase.swift */,
 			);
 			path = Wishlist;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Hex/Hex.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -393,6 +397,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -442,6 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34A3878B1FAE68CA006C4434 /* SearchTableViewController.swift in Sources */,
+				3F1ED1491FCCDD3200F0AA96 /* WishlistDatabase.swift in Sources */,
 				34A387B11FBCE19D006C4434 /* FilterSideBarTableViewController.swift in Sources */,
 				34A387A01FB784C4006C4434 /* BarCodeDataSource.swift in Sources */,
 				34A387531FABC434006C4434 /* AppDelegate.swift in Sources */,
