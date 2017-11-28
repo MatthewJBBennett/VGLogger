@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import SQLite
 
 class WishlistTableViewController: UITableViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
-
+                
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        let wishlistDB = WishlistDatabase()
+        wishlistDB.insertIntoDatabase(gameID: 10, gameTitle: "Fake Game Title")
+        print(wishlistDB.getValueFromDatabase())
+        
     }
 
     override func didReceiveMemoryWarning() {
