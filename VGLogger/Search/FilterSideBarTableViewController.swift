@@ -25,27 +25,26 @@ class FilterSideBarTableViewController: UITableViewController {
     //Switch variables
     var ratingOn: Bool = false
     var ratingValue: Int = 0
-    
     var optionsList: [Bool] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Search Options"
         
-        //view.backgroundColor = UIColor(hex: "#C0C5CD")
+        //view.backgroundColor = UIColor(hex: "#0A6ACD")
         if defaults.array(forKey: "switchON") != nil {
             optionsList = defaults.array(forKey: "switchON")  as? [Bool] ?? [Bool]()
         }
         //print(optionsList)
         else {
-            //25
-            for _ in 0..<23 {
+           
+            for _ in 0...23 {
                 optionsList.append(false)
             }
         }
-        print(optionsList)
-        print(ratingOn)
-        
+        print("IN FSB: \(optionsList)")
+        //print(ratingOn)
+    
       
         
         ratingOn = defaults.bool(forKey: "ratingON")
@@ -115,9 +114,18 @@ class FilterSideBarTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return options.count
     }
-
+    
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return options[section]
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = UIColor.white
+        
+        header.textLabel?.frame = header.frame
+        header.textLabel?.textAlignment = .center
+        header.backgroundView?.backgroundColor = UIColor(hex: "#0A6ACD")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -157,6 +165,12 @@ class FilterSideBarTableViewController: UITableViewController {
         cell.selectionStyle = .none
         //cell.backgroundColor = UIColor(hex: "#86B86B")
         //cell.backgroundColor = UIColor(hex: "#C0C5CD")
+        if indexPath.row % 2 == 0 {
+            cell.backgroundColor = UIColor(hex: "#C0C5CD")
+        }
+        else {
+            cell.backgroundColor = UIColor(hex: "#ffffff")
+        }
         return cell
     }
     

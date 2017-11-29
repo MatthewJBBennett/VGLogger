@@ -21,12 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // This area is to customize the look of the tab bar at the bottom of the app
         ////////////
         let tbController = self.window!.rootViewController as! UITabBarController
-        tbController.tabBar.barTintColor = UIColor(hex: "#65799B") // blue
-        tbController.tabBar.tintColor = UIColor(hex: "#86B86B") // green
+        tbController.tabBar.barTintColor = UIColor(hex: "#0A6ACD")//"#65799B") // blue
+        tbController.tabBar.tintColor = UIColor(hex: "#1FE600")//"#86B86B") // green
         tbController.tabBar.unselectedItemTintColor = UIColor(hex: "#ffffff") // white
         ////////
         UINavigationBar.appearance().barStyle = UIBarStyle.default
-        UINavigationBar.appearance().barTintColor = UIColor(hex: "#65799B") // blue
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "0A6ACD")//"#65799B") // blue
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         return true
@@ -53,11 +53,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        /*
-        let defaults = UserDefaults.standard
-        defaults.removeObject(forKey: "switchON")
-        defaults.removeObject(forKey: "slidON")
- */
+        
+        //let defaults = UserDefaults.standard
+        //defaults.removeObject(forKey: "switchON")
+        //defaults.synchronize()
+ //       defaults.removeObject(forKey: "slidON")
+ 
     }
 
 

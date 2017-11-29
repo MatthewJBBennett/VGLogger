@@ -22,6 +22,7 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
    // var barcodeDS: BarCodeDataSource?
     var upcString: String?
     
+    
     let supportedCodeTypes =  [AVMetadataObject.ObjectType.upce,
                               AVMetadataObject.ObjectType.code39,
                               AVMetadataObject.ObjectType.code39Mod43,
@@ -37,8 +38,8 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         super.viewDidLoad()
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-       let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
-        
+       //let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back)
+         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
         //let captureDevice = AVCaptureDevice.default(.builtInWideAngleCamera, for: AVMediaType.video, position: .back)
         //let captureDevice = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)//AVCaptureDevice.default(for: .video)
@@ -158,6 +159,10 @@ class BarCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             
             //set properties on the destination view controller
             destinationVC.upc = upcString
+            let backItem = UIBarButtonItem()
+            backItem.title = "Scan"
+            backItem.tintColor = UIColor(hex: "#ffffff")
+            navigationItem.backBarButtonItem = backItem
             //self.presentingViewController?.dismiss(animated: true, completion: nil)
         }
     }

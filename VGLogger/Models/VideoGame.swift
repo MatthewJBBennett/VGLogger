@@ -173,6 +173,13 @@ class VideoGame: NSObject {
         return nil
     }
     
+    func videoGamePlatform() -> Array<Int>? {
+        if let v = videogame["platforms"] {
+            return v as? Array
+        }
+        return nil
+    }
+    
     /*
     func videoGameCoverImageID() -> String? {
         if let dict = videogame["cover"] {

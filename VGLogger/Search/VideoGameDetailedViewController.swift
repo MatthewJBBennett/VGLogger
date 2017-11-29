@@ -31,15 +31,29 @@ class VideoGameDetailedViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if let a = videogame {
-            self.titleLabel.adjustsFontSizeToFitWidth = true
+        if let summary = videogame?.videoGameSummary() {
             self.summaryLabel.lineBreakMode = .byWordWrapping
             self.summaryLabel.numberOfLines = 0;
-        
-            self.titleLabel.text = a.videoGameName()
-            self.summaryLabel.text = a.videoGameSummary()
-            let rating = Int((a.videoGameTotalRating()?.rounded())!)
+            self.summaryLabel.text = summary
+            self.summaryLabel.sizeToFit()
+        }
+        else {
+            self.summaryLabel.text = "No summary is available yet :("
+        }
+        if let name = videogame?.videoGameName() {
+            self.titleLabel.adjustsFontSizeToFitWidth = true
+            self.titleLabel.text = name
+        }
+        else {
+            self.titleLabel.text = "Unknown Game Title"
+        }
+        if let rate = videogame?.videoGameTotalRating() {
+            let rating = Int((rate.rounded()))
             self.ratingLabel.text = "Rating: \(rating) / 100"
+            //self.ratingLabel.sizeToFit()
+        }
+        else {
+            self.ratingLabel.text = "Rating: No ratings available :("
         }
         if let aImage = videogame?.videoGameCoverImage()  {
             coverImage.contentMode = .scaleAspectFit
@@ -47,8 +61,19 @@ class VideoGameDetailedViewController: UIViewController {
             
             coverImage.image = aImage
         }
+        else {
+            coverImage.contentMode = .scaleAspectFit
+            coverImage.clipsToBounds = true
+            coverImage.image = #imageLiteral(resourceName: "no_image_available")
+        }
         if let esrb = videogame?.videoGameEsrb() {
-            esrbLabel.text = getEsrb(esrb: esrb)
+            esrbLabel.text = "Rated: " + getEsrb(esrb: esrb)
+        }
+        else {
+            esrbLabel.text = "Rated: N/A"
+        }
+        if let platform = videogame?.videoGamePlatform() {
+            platformLabel.text = getPlatform(platformArray: platform)
         }
     }
     
@@ -76,6 +101,48 @@ class VideoGameDetailedViewController: UIViewController {
             esrbString = "AO"
         }
         return esrbString
+    }
+    
+    func getPlatform(platformArray: Array<Int>) -> String {
+        var platform = ""
+        //var first = false
+        for i in platformArray {
+            if i == 41 {
+                platform += " Wii U,"
+            }
+            else if i == 37 {
+                platform += " Nintendo 3DS,"
+            }
+            else if i == 48 {
+                platform += " PS4,"
+            }
+            else if i == 49 {
+                platform += " Xbox One,"
+            }
+            else if i == 130 {
+                platform += " Nintendo Switch,"
+            }
+            else if i == 6 {
+                platform += " PC,"
+            }
+            else if i == 9 {
+                platform += " Playstation 3,"
+            }
+            else if i == 12 {
+                platform += " Xbox 360,"
+            }
+            else if i == 5 {
+                platform += " Wii,"
+            }
+            else if i == 46 {
+                platform += " PS Vita,"
+            }
+            else {
+                return platform
+            }
+        }
+        platform.remove(at: platform.index(before: platform.endIndex))
+        return platform
     }
     
     override func didReceiveMemoryWarning() {

@@ -17,8 +17,20 @@ class BarCodeTableViewController: UITableViewController {
     var upc: String?
     var barcodeDS: BarCodeDataSource?
     var json: JSON = JSON.null
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-
+    func startIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    func stopIndicator() {
+        activityIndicator.stopAnimating()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.backgroundColor = UIColor(hex: "#C0C5CD") 
@@ -49,20 +61,21 @@ class BarCodeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-////////
         switch self.json.type {
         case .array, .dictionary:
             //return self.json.count
+            if (barcodeDS?.numBarCodeItems())! == 0 {
+                let noDataLabel: UILabel     = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+                noDataLabel.text          = "No results found"
+                noDataLabel.textColor     = UIColor.black
+                noDataLabel.textAlignment = .center
+                tableView.backgroundView  = noDataLabel
+                tableView.separatorStyle  = .none
+            }
             return (barcodeDS?.numBarCodeItems())!
         default:
             return 1
         }
-        /*
-        if let ads = barcodeDS {
-            return ads.numBarCodeItems()
-        }
- */
-        //return 0
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -88,7 +101,7 @@ class BarCodeTableViewController: UITableViewController {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-            
+            self.startIndicator()
             Alamofire.request(url, method: .get).validate().responseJSON { response in
                 switch response.result {
                 case .success(let value):
@@ -104,9 +117,10 @@ class BarCodeTableViewController: UITableViewController {
                     }
                     */
                     
-                    print("json here: \(a[0])")
-                    print("Here: \(a[0]["title"])")
+                    //print("json here: \(a[0])")
+                    //print("Here: \(a[0]["title"])")
                     self.tableView.reloadData()
+                    self.stopIndicator()
                     
                 case .failure(let error):
                     print(error)
