@@ -29,14 +29,30 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     var esrbParameter: String = ""
     var ratingParameter: String = ""
     var counter: Int = 0
+    var didSearch = false
     
     var optionsList: [Bool] = []
     var catagory1List: [Bool] = []
     var catagory2List: [Bool] = []
     var catagory3List: [Bool] = []
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
    
     func getOptionsList(data: [Bool]) {
         optionsList = data
+    }
+    
+    func startIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+        activityIndicator.color = UIColor(hex: "#0A6ACD")
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    func stopIndicator() {
+        activityIndicator.stopAnimating()
     }
     
     override func viewDidLoad() {
@@ -55,13 +71,17 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             }
         }
         */
+        //let defaults = UserDefaults.standard
+        //defaults.removeObject(forKey: "switchON")
         
-        
-        
-        for _ in 0..<25 {
-            optionsList.append(false)
+        if defaults.array(forKey: "switchON") != nil {
+            optionsList = defaults.array(forKey: "switchON")  as? [Bool] ?? [Bool]()
         }
-       
+        else {
+            for _ in 0...23 {
+                optionsList.append(false)
+            }
+        }
         
         
         //apiCall()
@@ -90,27 +110,39 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
         if let ads = videogamesDS {
+            if ads.numVideoGames() == 0 {
+                let noDataLabel: UILabel     = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+                noDataLabel.text          = "No search results found"
+                noDataLabel.textColor     = UIColor.black
+                noDataLabel.textAlignment = .center
+                tableView.backgroundView  = noDataLabel
+                tableView.separatorStyle  = .none
+            }
             return ads.numVideoGames()
         }
-        return 0
+        else {
+                return 0
+        }
+        //return 0
  
         //return tableData.count
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        /*
         if defaults.value(forKey: "switchON") != nil {
             optionsList = defaults.value(forKey: "switchON") as! [Bool]
-            //print("Here " + "\(optionsList)")
-            
-            
+            print("Here " + "\(optionsList)")
         }
-        
+ */
+ /*
         if defaults.value(forKey: "slidON") != nil {
             let rating = defaults.value(forKey: "slidON") as! Int
             ratingParameter = "&filter[rating][gte]=" + "\(rating)"
-            //print("Here " + "\(ratingParameter)")
+            print("Here " + "\(ratingParameter)")
         }
-      
+        */
+      /*
         counter = 0
         for _ in platformOptions {
             catagory1List.append(optionsList[counter])
@@ -124,6 +156,23 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             catagory3List.append(optionsList[counter])
             counter += 1
         }
+ */
+        // 10p, 9g, 5e
+        /*
+        var tempCounter = 0;
+        while tempCounter < 10 {
+            catagory1List.append(optionsList[tempCounter]);
+            tempCounter += 1;
+        }
+        while tempCounter < 19 {
+            catagory2List.append(optionsList[tempCounter]);
+            tempCounter += 1;
+        }
+        while  tempCounter < 24 {
+            catagory3List.append(optionsList[tempCounter]);
+            tempCounter += 1;
+        }
+        */
         
     }
 
@@ -136,6 +185,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         // Used so the keyboard goes away when search button is pressed
         searchBar.endEditing(true)
         //print(searchBar.text)
+        didSearch = true
         if let searchQuery = searchBar.text {
             makeURLOptions()
             apiCall(params: searchQuery)
@@ -159,11 +209,14 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     //filter[genres][eq]=14
     //filter[esrb][eq]=3
     
-    
     func apiCall(params: String) {
         let UrlString :String = params.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!
         // Limit is set at 10, change later when more results are needed
-        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?search=" + "\(UrlString)" + "\(ratingParameter)" + "\(platformParameter)" + "\(genresParameter)" + "\(esrbParameter)" + "&limit=10&fields=*" ){//+ "\(platformParameter)") {
+        
+        
+        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?search=" + "\(UrlString)" + ratingParameter + platformParameter + genresParameter + esrbParameter + "&limit=10&fields=*") {//" ){//+ "\(platformParameter)") {
+            
+            self.startIndicator()
             print(url)
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
@@ -176,6 +229,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 if let JSON = response.result.value as? [AnyObject]  {
                     self.videogamesDS = VideoGameDataSource(dataSource: JSON)
                     self.tableView.reloadData()
+                    self.stopIndicator()
                 }
                 //debugPrint(response)
                 print(response)
@@ -186,42 +240,103 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func makeURLOptions() {
-        /*
+        if defaults.value(forKey: "slidON") != nil {
+            let rating = defaults.value(forKey: "slidON") as! Int
+            if rating != 0 {
+                ratingParameter = "&filter[rating][gte]=" + "\(rating)"
+            }
+            print("Here " + "\(ratingParameter)")
+        }
+        
+        
         if defaults.value(forKey: "switchON") != nil {
             optionsList = defaults.value(forKey: "switchON") as! [Bool]
             print("Here " + "\(optionsList)")
         }
-        */
+        
+        var tempCounter = 0
+        while tempCounter < 10 {
+            catagory1List.append(optionsList[tempCounter])
+            tempCounter += 1
+        }
+        while tempCounter < 19 {
+            catagory2List.append(optionsList[tempCounter])
+            tempCounter += 1
+        }
+        while  tempCounter < 24 {
+            catagory3List.append(optionsList[tempCounter])
+            tempCounter += 1
+        }
+        
+        //print("OptionsList in SC: \(optionsList)")
         
         //iterate through each list of options, appending appropriate strings
         //to the url as needed
         var counter = 0
+        var first = false
+       // platformParameter += "&filter[platforms][eq]=" + String(valueIds[counter])//platformOptions[counter]
         for i in catagory1List {
             if i == true {
-                platformParameter += "&filter[platforms][eq]=" + String(valueIds[counter])//platformOptions[counter]
-                print("Platforms: \(platformParameter)")
+                if first == false {
+                    platformParameter = "&filter[platforms][any]=" + String(valueIds[counter]) + ","
+                    first = true
+                }
+                else {
+                    platformParameter += String(valueIds[counter]) + ","
+                }
+                //platformParameter += "&filter[platforms][any]=5,37" //+ String(valueIds[counter])//platformOptions[counter]
+                //platformParameter = platformParameter.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)!
+                //print("Platforms: \(platformParameter)")
             }
             counter += 1
         }
+        if first == true {
+            platformParameter.remove(at: platformParameter.index(before: platformParameter.endIndex))
+        }
+        print("Platforms: \(platformParameter)")
         
         counter = 0
+        first = false
         for i in catagory2List {
             if i == true {
-                genresParameter += "&filter[genres][eq]=" + String(valueIds[counter + platformOptions.count]) // + genresOptions[counter]
-                print("Genres: \(genresParameter)")
+                if first == false {
+                    genresParameter = "&filter[genres][any]=" + String(valueIds[counter + platformOptions.count]) + ","
+                    first = true
+                }
+                else {
+                    genresParameter += String(valueIds[counter]) + ","
+                }
+               // genresParameter += "&filter[genres][any]=" + String(valueIds[counter + platformOptions.count])//platformOptions.count]) // + genresOptions[counter]
+                //print("Genres: \(genresParameter)")
             }
             counter += 1
         }
+        if first == true {
+            genresParameter.remove(at: genresParameter.index(before: genresParameter.endIndex))
+        }
+        print("Genres: \(genresParameter)")
         
         counter = 0
+        first = false
         for i in catagory3List {
             if i == true {
+                if first == false {
+                    esrbParameter = "&filter[esrb.rating][eq]=" + String(valueIds[counter + platformOptions.count + genresOptions.count]) + ","
+                    first = true
+                }
+                else {
+                    esrbParameter += String(valueIds[counter]) + ","
+                }
                 //print(courseOptions.count)
-                esrbParameter += "&filter[esrb][eq]=" + String(valueIds[counter + platformOptions.count + genresOptions.count])// + esrbOptions[counter]
-                print("ESRB: \(esrbParameter)")
+                //esrbParameter += "&filter[esrb.rating][any]=" + String(valueIds[counter + platformOptions.count + genresOptions.count])// + esrbOptions[counter]
+                //print("ESRB: \(esrbParameter)")
             }
             counter += 1
         }
+        if first == true {
+            esrbParameter.remove(at: esrbParameter.index(before: esrbParameter.endIndex))
+        }
+        print("ESRB: \(esrbParameter)")
     }
     
     func resetParameters() {
@@ -278,6 +393,10 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "filterSegue" {
+            resetParameters()
+            searchBar.endEditing(true)
+        }
         if segue.identifier == "ShowVideoGameDetails" {
             let cell = sender as! VideoGameTableViewCell
             if let indexPath = tableView.indexPath(for: cell), let ds = videogamesDS {
@@ -285,7 +404,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
                 detailedVC.videoGameForThisView(ds.videoGameAt(indexPath.row))
                 let backItem = UIBarButtonItem()
                 backItem.title = "Search"
-                backItem.tintColor = UIColor(hex: "#86B86B")
+                backItem.tintColor = UIColor(hex: "#ffffff")
                 navigationItem.backBarButtonItem = backItem
             }
             
