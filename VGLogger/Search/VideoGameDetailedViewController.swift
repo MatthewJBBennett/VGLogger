@@ -20,6 +20,7 @@ class VideoGameDetailedViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var esrbLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,6 +88,13 @@ class VideoGameDetailedViewController: UIViewController {
         self.videogame = videogame
     }
 
+    @IBAction func didClickAddButton(_ sender: UIButton) {
+        if let a = videogame{
+            WishlistObject.wishlistDB.insertIntoDatabase(gameID: a.videoGameId()!, gameTitle: a.videoGameName()!, gameCover: a.videoGameUrl()!)
+        }
+        print(WishlistObject.wishlistDB.getTitleArray())
+    }
+    
     /*
     // MARK: - Navigation
 
