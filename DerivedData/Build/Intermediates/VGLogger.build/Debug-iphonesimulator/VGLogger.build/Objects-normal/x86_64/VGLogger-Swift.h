@@ -275,6 +275,7 @@ SWIFT_CLASS("_TtC8VGLogger8Download")
 SWIFT_CLASS("_TtC8VGLogger18FeedViewController")
 @interface FeedViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified newsTable;
+@property (nonatomic, weak) IBOutlet UITableView * _Null_unspecified popularGameTable;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)tableView:(UITableView * _Nonnull)tableView numberOfRowsInSection:(NSInteger)section SWIFT_WARN_UNUSED_RESULT;
@@ -291,6 +292,17 @@ SWIFT_CLASS("_TtC8VGLogger17NewsTableViewCell")
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified articleTitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified authorLabel;
 @property (nonatomic, weak) IBOutlet UIImageView * _Null_unspecified articleImage;
+- (void)awakeFromNib;
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated;
+- (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8VGLogger24PopularGameTableViewCell")
+@interface PopularGameTableViewCell : UITableViewCell
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified gameTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified ratingLabel;
 - (void)awakeFromNib;
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
@@ -359,6 +371,13 @@ SWIFT_CLASS("_TtC8VGLogger22VideoGameTableViewCell")
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated;
 - (nonnull instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier OBJC_DESIGNATED_INITIALIZER SWIFT_AVAILABILITY(ios,introduced=3.0);
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC8VGLogger11popularGame")
+@interface popularGame : NSObject
+@property (nonatomic, copy) NSArray * _Nullable dataFromServer;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 SWIFT_MODULE_NAMESPACE_POP

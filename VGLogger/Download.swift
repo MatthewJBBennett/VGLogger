@@ -18,8 +18,10 @@ class Download: NSObject {
     //URL for popular game data
     //https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc
     
+    //URL for pulse news
+    //https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc
     func downloadData() {
-        if let url = URL(string: "https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc") {
+        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc") {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
@@ -30,11 +32,10 @@ class Download: NSObject {
                     let videogames = VideoGameDataSource(dataSource: JSON as! [AnyObject])
                     //self.vgDS = VideoGameDataSource(dataSource: self.dataFromServer!)
                 }
-                    debugPrint(response)
+                    //debugPrint(response)
                     //print(response)
             }
-            debugPrint(request)
-
+            //debugPrint(request)
         }
     }
 }

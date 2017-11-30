@@ -8,22 +8,22 @@
 
 import UIKit
 
-//class PopularGameTableViewCell: UITableViewCell
-//{
-//
-//    //@IBOutlet weak var header: UILabel!
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-//
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
-//
-//}
+class PopularGameTableViewCell: UITableViewCell
+{
+    @IBOutlet weak var gameTitleLabel: UILabel!    
+    @IBOutlet weak var ratingLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+}
 
 class NewsTableViewCell: UITableViewCell
 {
@@ -43,5 +43,4 @@ class NewsTableViewCell: UITableViewCell
         
         // Configure the view for the selected state
     }
-    
 }

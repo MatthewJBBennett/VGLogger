@@ -1,18 +1,26 @@
 ### Swift dependencies file v0 ###
 provides-top-level:
+- "PopularGameTableViewCell"
 - "NewsTableViewCell"
 provides-nominal:
+- "8VGLogger24PopularGameTableViewCellC"
 - "8VGLogger17NewsTableViewCellC"
 provides-member:
+- ["8VGLogger24PopularGameTableViewCellC", ""]
 - ["8VGLogger17NewsTableViewCellC", ""]
 provides-dynamic-lookup:
+- "articleImage"
 - "articleTitleLabel"
 - "authorLabel"
 - "awakeFromNib"
+- "gameTitleLabel"
+- "ratingLabel"
 - "setSelected"
 depends-top-level:
 - "Bool"
 - "NewsTableViewCell"
+- "PopularGameTableViewCell"
+- "UIImageView"
 - "UILabel"
 - "UITableViewCell"
 depends-member:
@@ -45,24 +53,38 @@ depends-member:
 - !private ["So8NSCodingP", "setSelected"]
 - ["So8NSCodingP", ""]
 - ["So8NSObjectC", "Bool"]
+- ["So8NSObjectC", "UIImageView"]
 - ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "articleImage"]
 - ["So8NSObjectC", "articleTitleLabel"]
 - ["So8NSObjectC", "authorLabel"]
 - ["So8NSObjectC", "awakeFromNib"]
+- ["So8NSObjectC", "gameTitleLabel"]
 - ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "ratingLabel"]
 - ["So8NSObjectC", "setSelected"]
 - !private ["So16NSObjectProtocolP", "awakeFromNib"]
 - !private ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "setSelected"]
 - ["So16NSObjectProtocolP", ""]
 - ["8VGLogger17NewsTableViewCellC", "Bool"]
+- ["8VGLogger17NewsTableViewCellC", "UIImageView"]
 - ["8VGLogger17NewsTableViewCellC", "UILabel"]
+- ["8VGLogger17NewsTableViewCellC", "articleImage"]
 - ["8VGLogger17NewsTableViewCellC", "articleTitleLabel"]
 - ["8VGLogger17NewsTableViewCellC", "authorLabel"]
 - ["8VGLogger17NewsTableViewCellC", "awakeFromNib"]
 - ["8VGLogger17NewsTableViewCellC", "deinit"]
 - ["8VGLogger17NewsTableViewCellC", "init"]
 - ["8VGLogger17NewsTableViewCellC", "setSelected"]
+- ["8VGLogger24PopularGameTableViewCellC", "Bool"]
+- ["8VGLogger24PopularGameTableViewCellC", "UILabel"]
+- ["8VGLogger24PopularGameTableViewCellC", "awakeFromNib"]
+- ["8VGLogger24PopularGameTableViewCellC", "deinit"]
+- ["8VGLogger24PopularGameTableViewCellC", "gameTitleLabel"]
+- ["8VGLogger24PopularGameTableViewCellC", "init"]
+- ["8VGLogger24PopularGameTableViewCellC", "ratingLabel"]
+- ["8VGLogger24PopularGameTableViewCellC", "setSelected"]
 - !private ["So29UIAccessibilityIdentificationP", "awakeFromNib"]
 - !private ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "setSelected"]
@@ -100,22 +122,30 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "setSelected"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So11UIResponderC", "Bool"]
+- ["So11UIResponderC", "UIImageView"]
 - ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "articleImage"]
 - ["So11UIResponderC", "articleTitleLabel"]
 - ["So11UIResponderC", "authorLabel"]
 - ["So11UIResponderC", "awakeFromNib"]
+- ["So11UIResponderC", "gameTitleLabel"]
 - ["So11UIResponderC", "init"]
+- ["So11UIResponderC", "ratingLabel"]
 - ["So11UIResponderC", "setSelected"]
 - !private ["So30UIResponderStandardEditActionsP", "awakeFromNib"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "setSelected"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - ["So15UITableViewCellC", "Bool"]
+- ["So15UITableViewCellC", "UIImageView"]
 - ["So15UITableViewCellC", "UILabel"]
+- ["So15UITableViewCellC", "articleImage"]
 - ["So15UITableViewCellC", "articleTitleLabel"]
 - ["So15UITableViewCellC", "authorLabel"]
 - ["So15UITableViewCellC", "awakeFromNib"]
+- ["So15UITableViewCellC", "gameTitleLabel"]
 - ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", "ratingLabel"]
 - ["So15UITableViewCellC", "setSelected"]
 - ["So15UITableViewCellC", ""]
 - !private ["So18UITraitEnvironmentP", "awakeFromNib"]
@@ -123,11 +153,15 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "setSelected"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So6UIViewC", "Bool"]
+- ["So6UIViewC", "UIImageView"]
 - ["So6UIViewC", "UILabel"]
+- ["So6UIViewC", "articleImage"]
 - ["So6UIViewC", "articleTitleLabel"]
 - ["So6UIViewC", "authorLabel"]
 - ["So6UIViewC", "awakeFromNib"]
+- ["So6UIViewC", "gameTitleLabel"]
 - ["So6UIViewC", "init"]
+- ["So6UIViewC", "ratingLabel"]
 - ["So6UIViewC", "setSelected"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "awakeFromNib"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
@@ -148,6 +182,7 @@ depends-nominal:
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
 - "8VGLogger17NewsTableViewCellC"
+- "8VGLogger24PopularGameTableViewCellC"
 - "So29UIAccessibilityIdentificationP"
 - "So12UIAppearanceP"
 - "So21UIAppearanceContainerP"
@@ -191,4 +226,4 @@ depends-external:
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "f67c86284139d6db210367e6f2d3469d"
+interface-hash: "3fc2d1edb8af09026e041d027fc43750"
