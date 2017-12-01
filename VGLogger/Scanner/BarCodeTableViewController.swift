@@ -114,7 +114,7 @@ class BarCodeTableViewController: UITableViewController {
             /*
             Alamofire.request(urlRequest).responseJSON { response in
                 if let JSON = response.result.value as? [AnyObject]  {
-                    self.barcodeDS = BarCodeDataSource(dataSource: JSON)
+                    self.barcodeDS =x BarCodeDataSource(dataSource: JSON)
                     self.tableView.reloadData()
                 }
                 //debugPrint(response)

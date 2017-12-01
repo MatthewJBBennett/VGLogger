@@ -31,8 +31,12 @@ class popularGame: NSObject
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
-            Alamofire.request(urlRequest).responseJSON { response in
-                if let responseJSON = response.result.value {
+            Alamofire.request(urlRequest).responseJSON {response in
+                if let responseJSON = response.result.value as? [String:Any],
+                    let dataArray = responseJSON["name"] {
+                        //let nameArray = dataArray.flatMap { $0["url"] as? String }
+                        print(dataArray)
+                    }
                     //let videogames = VideoGameDataSource(dataSource: JSON as! [AnyObject])
                     //self.vgDS = VideoGameDataSource(dataSource: self.dataFromServer!)
                     //self.json = JSON(responseJSON)
@@ -40,6 +44,31 @@ class popularGame: NSObject
                     //let a = self.json[0]["name"].arrayValue
                     //print("here: \(a[0])")
                     //print(self.json)
+                    //print(responseJSON)
+                    
+//                    URLSession.shared.dataTask(with:url, completionHandler: {(data, response, error) in
+//                        if error != nil {
+//                            print(error)
+//                        } else {
+//                            do {
+//                                //guard let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any],
+                               // let products = responseJSON["cover"] as? [[String: Any]]
+//                                   // else { return }
+//
+//                    for product in products! {
+//                                    guard let id = product["url"] as? String
+//                                        //let options = product["options"] as? [[String: Any]]
+//                                        else { return }
+//
+//                                    print(id)
+//                                    print(products)
+//                                }
+//                            } catch let error as NSError {
+//                                print(error)
+//                            }
+//                        }
+//                    }).resume()
+                    
 //                    if let jArray = json.array
 //                    {
 //                        if let covers = jArray[0]["cover"].array
@@ -54,35 +83,34 @@ class popularGame: NSObject
 //                        }
 //                    }
                     
-                    var json: [Any]?
-                    do {
-                        json = try JSONSerialization.jsonObject(with: data)
-                    } catch {
-                        print(error)
-                    }
-                    guard let item = json?.first as? [String: Any],
-                        let person = item["person"] as? [String: Any],
-                        let age = person["age"] as? Int else {
-                            return
-                    }
-                    
-                    self.json = JSON(["name"])
-                    if let name = self.json["name"].string
-                    {
-                        print(name)
-                    }
+//                    var json: [Any]?
+//                    do {
+//                        json = try JSONSerialization.jsonObject(with: data)
+//                    } catch {
+//                        print(error)
+//                    }
+//                    guard let item = json?.first as? [String: Any],
+//                        let person = item["person"] as? [String: Any],
+//                        let age = person["age"] as? Int else {
+//                            return
+//                    }
+//
+//                    self.json = JSON(["name"])
+//                    if let name = self.json["name"].string
+//                    {
+//                        print(name)
+//                    }
                     
                     
                 }
-                else
-                {
-                    print("JSON error")
-                }
-                
+//                else
+//                {
+//                    print("JSON error")
+//                }
+            
                 //debugPrint(response)
                 //print(response)
             }
             //debugPrint(request)
         }
     }
-}
