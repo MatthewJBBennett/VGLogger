@@ -32,11 +32,20 @@ class popularGame: NSObject
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
             Alamofire.request(urlRequest).responseJSON {response in
-                if let responseJSON = response.result.value as? [String:Any],
-                    let dataArray = responseJSON["name"] {
-                        //let nameArray = dataArray.flatMap { $0["url"] as? String }
-                        print(dataArray)
-                    }
+                if let jsonDict = response.result.value as? [String:Any],
+                    let dataArray = jsonDict["cover"] as? [[String:Any]] {
+                    let nameArray = dataArray.flatMap { $0["url"] as? String }
+                    print(nameArray)
+                }
+//                if let result = response.result.value as? [String:Any],
+//                    let main = result["cover"] as? [[String:String]]{
+//                    // main[0]["USDARS"] or use main.first?["USDARS"] for first index or loop through array
+//                    for obj in main{
+//                        print(obj["url"])
+//                        //print(obj["date"])
+//                    }
+//                }
+                
                     //let videogames = VideoGameDataSource(dataSource: JSON as! [AnyObject])
                     //self.vgDS = VideoGameDataSource(dataSource: self.dataFromServer!)
                     //self.json = JSON(responseJSON)

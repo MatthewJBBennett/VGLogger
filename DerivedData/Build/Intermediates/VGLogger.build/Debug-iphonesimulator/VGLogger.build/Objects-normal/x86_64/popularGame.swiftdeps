@@ -23,6 +23,8 @@ depends-top-level:
 - "popularGame"
 - !private "print"
 depends-member:
+- !private ["Sa", "flatMap"]
+- !private ["s23BidirectionalCollectionP", "flatMap"]
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s7CVarArgP", "Alamofire"]
 - !private ["s7CVarArgP", "HTTPMethod"]
@@ -30,10 +32,12 @@ depends-member:
 - !private ["s7CVarArgP", "URL"]
 - !private ["s7CVarArgP", "URLRequest"]
 - !private ["s7CVarArgP", "apiKey"]
+- !private ["s7CVarArgP", "flatMap"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "subscript"]
 - ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "flatMap"]
 - ["s10CollectionP", "init"]
 - ["s10CollectionP", "null"]
 - !private ["s10CollectionP", "subscript"]
@@ -46,6 +50,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "URLRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "addValue"]
 - !private ["s28CustomDebugStringConvertibleP", "apiKey"]
+- !private ["s28CustomDebugStringConvertibleP", "flatMap"]
 - !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "null"]
@@ -57,6 +62,7 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", ""]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
 - !private ["s17CustomReflectableP", "addValue"]
+- !private ["s17CustomReflectableP", "flatMap"]
 - !private ["s17CustomReflectableP", "httpMethod"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
@@ -67,6 +73,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "URLRequest"]
 - !private ["s23CustomStringConvertibleP", "addValue"]
 - !private ["s23CustomStringConvertibleP", "apiKey"]
+- !private ["s23CustomStringConvertibleP", "flatMap"]
 - !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "null"]
@@ -78,9 +85,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["9Alamofire11DataRequestC", "responseJSON"]
 - !private ["9Alamofire12DataResponseV", "result"]
+- !private ["s9DecodableP", "flatMap"]
 - ["s9DecodableP", "init"]
 - !private ["s9DecodableP", "subscript"]
 - !private ["s10DictionaryV", "subscript"]
+- !private ["s9EncodableP", "flatMap"]
 - ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "subscript"]
 - !private ["s9EquatableP", "Alamofire"]
@@ -97,6 +106,7 @@ depends-member:
 - !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "rawValue"]
 - ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "flatMap"]
 - ["s25ExpressibleByArrayLiteralP", "null"]
 - ["s27ExpressibleByBooleanLiteralP", "null"]
 - ["s30ExpressibleByDictionaryLiteralP", "null"]
@@ -129,6 +139,7 @@ depends-member:
 - ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "flatMap"]
 - ["So8NSCodingP", "init"]
 - ["So9NSCopyingP", "init"]
 - ["So21NSItemProviderReadingP", "init"]
@@ -161,6 +172,8 @@ depends-member:
 - ["So16NSObjectProtocolP", ""]
 - ["So14NSSecureCodingP", "init"]
 - ["So8NSStringC", "init"]
+- !private ["s22RandomAccessCollectionP", "flatMap"]
+- !private ["s26RangeReplaceableCollectionP", "flatMap"]
 - ["s26RangeReplaceableCollectionP", "init"]
 - !private ["s16RawRepresentableP", "get"]
 - ["s16RawRepresentableP", "null"]
@@ -171,6 +184,7 @@ depends-member:
 - !private ["9Alamofire7RequestC", "responseJSON"]
 - !private ["9Alamofire8ResponseP", "result"]
 - !private ["9Alamofire6ResultO", "value"]
+- !private ["s8SequenceP", "flatMap"]
 - ["s8SequenceP", "init"]
 - ["s8SequenceP", "null"]
 - !private ["s8SequenceP", "subscript"]
@@ -186,7 +200,10 @@ depends-member:
 - !private ["9Alamofire21URLRequestConvertibleP", "addValue"]
 - !private ["9Alamofire21URLRequestConvertibleP", "httpMethod"]
 - !private ["9Alamofire21URLRequestConvertibleP", "init"]
+- !private ["s14_ArrayProtocolP", "flatMap"]
+- !private ["s23_BidirectionalIndexableP", "flatMap"]
 - ["s23_BidirectionalIndexableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "flatMap"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
 - ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
 - ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
@@ -194,9 +211,11 @@ depends-member:
 - !private ["s34_ExpressibleByFileReferenceLiteralP", "init"]
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "flatMap"]
 - ["s10_IndexableP", "init"]
 - ["s10_IndexableP", "null"]
 - !private ["s10_IndexableP", "subscript"]
+- !private ["s14_IndexableBaseP", "flatMap"]
 - ["s14_IndexableBaseP", "init"]
 - ["s14_IndexableBaseP", "null"]
 - !private ["s14_IndexableBaseP", "subscript"]
@@ -209,10 +228,14 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "flatMap"]
 - !private ["s21_ObjectiveCBridgeableP", "addValue"]
+- !private ["s21_ObjectiveCBridgeableP", "flatMap"]
 - !private ["s21_ObjectiveCBridgeableP", "httpMethod"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s22_RandomAccessIndexableP", "flatMap"]
+- !private ["s26_RangeReplaceableIndexableP", "flatMap"]
 - ["s26_RangeReplaceableIndexableP", "init"]
 - ["s16_SwiftStringViewP", "init"]
 - !private ["8VGLogger11popularGameC", "Alamofire"]
@@ -232,6 +255,7 @@ depends-member:
 - !private ["8VGLogger11popularGameC", "print"]
 - ["8VGLogger11popularGameC", "vgDS"]
 depends-nominal:
+- !private "Sa"
 - "s23BidirectionalCollectionP"
 - "s7CVarArgP"
 - "s10CollectionP"
@@ -261,6 +285,7 @@ depends-nominal:
 - "10SwiftyJSON17JSONSubscriptTypeP"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
+- !private "s17MutableCollectionP"
 - "So8NSCodingP"
 - "So9NSCopyingP"
 - "So21NSItemProviderReadingP"
@@ -270,6 +295,7 @@ depends-nominal:
 - "So16NSObjectProtocolP"
 - "So14NSSecureCodingP"
 - "So8NSStringC"
+- !private "s22RandomAccessCollectionP"
 - "s26RangeReplaceableCollectionP"
 - "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
@@ -285,7 +311,9 @@ depends-nominal:
 - "9Alamofire14URLConvertibleP"
 - !private "10Foundation10URLRequestV"
 - !private "9Alamofire21URLRequestConvertibleP"
+- !private "s14_ArrayProtocolP"
 - "s23_BidirectionalIndexableP"
+- !private "s24_DestructorSafeContainerP"
 - "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
 - "s34_ExpressibleByBuiltinStringLiteralP"
 - "s39_ExpressibleByBuiltinUTF16StringLiteralP"
@@ -296,7 +324,9 @@ depends-nominal:
 - "s10_IndexableP"
 - "s14_IndexableBaseP"
 - "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
 - "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
 - "s26_RangeReplaceableIndexableP"
 - "s16_SwiftStringViewP"
 - "8VGLogger11popularGameC"

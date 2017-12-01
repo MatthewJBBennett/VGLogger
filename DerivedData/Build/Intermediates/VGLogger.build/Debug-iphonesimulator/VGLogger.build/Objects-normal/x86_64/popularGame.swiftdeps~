@@ -20,6 +20,7 @@ depends-top-level:
 - !private "URL"
 - !private "URLRequest"
 - "VideoGameDataSource"
+- !private "debugPrint"
 - "popularGame"
 - !private "print"
 depends-member:
@@ -30,6 +31,7 @@ depends-member:
 - !private ["s7CVarArgP", "URL"]
 - !private ["s7CVarArgP", "URLRequest"]
 - !private ["s7CVarArgP", "apiKey"]
+- !private ["s7CVarArgP", "debugPrint"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "subscript"]
@@ -46,6 +48,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "URLRequest"]
 - !private ["s28CustomDebugStringConvertibleP", "addValue"]
 - !private ["s28CustomDebugStringConvertibleP", "apiKey"]
+- !private ["s28CustomDebugStringConvertibleP", "debugPrint"]
 - !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
 - ["s28CustomDebugStringConvertibleP", "null"]
@@ -67,6 +70,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "URLRequest"]
 - !private ["s23CustomStringConvertibleP", "addValue"]
 - !private ["s23CustomStringConvertibleP", "apiKey"]
+- !private ["s23CustomStringConvertibleP", "debugPrint"]
 - !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
 - ["s23CustomStringConvertibleP", "null"]
@@ -90,6 +94,7 @@ depends-member:
 - !private ["s9EquatableP", "URLRequest"]
 - !private ["s9EquatableP", "addValue"]
 - !private ["s9EquatableP", "apiKey"]
+- !private ["s9EquatableP", "debugPrint"]
 - !private ["s9EquatableP", "get"]
 - !private ["s9EquatableP", "httpMethod"]
 - ["s9EquatableP", "init"]
@@ -119,6 +124,7 @@ depends-member:
 - !private ["s8HashableP", "URLRequest"]
 - !private ["s8HashableP", "addValue"]
 - !private ["s8HashableP", "apiKey"]
+- !private ["s8HashableP", "debugPrint"]
 - !private ["s8HashableP", "get"]
 - !private ["s8HashableP", "httpMethod"]
 - ["s8HashableP", "init"]
@@ -144,6 +150,7 @@ depends-member:
 - ["So8NSObjectC", "VideoGameDataSource"]
 - ["So8NSObjectC", "apiKey"]
 - ["So8NSObjectC", "dataFromServer"]
+- !private ["So8NSObjectC", "debugPrint"]
 - ["So8NSObjectC", "downloadData"]
 - ["So8NSObjectC", "init"]
 - ["So8NSObjectC", "json"]
@@ -156,6 +163,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "URL"]
 - !private ["So16NSObjectProtocolP", "URLRequest"]
 - !private ["So16NSObjectProtocolP", "apiKey"]
+- !private ["So16NSObjectProtocolP", "debugPrint"]
 - ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "print"]
 - ["So16NSObjectProtocolP", ""]
@@ -206,6 +214,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URLRequest"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "apiKey"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "debugPrint"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
@@ -225,6 +234,7 @@ depends-member:
 - ["8VGLogger11popularGameC", "VideoGameDataSource"]
 - ["8VGLogger11popularGameC", "apiKey"]
 - ["8VGLogger11popularGameC", "dataFromServer"]
+- !private ["8VGLogger11popularGameC", "debugPrint"]
 - ["8VGLogger11popularGameC", "deinit"]
 - ["8VGLogger11popularGameC", "downloadData"]
 - ["8VGLogger11popularGameC", "init"]
