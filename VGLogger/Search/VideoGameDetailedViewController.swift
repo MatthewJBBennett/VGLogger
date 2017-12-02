@@ -20,6 +20,7 @@ class VideoGameDetailedViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var esrbLabel: UILabel!
+   // @IBOutlet weak var videoView: UIWebView!
     
     var urlToShare: String = ""
     
@@ -91,6 +92,12 @@ class VideoGameDetailedViewController: UIViewController {
         if let platform = videogame?.videoGamePlatform() {
             platformLabel.text = getPlatform(platformArray: platform)
         }
+        
+        /*
+        let videoID = "F0GROJ1F41E"
+        let youtubeURL = URL(string: "https://www.youtube.com/embed/\(videoID)")
+        videoView.loadRequest(URLRequest(url: youtubeURL!))
+ */
     }
     
     func getEsrb(esrb: Int) -> String {
