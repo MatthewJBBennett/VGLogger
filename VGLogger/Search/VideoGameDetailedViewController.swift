@@ -21,12 +21,28 @@ class VideoGameDetailedViewController: UIViewController {
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var esrbLabel: UILabel!
     
+    var urlToShare: String = ""
+    
     override func viewDidLoad() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(addShare))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(hex: "#C0C5CD")
         // Do any additional setup after loading the view.
         self.scrollView.frame = self.view.bounds
         scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.frame.height+2000)//CGSize(width: self.view.frame.width, height: self.view.frame.height+2000)
+    }
+    
+    @objc func addShare() {
+        if let url = videogame?.videoGameUrl() {
+            urlToShare = url
+        }
+        else {
+            urlToShare = "Check out this game!"
+        }
+        let VC = UIActivityViewController(activityItems: [urlToShare], applicationActivities: nil)
+        VC.popoverPresentationController?.sourceView = self.view
+        self.present(VC, animated: true, completion: nil)
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -53,7 +69,7 @@ class VideoGameDetailedViewController: UIViewController {
             //self.ratingLabel.sizeToFit()
         }
         else {
-            self.ratingLabel.text = "Rating: No ratings available :("
+            self.ratingLabel.text = "Rating: N/A"
         }
         if let aImage = videogame?.videoGameCoverImage()  {
             coverImage.contentMode = .scaleAspectFit
@@ -104,7 +120,7 @@ class VideoGameDetailedViewController: UIViewController {
     }
     
     func getPlatform(platformArray: Array<Int>) -> String {
-        var platform = ""
+        var platform = " "
         //var first = false
         for i in platformArray {
             if i == 41 {
@@ -137,9 +153,16 @@ class VideoGameDetailedViewController: UIViewController {
             else if i == 46 {
                 platform += " PS Vita,"
             }
-            else {
-                return platform
+            else if i == 20 {
+                platform += " Nintendo DS,"
             }
+            else if i == 4 {
+                platform += " Nintendo 64,"
+            }
+                
+            //else {
+            //    return platform
+            //}
         }
         platform.remove(at: platform.index(before: platform.endIndex))
         return platform
