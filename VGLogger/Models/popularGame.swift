@@ -14,8 +14,9 @@ class popularGame: NSObject
 {
     let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
     var vgDS: VideoGameDataSource?
-    var json: JSON = JSON.null
-    
+   // var json: JSON = JSON.null
+    var rating: Float?
+    //var name: String?
     
     @objc dynamic var dataFromServer: [AnyObject]?
     
@@ -31,95 +32,35 @@ class popularGame: NSObject
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
-            Alamofire.request(urlRequest).responseJSON {response in
-                if let jsonDict = response.result.value as? [String:Any],
-                    let dataArray = jsonDict["cover"] as? [[String:Any]] {
-                    let nameArray = dataArray.flatMap { $0["url"] as? String }
-                    print(nameArray)
-                }
-//                if let result = response.result.value as? [String:Any],
-//                    let main = result["cover"] as? [[String:String]]{
-//                    // main[0]["USDARS"] or use main.first?["USDARS"] for first index or loop through array
-//                    for obj in main{
-//                        print(obj["url"])
-//                        //print(obj["date"])
-//                    }
-//                }
-                
-                    //let videogames = VideoGameDataSource(dataSource: JSON as! [AnyObject])
-                    //self.vgDS = VideoGameDataSource(dataSource: self.dataFromServer!)
-                    //self.json = JSON(responseJSON)
-                    //let a = self.json["cover"][0]["url"].arrayValue
-                    //let a = self.json[0]["name"].arrayValue
-                    //print("here: \(a[0])")
-                    //print(self.json)
-                    //print(responseJSON)
-                    
-//                    URLSession.shared.dataTask(with:url, completionHandler: {(data, response, error) in
-//                        if error != nil {
-//                            print(error)
-//                        } else {
-//                            do {
-//                                //guard let json = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String: Any],
-                               // let products = responseJSON["cover"] as? [[String: Any]]
-//                                   // else { return }
-//
-//                    for product in products! {
-//                                    guard let id = product["url"] as? String
-//                                        //let options = product["options"] as? [[String: Any]]
-//                                        else { return }
-//
-//                                    print(id)
-//                                    print(products)
-//                                }
-//                            } catch let error as NSError {
-//                                print(error)
-//                            }
-//                        }
-//                    }).resume()
-                    
-//                    if let jArray = json.array
-//                    {
-//                        if let covers = jArray[0]["cover"].array
-//                        {
-//                            for test in covers
+            Alamofire.request(urlRequest).responseJSON {response in print(response)
+                if let allSections = response.result.value as? [[String : Any]]
+                {
+                    //Here we will loop through the array and parse each dictionary
+                    for section in allSections
+                    {
+                        if let name = section["name"] as? String, let cover = section["cover"] as? [String : Any], let imageUrl = cover["url"] as? String
+                            //let rating = section["total_rating"] as? Float
+                        //guard let rating = section["total_rating"] as? String else{return}
+                        {
+                            //let rating = section["total_rating"] as? Float
+                            //let outrating = Int(rating.rounded())   //Round the float rating up or down, then convert to int for output
+//                            for i in 0..<imageUrl.count
 //                            {
-//                                if let url = test["url"].string
+//                                if imageUrl[i].contains("https")
 //                                {
-//                                    print(url)
+//
 //                                }
 //                            }
-//                        }
-//                    }
-                    
-//                    var json: [Any]?
-//                    do {
-//                        json = try JSONSerialization.jsonObject(with: data)
-//                    } catch {
-//                        print(error)
-//                    }
-//                    guard let item = json?.first as? [String: Any],
-//                        let person = item["person"] as? [String: Any],
-//                        let age = person["age"] as? Int else {
-//                            return
-//                    }
-//
-//                    self.json = JSON(["name"])
-//                    if let name = self.json["name"].string
-//                    {
-//                        print(name)
-//                    }
-                    
-                    
+                            print(name)
+                        }
+                    }
                 }
-//                else
-//                {
-//                    print("JSON error")
-//                }
-            
-                //debugPrint(response)
-                //print(response)
             }
-            //debugPrint(request)
         }
     }
+    
+//    func getName() -> String
+//    {
+//        return name!
+//    }
+}

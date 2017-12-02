@@ -12,6 +12,8 @@ import Alamofire
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     var vg: VideoGame?
+    //var pg: popularGame?
+    var pg = popularGame()
     
     @IBOutlet weak var newsTable: UITableView!
     @IBOutlet weak var popularGameTable: UITableView!
@@ -21,6 +23,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         downloadAssistant.downloadData()
+        self.title = "Home"
         
     }
     
@@ -32,24 +35,36 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     var downloadAssistant = popularGame()
     
-    var categories = ["Action", "RPG", "Indie", "Kids", "RTS"]
+    var categories = ["Action", "RPG", "Indie", "Kids"]
     var articles = ["Leak Reveals Character Customization in 'Star Wars Battlefront II'", "Who is the King of Fear? Geese shows off his moves U2014 and two new costumes U2014 in his Tekken 7 launch trailer", "In-Game Purchases Poison The Well", "A new Fortnite update adds weapons, smoke grenades, and two more leaderboards"]
     var authors = ["By Blake Hester", "Zavian \"mushin_Z\" Sildra", "Kirk Hamilton", "Andy Chalk"]
     
-//    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        if (tableView == popularGameTable)
+        {
+            return "POPULAR GAMES RIGHT NOW"
+        }
+        else
+        {
+            return "PULSE: RECENT GAMING NEWS"
+        }
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat
 //    {
-//        if(tableView == popularGameTable)
+//        if (tableView == newsTable)
 //        {
-//            return "ESTHEADAER"
+//            return 31.0
 //        }
-//        return categories[section]
 //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         if (tableView == popularGameTable)
         {
-            return categories.count
+            //return categories.count
+            return 1
         }
         else
         {
@@ -57,14 +72,18 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         if(tableView == popularGameTable)
         {
+           // var temp = pg.getName()
             let cell = tableView.dequeueReusableCell(withIdentifier : "popularGameCell", for : indexPath) as! PopularGameTableViewCell
             cell.gameTitleLabel?.text = categories[indexPath.row]
-            return cell
+            //cell.gameTitleLabel?.text = pg?.name[indexPath.row]
+            //cell.gameTitleLabel?.text = temp[indexPath.row]
             
+            return cell
         }
         else
         {
