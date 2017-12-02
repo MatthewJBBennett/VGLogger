@@ -22,7 +22,8 @@ class BarCodeTableViewController: UITableViewController {
     func startIndicator() {
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
-        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.white
+        activityIndicator.color = UIColor(hex: "#0A6ACD")
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
     }

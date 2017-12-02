@@ -26,6 +26,7 @@ class VideoGameTableViewCell: UITableViewCell {
         //if let aImage = videogame.getImage()  {
         //    cellImage.image = aImage
         //}
+        self.cellLabel.adjustsFontSizeToFitWidth = true
         cellLabel.text = videogame.videoGameName()
     }
 }

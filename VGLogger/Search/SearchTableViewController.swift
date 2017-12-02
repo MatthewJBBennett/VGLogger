@@ -214,7 +214,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         // Limit is set at 10, change later when more results are needed
         
         
-        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?search=" + "\(UrlString)" + ratingParameter + platformParameter + genresParameter + esrbParameter + "&limit=10&fields=*") {//" ){//+ "\(platformParameter)") {
+        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?search=" + "\(UrlString)" + ratingParameter + platformParameter + genresParameter + esrbParameter + "&limit=50&fields=*") {//" ){//+ "\(platformParameter)") {
             
             self.startIndicator()
             print(url)
@@ -274,19 +274,24 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         //to the url as needed
         var counter = 0
         var first = false
-       // platformParameter += "&filter[platforms][eq]=" + String(valueIds[counter])//platformOptions[counter]
+        var trueItems = 0
+        var tempParam = ""
         for i in catagory1List {
             if i == true {
-                if first == false {
-                    platformParameter = "&filter[platforms][any]=" + String(valueIds[counter]) + ","
-                    first = true
+                trueItems += 1
+                if trueItems > 1 {
+                    if first == false {
+                        platformParameter = "&filter[platforms][any]=" + String(valueIds[counter]) + "," + tempParam + ","
+                        first = true
+                    }
+                    else {
+                        platformParameter += String(valueIds[counter]) + ","
+                    }
                 }
-                else {
-                    platformParameter += String(valueIds[counter]) + ","
+                if trueItems <= 1 {
+                    platformParameter = "&filter[platforms][eq]=" + String(valueIds[counter])
+                    tempParam = String(valueIds[counter])
                 }
-                //platformParameter += "&filter[platforms][any]=5,37" //+ String(valueIds[counter])//platformOptions[counter]
-                //platformParameter = platformParameter.addingPercentEncoding(withAllowedCharacters: allowedCharacterSet)!
-                //print("Platforms: \(platformParameter)")
             }
             counter += 1
         }
@@ -297,17 +302,24 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         
         counter = 0
         first = false
+        trueItems = 0
+        tempParam = ""
         for i in catagory2List {
             if i == true {
-                if first == false {
-                    genresParameter = "&filter[genres][any]=" + String(valueIds[counter + platformOptions.count]) + ","
-                    first = true
+                trueItems += 1
+                if trueItems > 1 {
+                    if first == false {
+                        genresParameter = "&filter[genres][any]=" + String(valueIds[counter + platformOptions.count]) + "," + tempParam + ","
+                        first = true
+                    }
+                    else {
+                        genresParameter += String(valueIds[counter]) + ","
+                    }
                 }
-                else {
-                    genresParameter += String(valueIds[counter]) + ","
+                if trueItems <= 1 {
+                    genresParameter = "&filter[genres][eq]=" + String(valueIds[counter + platformOptions.count])
+                    tempParam = String(valueIds[counter + platformOptions.count])
                 }
-               // genresParameter += "&filter[genres][any]=" + String(valueIds[counter + platformOptions.count])//platformOptions.count]) // + genresOptions[counter]
-                //print("Genres: \(genresParameter)")
             }
             counter += 1
         }
@@ -318,18 +330,24 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         
         counter = 0
         first = false
+        trueItems = 0
+        tempParam = ""
         for i in catagory3List {
             if i == true {
-                if first == false {
-                    esrbParameter = "&filter[esrb.rating][eq]=" + String(valueIds[counter + platformOptions.count + genresOptions.count]) + ","
-                    first = true
+                trueItems += 1
+                if trueItems > 1 {
+                    if first == false {
+                        esrbParameter = "&filter[esrb.rating][any]=" + String(valueIds[counter + platformOptions.count + genresOptions.count]) + "," + tempParam + ","
+                        first = true
+                    }
+                    else {
+                        esrbParameter += String(valueIds[counter]) + ","
+                    }
                 }
-                else {
-                    esrbParameter += String(valueIds[counter]) + ","
+                if trueItems <= 1 {
+                    esrbParameter = "&filter[esrb.rating][eq]=" + String(valueIds[counter + platformOptions.count + genresOptions.count])
+                    tempParam = String(valueIds[counter + platformOptions.count + genresOptions.count])
                 }
-                //print(courseOptions.count)
-                //esrbParameter += "&filter[esrb.rating][any]=" + String(valueIds[counter + platformOptions.count + genresOptions.count])// + esrbOptions[counter]
-                //print("ESRB: \(esrbParameter)")
             }
             counter += 1
         }
@@ -340,7 +358,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func resetParameters() {
-        
         platformParameter = ""
         genresParameter = ""
         esrbParameter = ""
