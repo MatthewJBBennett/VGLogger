@@ -329,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAN-eq-IVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2029.5999999999999" y="992.20389805097454"/>
+            <point key="canvasLocation" x="2117" y="1093"/>
         </scene>
         <!--News-->
         <scene sceneID="6ep-fA-tIA">
@@ -486,19 +486,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-SL-nAa">
-                                            <rect key="frame" x="8" y="2" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HY5-eh-Ugd">
-                                            <rect key="frame" x="106" y="8" width="34" height="21"/>
+                                            <rect key="frame" x="106" y="2" width="261" height="90"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-SL-nAa">
+                                            <rect key="frame" x="8" y="2" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gameCoverImage" destination="6Ra-SL-nAa" id="0cT-DF-SbO"/>
+                                    <outlet property="gameTitleLabel" destination="HY5-eh-Ugd" id="SMp-sc-vX0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -507,9 +511,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="LbG-Gb-7NZ"/>
-                    <connections>
-                        <outlet property="coverImageThumbnail" destination="6Ra-SL-nAa" id="fjR-Xe-CpK"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWS-KX-MOR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -90,7 +90,7 @@ class VideoGameDetailedViewController: UIViewController {
 
     @IBAction func didClickAddButton(_ sender: UIButton) {
         if let a = videogame{
-            WishlistObject.wishlistDB.insertIntoDatabase(gameID: a.videoGameId()!, gameTitle: a.videoGameName()!, gameCover: a.videoGameUrl()!)
+            WishlistObject.wishlistDB.insertIntoDatabase(gameID: a.videoGameId()!, gameTitle: a.videoGameName()!, gameCover: a.videoGameThumbnailURL()!)
         }
         print(WishlistObject.wishlistDB.getTitleArray())
     }

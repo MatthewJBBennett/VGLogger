@@ -36,6 +36,7 @@
 		3F17CF871FCF5A27004F52FD /* WishlistObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17CF861FCF5A27004F52FD /* WishlistObject.swift */; };
 		3F17CF8B1FCF926C004F52FD /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17CF8A1FCF926C004F52FD /* WishlistTableViewCell.swift */; };
 		3F1ED1471FCCD8D300F0AA96 /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */; };
+		3FDB6A101FD49538009CACCB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDB6A111FD49538009CACCB /* SQLite.framework */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,7 @@
 		3F17CF861FCF5A27004F52FD /* WishlistObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistObject.swift; sourceTree = "<group>"; };
 		3F17CF8A1FCF926C004F52FD /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
 		3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
+		3FDB6A111FD49538009CACCB /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FDB6A101FD49538009CACCB /* SQLite.framework in Frameworks */,
 				34A387C21FC939FB006C4434 /* Hex.framework in Frameworks */,
 				34A387AE1FBCDEC4006C4434 /* SideMenu.framework in Frameworks */,
 				34A387A51FB7C6A3006C4434 /* SwiftyJSON.framework in Frameworks */,
@@ -234,6 +237,7 @@
 		97C8C36D533886E93EDD26B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3FDB6A111FD49538009CACCB /* SQLite.framework */,
 				34A387C31FC939FB006C4434 /* Hex.framework */,
 				34A387AF1FBCDEC4006C4434 /* SideMenu.framework */,
 				34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */,

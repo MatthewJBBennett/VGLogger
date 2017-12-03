@@ -10,8 +10,8 @@ import UIKit
 import SQLite
 
 class WishlistTableViewController: UITableViewController{
+    
     @IBOutlet var wishlistView: UITableView!
-    @IBOutlet weak var coverImageThumbnail: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,14 +49,12 @@ class WishlistTableViewController: UITableViewController{
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WishlistCell", for: indexPath)
         let gameTitles = WishlistObject.wishlistDB.getTitleArray()
-        cell.textLabel?.text = gameTitles[indexPath.row]
         let gameCovers = WishlistObject.wishlistDB.getCoverArray()
-        let newUrl = "https://images.igdb.com/igdb/image/upload/t_thumb/" + gameCovers[indexPath.row] + ".jpg"
-        if let url = URL(string: newUrl),
-            let data = try? Data(contentsOf: url),
-            let image = UIImage(data: data) {
-                coverImageThumbnail.image = image
-            }
+        
+        let theCell = cell as? WishlistTableViewCell
+        let wishlistTitle = gameTitles[indexPath.row]
+        let wishlistCover = gameCovers[indexPath.row]
+        theCell?.setWishlistCell(wishlistTitle, coverURL: wishlistCover)
         return cell
     }
 

@@ -148,6 +148,15 @@ class VideoGame: NSObject {
         return nil
     }
  */
+    func videoGameThumbnailURL() -> String? {
+        if let dict = videogame["cover"] {
+            if let dictionary = dict as? Dictionary<String, AnyObject> {
+                let id = dictionary["cloudinary_id"] as? String
+                return id
+            }
+        }
+        return nil
+    }
     
     func videoGameCoverImage() -> UIImage? {
         if let dict = videogame["cover"] {
