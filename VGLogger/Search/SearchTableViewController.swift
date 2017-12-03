@@ -365,7 +365,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         catagory1List = []
         catagory2List = []
         catagory3List = []
-        optionsList = []
+        //optionsList = []
     }
     
     /*
