@@ -110,10 +110,10 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                                 //print(self.outputGameName)
                                 //cell.gameTitleLabel?.text = outputGameName[indexPath.row]
                             }
-                            if let rating = section["total_rating"] as? Float //or maybe string
-                            {
-                                print(rating)
-                            }
+//                            if let rating = section["total_rating"] as? Float //or maybe string
+//                            {
+//                                print(rating)
+//                            }
                             //else append N/A
                         }
                         //print(self.outputGameName)
@@ -138,7 +138,14 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         else
         {
+//            newsTable.layer.masksToBounds = true
+//            newsTable.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).cgColor
+//            newsTable.layer.borderWidth = 2.0
+            
             let cell = tableView.dequeueReusableCell(withIdentifier : "newsCell", for : indexPath) as! NewsTableViewCell
+            
+            cell.contentView.layer.borderColor = UIColor.black.cgColor
+            cell.contentView.layer.borderWidth = 1.0
             
             if let url = URL(string: "https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc") {
                 var urlRequest = URLRequest(url: url)
@@ -146,10 +153,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
                 
-                Alamofire.request(urlRequest).responseJSON {response in
+                Alamofire.request(urlRequest).responseJSON {response in print(response)
                     if let allSections = response.result.value as? [[String : Any]]
                     {
-                        //Here we will loop through the array and parse each dictionary
                         for section in allSections
                         {
                             if let author = section["author"] as? String, let image = section["image"] as? String, let title = section["title"] as? String, let url = section["url"] as? String
@@ -165,9 +171,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                                 {
                                     cell.articleImage?.image = UIImage(data: data!)
                                 }
-                            }
+                            }                            
                         }
-                        //print(self.outputImage)
+                        print(self.outputImage.count, "this many")
                     }
                     cell.authorLabel?.text = self.outputAuthor[indexPath.row]
                     cell.articleTitleLabel?.text = self.outputArticle[indexPath.row]

@@ -6,9 +6,11 @@ provides-nominal:
 provides-member:
 - ["8VGLogger22FeedCollectionViewCellC", ""]
 provides-dynamic-lookup:
+- "gameTitle"
 depends-top-level:
 - "FeedCollectionViewCell"
 - "UICollectionViewCell"
+- "UILabel"
 depends-member:
 - !private ["So15CALayerDelegateP", "init"]
 - ["So15CALayerDelegateP", ""]
@@ -20,12 +22,16 @@ depends-member:
 - ["s23CustomStringConvertibleP", ""]
 - !private ["s9EquatableP", "init"]
 - ["s9EquatableP", ""]
+- ["8VGLogger22FeedCollectionViewCellC", "UILabel"]
 - ["8VGLogger22FeedCollectionViewCellC", "deinit"]
+- ["8VGLogger22FeedCollectionViewCellC", "gameTitle"]
 - ["8VGLogger22FeedCollectionViewCellC", "init"]
 - !private ["s8HashableP", "init"]
 - ["s8HashableP", ""]
 - !private ["So8NSCodingP", "init"]
 - ["So8NSCodingP", ""]
+- ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "gameTitle"]
 - ["So8NSObjectC", "init"]
 - !private ["So16NSObjectProtocolP", "init"]
 - ["So16NSObjectProtocolP", ""]
@@ -35,7 +41,11 @@ depends-member:
 - ["So12UIAppearanceP", ""]
 - !private ["So21UIAppearanceContainerP", "init"]
 - ["So21UIAppearanceContainerP", ""]
+- ["So24UICollectionReusableViewC", "UILabel"]
+- ["So24UICollectionReusableViewC", "gameTitle"]
 - ["So24UICollectionReusableViewC", "init"]
+- ["So20UICollectionViewCellC", "UILabel"]
+- ["So20UICollectionViewCellC", "gameTitle"]
 - ["So20UICollectionViewCellC", "init"]
 - ["So20UICollectionViewCellC", ""]
 - !private ["So17UICoordinateSpaceP", "init"]
@@ -48,11 +58,15 @@ depends-member:
 - ["So11UIFocusItemP", ""]
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "gameTitle"]
 - ["So11UIResponderC", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
 - ["So30UIResponderStandardEditActionsP", ""]
 - !private ["So18UITraitEnvironmentP", "init"]
 - ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "UILabel"]
+- ["So6UIViewC", "gameTitle"]
 - ["So6UIViewC", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
@@ -112,4 +126,4 @@ depends-external:
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "fffd993d2725cee0cdb1e3b2aa1d5f5e"
+interface-hash: "eb63b2e19c898935ec937327cd89b86a"

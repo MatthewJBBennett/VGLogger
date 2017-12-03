@@ -276,6 +276,7 @@ SWIFT_CLASS("_TtC8VGLogger8Download")
 SWIFT_CLASS("_TtC8VGLogger22FeedCollectionViewCell")
 @interface FeedCollectionViewCell : UICollectionViewCell
 @property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified gameTitle;
+@property (nonatomic, weak) IBOutlet UILabel * _Null_unspecified gameRating;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
