@@ -20,7 +20,7 @@ class VideoGameDetailedViewController: UIViewController {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var platformLabel: UILabel!
     @IBOutlet weak var esrbLabel: UILabel!
-   // @IBOutlet weak var videoView: UIWebView!
+    @IBOutlet weak var addButton: UIButton!
     
     var urlToShare: String = ""
     
