@@ -9,7 +9,6 @@
 import UIKit
 
 class FeedCollectionViewCell: UICollectionViewCell {
-    //@IBOutlet weak var gameTitle: UILabel!
-    //@IBOutlet weak var gameRating: UILabel!
-
+    @IBOutlet weak var gameTitle: UILabel!
+    @IBOutlet weak var gameRating: UILabel!
 }

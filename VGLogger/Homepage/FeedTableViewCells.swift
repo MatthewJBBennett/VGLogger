@@ -11,7 +11,7 @@ import UIKit
 class PopularGameTableViewCell: UITableViewCell
 {
     
- //   @IBOutlet weak var collectionview: UICollectionView!
+    @IBOutlet weak var collectionview: UICollectionView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,9 +28,9 @@ class PopularGameTableViewCell: UITableViewCell
 class NewsTableViewCell: UITableViewCell
 {
     
-//    @IBOutlet weak var articleTitleLabel: UILabel!
-//    @IBOutlet weak var authorLabel: UILabel!
-//    @IBOutlet weak var articleImage: UIImageView!
+    @IBOutlet weak var articleTitleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var articleImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
