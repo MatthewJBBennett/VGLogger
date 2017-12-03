@@ -8,8 +8,10 @@ provides-member:
 provides-dynamic-lookup:
 depends-top-level:
 - "GameRow"
-- "NSObject"
+- "UITableViewCell"
 depends-member:
+- !private ["So15CALayerDelegateP", "init"]
+- ["So15CALayerDelegateP", ""]
 - !private ["s7CVarArgP", "init"]
 - ["s7CVarArgP", ""]
 - !private ["s28CustomDebugStringConvertibleP", "init"]
@@ -22,21 +24,67 @@ depends-member:
 - ["8VGLogger7GameRowC", "init"]
 - !private ["s8HashableP", "init"]
 - ["s8HashableP", ""]
+- !private ["So8NSCodingP", "init"]
+- ["So8NSCodingP", ""]
 - ["So8NSObjectC", "init"]
-- ["So8NSObjectC", ""]
 - !private ["So16NSObjectProtocolP", "init"]
 - ["So16NSObjectProtocolP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So12UIAppearanceP", "init"]
+- ["So12UIAppearanceP", ""]
+- !private ["So21UIAppearanceContainerP", "init"]
+- ["So21UIAppearanceContainerP", ""]
+- !private ["So17UICoordinateSpaceP", "init"]
+- ["So17UICoordinateSpaceP", ""]
+- !private ["So13UIDynamicItemP", "init"]
+- ["So13UIDynamicItemP", ""]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- ["So18UIFocusEnvironmentP", ""]
+- !private ["So11UIFocusItemP", "init"]
+- ["So11UIFocusItemP", ""]
+- !private ["So27UIGestureRecognizerDelegateP", "init"]
+- ["So27UIGestureRecognizerDelegateP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- ["So30UIPasteConfigurationSupportingP", ""]
+- ["So11UIResponderC", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- ["So30UIResponderStandardEditActionsP", ""]
+- ["So15UITableViewCellC", "init"]
+- ["So15UITableViewCellC", ""]
+- !private ["So18UITraitEnvironmentP", "init"]
+- ["So18UITraitEnvironmentP", ""]
+- ["So6UIViewC", "init"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
+- ["s37_DefaultCustomPlaygroundQuickLookableP", ""]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
 depends-nominal:
+- "So15CALayerDelegateP"
 - "s7CVarArgP"
 - "s28CustomDebugStringConvertibleP"
 - "s23CustomStringConvertibleP"
 - "s9EquatableP"
 - "8VGLogger7GameRowC"
 - "s8HashableP"
+- "So8NSCodingP"
 - "So8NSObjectC"
 - "So16NSObjectProtocolP"
+- "So29UIAccessibilityIdentificationP"
+- "So12UIAppearanceP"
+- "So21UIAppearanceContainerP"
+- "So17UICoordinateSpaceP"
+- "So13UIDynamicItemP"
+- "So18UIFocusEnvironmentP"
+- "So11UIFocusItemP"
+- "So27UIGestureRecognizerDelegateP"
+- "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- "So30UIResponderStandardEditActionsP"
+- "So15UITableViewCellC"
+- "So18UITraitEnvironmentP"
+- "So6UIViewC"
+- "s37_DefaultCustomPlaygroundQuickLookableP"
 - "10Foundation27_KeyValueCodingAndObservingP"
 depends-dynamic-lookup:
 depends-external:
@@ -65,4 +113,4 @@ depends-external:
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "c397533efbc02f33601ed17359a2bafa"
+interface-hash: "ee08c7bba96f776b353e795698d7503f"

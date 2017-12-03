@@ -10,9 +10,10 @@ provides-dynamic-lookup:
 depends-top-level:
 - !private "Alamofire"
 - "AnyObject"
+- "AssignmentPrecedence"
 - !private "CastingPrecedence"
 - "Float"
-- "JSON"
+- !private "HTTPMethod"
 - "NSObject"
 - !private "String"
 - "StringLiteralType"
@@ -24,24 +25,25 @@ depends-top-level:
 depends-member:
 - ["s23BidirectionalCollectionP", "init"]
 - !private ["s7CVarArgP", "Alamofire"]
-- ["s7CVarArgP", "JSON"]
+- !private ["s7CVarArgP", "HTTPMethod"]
 - !private ["s7CVarArgP", "URL"]
 - !private ["s7CVarArgP", "URLRequest"]
+- !private ["s7CVarArgP", "apiKey"]
 - ["s7CVarArgP", "init"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "subscript"]
 - ["s7CVarArgP", ""]
 - ["s10CollectionP", "init"]
-- ["s10CollectionP", "null"]
 - !private ["s10CollectionP", "subscript"]
 - ["s10ComparableP", "init"]
-- ["s10ComparableP", "null"]
 - !private ["s28CustomDebugStringConvertibleP", "Alamofire"]
-- ["s28CustomDebugStringConvertibleP", "JSON"]
+- !private ["s28CustomDebugStringConvertibleP", "HTTPMethod"]
 - !private ["s28CustomDebugStringConvertibleP", "URL"]
 - !private ["s28CustomDebugStringConvertibleP", "URLRequest"]
+- !private ["s28CustomDebugStringConvertibleP", "addValue"]
+- !private ["s28CustomDebugStringConvertibleP", "apiKey"]
+- !private ["s28CustomDebugStringConvertibleP", "httpMethod"]
 - ["s28CustomDebugStringConvertibleP", "init"]
-- ["s28CustomDebugStringConvertibleP", "null"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "responseJSON"]
 - !private ["s28CustomDebugStringConvertibleP", "result"]
@@ -49,14 +51,18 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "value"]
 - ["s28CustomDebugStringConvertibleP", ""]
 - ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "addValue"]
+- !private ["s17CustomReflectableP", "httpMethod"]
 - ["s17CustomReflectableP", "init"]
 - !private ["s17CustomReflectableP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "Alamofire"]
-- ["s23CustomStringConvertibleP", "JSON"]
+- !private ["s23CustomStringConvertibleP", "HTTPMethod"]
 - !private ["s23CustomStringConvertibleP", "URL"]
 - !private ["s23CustomStringConvertibleP", "URLRequest"]
+- !private ["s23CustomStringConvertibleP", "addValue"]
+- !private ["s23CustomStringConvertibleP", "apiKey"]
+- !private ["s23CustomStringConvertibleP", "httpMethod"]
 - ["s23CustomStringConvertibleP", "init"]
-- ["s23CustomStringConvertibleP", "null"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "responseJSON"]
 - !private ["s23CustomStringConvertibleP", "result"]
@@ -71,34 +77,35 @@ depends-member:
 - ["s9EncodableP", "init"]
 - !private ["s9EncodableP", "subscript"]
 - !private ["s9EquatableP", "Alamofire"]
-- ["s9EquatableP", "JSON"]
+- !private ["s9EquatableP", "HTTPMethod"]
 - !private ["s9EquatableP", "URL"]
 - !private ["s9EquatableP", "URLRequest"]
+- !private ["s9EquatableP", "addValue"]
+- !private ["s9EquatableP", "apiKey"]
+- !private ["s9EquatableP", "get"]
+- !private ["s9EquatableP", "httpMethod"]
 - ["s9EquatableP", "init"]
-- ["s9EquatableP", "null"]
 - !private ["s9EquatableP", "print"]
+- !private ["s9EquatableP", "rawValue"]
 - ["s9EquatableP", ""]
-- ["s25ExpressibleByArrayLiteralP", "null"]
-- ["s27ExpressibleByBooleanLiteralP", "null"]
-- ["s30ExpressibleByDictionaryLiteralP", "null"]
 - !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
 - ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
-- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "null"]
-- ["s25ExpressibleByFloatLiteralP", "null"]
-- ["s27ExpressibleByIntegerLiteralP", "null"]
-- ["s23ExpressibleByNilLiteralP", "null"]
 - ["s26ExpressibleByStringLiteralP", "init"]
-- ["s26ExpressibleByStringLiteralP", "null"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
-- ["s33ExpressibleByUnicodeScalarLiteralP", "null"]
+- !private ["9Alamofire10HTTPMethodO", "get"]
+- !private ["9Alamofire10HTTPMethodO", "rawValue"]
 - !private ["s8HashableP", "Alamofire"]
-- ["s8HashableP", "JSON"]
+- !private ["s8HashableP", "HTTPMethod"]
 - !private ["s8HashableP", "URL"]
 - !private ["s8HashableP", "URLRequest"]
+- !private ["s8HashableP", "addValue"]
+- !private ["s8HashableP", "apiKey"]
+- !private ["s8HashableP", "get"]
+- !private ["s8HashableP", "httpMethod"]
 - ["s8HashableP", "init"]
 - !private ["s8HashableP", "print"]
+- !private ["s8HashableP", "rawValue"]
 - ["s8HashableP", ""]
-- ["10SwiftyJSON0B0V", "null"]
 - ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
 - ["s25LosslessStringConvertibleP", "init"]
 - ["s10MirrorPathP", "init"]
@@ -110,7 +117,7 @@ depends-member:
 - !private ["So8NSObjectC", "Alamofire"]
 - ["So8NSObjectC", "AnyObject"]
 - ["So8NSObjectC", "Float"]
-- ["So8NSObjectC", "JSON"]
+- !private ["So8NSObjectC", "HTTPMethod"]
 - !private ["So8NSObjectC", "String"]
 - !private ["So8NSObjectC", "URL"]
 - !private ["So8NSObjectC", "URLRequest"]
@@ -119,28 +126,30 @@ depends-member:
 - ["So8NSObjectC", "dataFromServer"]
 - ["So8NSObjectC", "downloadData"]
 - ["So8NSObjectC", "init"]
-- ["So8NSObjectC", "json"]
 - !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "rating"]
 - ["So8NSObjectC", "vgDS"]
 - ["So8NSObjectC", ""]
 - !private ["So16NSObjectProtocolP", "Alamofire"]
-- ["So16NSObjectProtocolP", "JSON"]
+- !private ["So16NSObjectProtocolP", "HTTPMethod"]
 - !private ["So16NSObjectProtocolP", "URL"]
 - !private ["So16NSObjectProtocolP", "URLRequest"]
+- !private ["So16NSObjectProtocolP", "apiKey"]
 - ["So16NSObjectProtocolP", "init"]
 - !private ["So16NSObjectProtocolP", "print"]
 - ["So16NSObjectProtocolP", ""]
 - ["So14NSSecureCodingP", "init"]
 - ["So8NSStringC", "init"]
 - ["s26RangeReplaceableCollectionP", "init"]
-- ["s16RawRepresentableP", "null"]
+- !private ["s16RawRepresentableP", "get"]
+- !private ["s16RawRepresentableP", "rawValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "addValue"]
+- !private ["10Foundation20ReferenceConvertibleP", "httpMethod"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["9Alamofire7RequestC", "responseJSON"]
 - !private ["9Alamofire8ResponseP", "result"]
 - !private ["9Alamofire6ResultO", "value"]
 - ["s8SequenceP", "init"]
-- ["s8SequenceP", "null"]
 - !private ["s8SequenceP", "subscript"]
 - ["SS", "init"]
 - ["s14StringProtocolP", "init"]
@@ -148,7 +157,11 @@ depends-member:
 - ["s20TextOutputStreamableP", "init"]
 - !private ["10Foundation3URLV", "init"]
 - ["9Alamofire14URLConvertibleP", "init"]
+- !private ["10Foundation10URLRequestV", "addValue"]
+- !private ["10Foundation10URLRequestV", "httpMethod"]
 - !private ["10Foundation10URLRequestV", "init"]
+- !private ["9Alamofire21URLRequestConvertibleP", "addValue"]
+- !private ["9Alamofire21URLRequestConvertibleP", "httpMethod"]
 - !private ["9Alamofire21URLRequestConvertibleP", "init"]
 - ["s23_BidirectionalIndexableP", "init"]
 - ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
@@ -159,18 +172,19 @@ depends-member:
 - ["s33_ExpressibleByStringInterpolationP", "init"]
 - ["s35_HasCustomAnyHashableRepresentationP", "init"]
 - ["s10_IndexableP", "init"]
-- ["s10_IndexableP", "null"]
 - !private ["s10_IndexableP", "subscript"]
 - ["s14_IndexableBaseP", "init"]
-- ["s14_IndexableBaseP", "null"]
 - !private ["s14_IndexableBaseP", "subscript"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "Alamofire"]
-- ["10Foundation27_KeyValueCodingAndObservingP", "JSON"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "HTTPMethod"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URLRequest"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "apiKey"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "init"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s21_ObjectiveCBridgeableP", "addValue"]
+- !private ["s21_ObjectiveCBridgeableP", "httpMethod"]
 - ["s21_ObjectiveCBridgeableP", "init"]
 - !private ["s21_ObjectiveCBridgeableP", "subscript"]
 - ["s26_RangeReplaceableIndexableP", "init"]
@@ -178,7 +192,7 @@ depends-member:
 - !private ["8VGLogger11popularGameC", "Alamofire"]
 - ["8VGLogger11popularGameC", "AnyObject"]
 - ["8VGLogger11popularGameC", "Float"]
-- ["8VGLogger11popularGameC", "JSON"]
+- !private ["8VGLogger11popularGameC", "HTTPMethod"]
 - !private ["8VGLogger11popularGameC", "String"]
 - !private ["8VGLogger11popularGameC", "URL"]
 - !private ["8VGLogger11popularGameC", "URLRequest"]
@@ -188,7 +202,6 @@ depends-member:
 - ["8VGLogger11popularGameC", "deinit"]
 - ["8VGLogger11popularGameC", "downloadData"]
 - ["8VGLogger11popularGameC", "init"]
-- ["8VGLogger11popularGameC", "json"]
 - !private ["8VGLogger11popularGameC", "print"]
 - ["8VGLogger11popularGameC", "rating"]
 - ["8VGLogger11popularGameC", "vgDS"]
@@ -207,17 +220,12 @@ depends-nominal:
 - !private "s10DictionaryV"
 - "s9EncodableP"
 - "s9EquatableP"
-- "s25ExpressibleByArrayLiteralP"
-- "s27ExpressibleByBooleanLiteralP"
-- "s30ExpressibleByDictionaryLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
-- "s25ExpressibleByFloatLiteralP"
-- "s27ExpressibleByIntegerLiteralP"
-- "s23ExpressibleByNilLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "9Alamofire10HTTPMethodO"
 - "s8HashableP"
-- "10SwiftyJSON0B0V"
 - "10SwiftyJSON17JSONSubscriptTypeP"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
@@ -231,7 +239,7 @@ depends-nominal:
 - "So14NSSecureCodingP"
 - "So8NSStringC"
 - "s26RangeReplaceableCollectionP"
-- "s16RawRepresentableP"
+- !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
 - !private "9Alamofire7RequestC"
 - !private "9Alamofire8ResponseP"
@@ -287,4 +295,4 @@ depends-external:
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "4a16c6534b0255a3ab60e79069df4484"
+interface-hash: "9c85051c984fdef88617f8edb8094c9a"

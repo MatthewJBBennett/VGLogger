@@ -3,10 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>application-identifier</key>
-	<string>FAKETEAMID.SSU470.VGLogger</string>
+	<string>W7BECS7GGC.SSU470.VGLogger</string>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>FAKETEAMID.SSU470.VGLogger</string>
+		<string>W7BECS7GGC.SSU470.VGLogger</string>
 	</array>
 </dict>
 </plist>

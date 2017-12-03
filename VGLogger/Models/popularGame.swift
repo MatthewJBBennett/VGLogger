@@ -25,8 +25,10 @@ class popularGame: NSObject
     
     //URL for pulse news
     //https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc
+    
+    //news
     func downloadData() {
-        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc") {
+        if let url = URL(string: "https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc") {
             var urlRequest = URLRequest(url: url)
             urlRequest.httpMethod = HTTPMethod.get.rawValue
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
@@ -38,20 +40,9 @@ class popularGame: NSObject
                     //Here we will loop through the array and parse each dictionary
                     for section in allSections
                     {
-                        if let name = section["name"] as? String, let cover = section["cover"] as? [String : Any], let imageUrl = cover["url"] as? String
-                            //let rating = section["total_rating"] as? Float
-                        //guard let rating = section["total_rating"] as? String else{return}
+                        if let author = section["author"] as? String, let image = section["image"] as? String, let title = section["title"] as? String, let url = section["url"] as? String
                         {
-                            //let rating = section["total_rating"] as? Float
-                            //let outrating = Int(rating.rounded())   //Round the float rating up or down, then convert to int for output
-//                            for i in 0..<imageUrl.count
-//                            {
-//                                if imageUrl[i].contains("https")
-//                                {
-//
-//                                }
-//                            }
-                            print(name)
+                            print(url)
                         }
                     }
                 }
@@ -59,8 +50,37 @@ class popularGame: NSObject
         }
     }
     
-//    func getName() -> String
-//    {
-//        return name!
+    //popular games
+//    func downloadData() {
+//        if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc") {
+//            var urlRequest = URLRequest(url: url)
+//            urlRequest.httpMethod = HTTPMethod.get.rawValue
+//            urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
+//            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+//
+//            Alamofire.request(urlRequest).responseJSON {response in print(response)
+//                if let allSections = response.result.value as? [[String : Any]]
+//                {
+//                    //Here we will loop through the array and parse each dictionary
+//                    for section in allSections
+//                    {
+//                        if let name = section["name"] as? String, let cover = section["cover"] as? [String : Any], let imageUrl = cover["url"] as? String
+//                            //let rating = section["total_rating"] as? Float
+//                        //guard let rating = section["total_rating"] as? String else{return}
+//                        {
+//                            //let rating = section["total_rating"] as? Float
+//                            //let outrating = Int(rating.rounded())   //Round the float rating up or down, then convert to int for output
+////                            for i in 0..<imageUrl.count
+////                            {
+////                                if imageUrl[i].contains("https")
+////                                {
+////
+////                                }
+////                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
 //    }
 }

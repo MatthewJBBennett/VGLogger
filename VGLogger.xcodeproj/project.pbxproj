@@ -29,8 +29,8 @@
 		34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */; };
 		34A387A51FB7C6A3006C4434 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */; };
 		3FDC9EAE1FCF77820042DD04 /* popularGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC9EAD1FCF77820042DD04 /* popularGame.swift */; };
-		3FEDDA6C1FD2613900533315 /* GameRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDDA6B1FD2613900533315 /* GameRow.swift */; };
-		3FF0767F1FBD45FA00924CF6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0767E1FBD45FA00924CF6 /* FeedCell.swift */; };
+		3FF0767F1FBD45FA00924CF6 /* FeedTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0767E1FBD45FA00924CF6 /* FeedTableViewCells.swift */; };
+		3FF324421FD3AD9200CBBA2E /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF324411FD3AD9200CBBA2E /* FeedCollectionViewCell.swift */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,8 +82,8 @@
 		34A387A31FB79557006C4434 /* BarCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeTableViewCell.swift; sourceTree = "<group>"; };
 		34A387A61FB7C6A3006C4434 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FDC9EAD1FCF77820042DD04 /* popularGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popularGame.swift; sourceTree = "<group>"; };
-		3FEDDA6B1FD2613900533315 /* GameRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRow.swift; sourceTree = "<group>"; };
-		3FF0767E1FBD45FA00924CF6 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		3FF0767E1FBD45FA00924CF6 /* FeedTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCells.swift; sourceTree = "<group>"; };
+		3FF324411FD3AD9200CBBA2E /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,8 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				34A387541FABC434006C4434 /* FeedViewController.swift */,
-				3FF0767E1FBD45FA00924CF6 /* FeedCell.swift */,
-				3FEDDA6B1FD2613900533315 /* GameRow.swift */,
+				3FF0767E1FBD45FA00924CF6 /* FeedTableViewCells.swift */,
+				3FF324411FD3AD9200CBBA2E /* FeedCollectionViewCell.swift */,
 			);
 			path = Homepage;
 			sourceTree = "<group>";
@@ -430,10 +430,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				34A3878B1FAE68CA006C4434 /* SearchTableViewController.swift in Sources */,
+				3FF324421FD3AD9200CBBA2E /* FeedCollectionViewCell.swift in Sources */,
 				34A387A01FB784C4006C4434 /* BarCodeDataSource.swift in Sources */,
 				34A387531FABC434006C4434 /* AppDelegate.swift in Sources */,
 				34A387831FABC5FE006C4434 /* ThirdViewController.swift in Sources */,
-				3FEDDA6C1FD2613900533315 /* GameRow.swift in Sources */,
 				34A387961FAFE654006C4434 /* VideoGameTableViewCell.swift in Sources */,
 				34A387941FAE8230006C4434 /* VideoGame.swift in Sources */,
 				34A387A21FB78532006C4434 /* BarCode.swift in Sources */,
@@ -441,7 +441,7 @@
 				34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */,
 				3FDC9EAE1FCF77820042DD04 /* popularGame.swift in Sources */,
 				34A387551FABC434006C4434 /* FeedViewController.swift in Sources */,
-				3FF0767F1FBD45FA00924CF6 /* FeedCell.swift in Sources */,
+				3FF0767F1FBD45FA00924CF6 /* FeedTableViewCells.swift in Sources */,
 				34A387871FABCE7D006C4434 /* Download.swift in Sources */,
 				34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */,
 				34A387991FB3BA91006C4434 /* BarCodeViewController.swift in Sources */,
