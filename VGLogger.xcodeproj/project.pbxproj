@@ -35,6 +35,10 @@
 		3F17CF871FCF5A27004F52FD /* WishlistObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17CF861FCF5A27004F52FD /* WishlistObject.swift */; };
 		3F17CF8B1FCF926C004F52FD /* WishlistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F17CF8A1FCF926C004F52FD /* WishlistTableViewCell.swift */; };
 		3F1ED1471FCCD8D300F0AA96 /* WishlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */; };
+		3FAD60491FD4B00E00A7DD2F /* FeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD60481FD4B00E00A7DD2F /* FeedCollectionViewCell.swift */; };
+		3FAD604B1FD4B04600A7DD2F /* FeedTableViewCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD604A1FD4B04600A7DD2F /* FeedTableViewCells.swift */; };
+		3FAD604D1FD4B09900A7DD2F /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD604C1FD4B09900A7DD2F /* FeedViewController.swift */; };
+		3FAD604F1FD4B0D700A7DD2F /* popularGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAD604E1FD4B0D700A7DD2F /* popularGame.swift */; };
 		3FDB6A101FD49538009CACCB /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FDB6A111FD49538009CACCB /* SQLite.framework */; };
 		FB3527808A6FFAC61C4D0906 /* Pods_VGLogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +97,10 @@
 		3F17CF861FCF5A27004F52FD /* WishlistObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistObject.swift; sourceTree = "<group>"; };
 		3F17CF8A1FCF926C004F52FD /* WishlistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewCell.swift; sourceTree = "<group>"; };
 		3F1ED1461FCCD8D300F0AA96 /* WishlistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistTableViewController.swift; sourceTree = "<group>"; };
+		3FAD60481FD4B00E00A7DD2F /* FeedCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FAD604A1FD4B04600A7DD2F /* FeedTableViewCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCells.swift; sourceTree = "<group>"; };
+		3FAD604C1FD4B09900A7DD2F /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		3FAD604E1FD4B0D700A7DD2F /* popularGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popularGame.swift; sourceTree = "<group>"; };
 		3FDB6A111FD49538009CACCB /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F50A7E3B799BFC08BBA970F /* Pods-VGLogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.debug.xcconfig"; sourceTree = "<group>"; };
 		B70DC86215462DE4FD1ED4B3 /* Pods-VGLogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VGLogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-VGLogger/Pods-VGLogger.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 		34A387511FABC434006C4434 /* VGLogger */ = {
 			isa = PBXGroup;
 			children = (
+				3FAD60431FD4AEE600A7DD2F /* Homepage */,
 				3F1ED1451FCCD8BF00F0AA96 /* Wishlist */,
 				34A387521FABC434006C4434 /* AppDelegate.swift */,
 				34A387971FB3B957006C4434 /* Search */,
@@ -194,6 +203,7 @@
 				34A387931FAE8230006C4434 /* VideoGame.swift */,
 				34A387A11FB78532006C4434 /* BarCode.swift */,
 				34A3879F1FB784C4006C4434 /* BarCodeDataSource.swift */,
+				3FAD604E1FD4B0D700A7DD2F /* popularGame.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -229,6 +239,16 @@
 				3F17CF8A1FCF926C004F52FD /* WishlistTableViewCell.swift */,
 			);
 			path = Wishlist;
+			sourceTree = "<group>";
+		};
+		3FAD60431FD4AEE600A7DD2F /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				3FAD60481FD4B00E00A7DD2F /* FeedCollectionViewCell.swift */,
+				3FAD604A1FD4B04600A7DD2F /* FeedTableViewCells.swift */,
+				3FAD604C1FD4B09900A7DD2F /* FeedViewController.swift */,
+			);
+			path = Homepage;
 			sourceTree = "<group>";
 		};
 		97C8C36D533886E93EDD26B3 /* Frameworks */ = {
@@ -453,13 +473,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAD604D1FD4B09900A7DD2F /* FeedViewController.swift in Sources */,
 				3F17CF8B1FCF926C004F52FD /* WishlistTableViewCell.swift in Sources */,
 				34A3878B1FAE68CA006C4434 /* SearchTableViewController.swift in Sources */,
 				3F14FDE81FCCE7F100B51742 /* WishlistDatabase.swift in Sources */,
 				34A387B11FBCE19D006C4434 /* FilterSideBarTableViewController.swift in Sources */,
 				34A387A01FB784C4006C4434 /* BarCodeDataSource.swift in Sources */,
+				3FAD60491FD4B00E00A7DD2F /* FeedCollectionViewCell.swift in Sources */,
 				34A387531FABC434006C4434 /* AppDelegate.swift in Sources */,
 				34A387831FABC5FE006C4434 /* ThirdViewController.swift in Sources */,
+				3FAD604F1FD4B0D700A7DD2F /* popularGame.swift in Sources */,
 				34A387961FAFE654006C4434 /* VideoGameTableViewCell.swift in Sources */,
 				34A387941FAE8230006C4434 /* VideoGame.swift in Sources */,
 				34A387A21FB78532006C4434 /* BarCode.swift in Sources */,
@@ -470,6 +493,7 @@
 				34A387C11FBD5442006C4434 /* FilterSideBarTableViewCell.swift in Sources */,
 				34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */,
 				3F17CF871FCF5A27004F52FD /* WishlistObject.swift in Sources */,
+				3FAD604B1FD4B04600A7DD2F /* FeedTableViewCells.swift in Sources */,
 				34A387991FB3BA91006C4434 /* BarCodeViewController.swift in Sources */,
 				34A3879E1FB77B08006C4434 /* BarCodeTableViewController.swift in Sources */,
 			);
