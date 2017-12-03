@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		34A387531FABC434006C4434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387521FABC434006C4434 /* AppDelegate.swift */; };
-		34A387551FABC434006C4434 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34A387541FABC434006C4434 /* FeedTableViewController.swift */; };
 		34A3875A1FABC434006C4434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A387581FABC434006C4434 /* Main.storyboard */; };
 		34A3875C1FABC434006C4434 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34A3875B1FABC434006C4434 /* Assets.xcassets */; };
 		34A3875F1FABC434006C4434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34A3875D1FABC434006C4434 /* LaunchScreen.storyboard */; };
@@ -61,7 +60,6 @@
 		2F8B48F1A59F0D328577750C /* Pods_VGLogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VGLogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A3874F1FABC434006C4434 /* VGLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VGLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34A387521FABC434006C4434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		34A387541FABC434006C4434 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		34A387591FABC434006C4434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		34A3875B1FABC434006C4434 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		34A3875E1FABC434006C4434 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 			children = (
 				3F1ED1451FCCD8BF00F0AA96 /* Wishlist */,
 				34A387521FABC434006C4434 /* AppDelegate.swift */,
-				34A387541FABC434006C4434 /* FeedTableViewController.swift */,
 				34A387971FB3B957006C4434 /* Search */,
 				34A3879C1FB77AD9006C4434 /* Scanner */,
 				34A387821FABC5FE006C4434 /* ThirdViewController.swift */,
@@ -469,7 +466,6 @@
 				3F1ED1471FCCD8D300F0AA96 /* WishlistTableViewController.swift in Sources */,
 				34A3878F1FAE74D6006C4434 /* VideoGameDetailedViewController.swift in Sources */,
 				34A387A41FB79557006C4434 /* BarCodeTableViewCell.swift in Sources */,
-				34A387551FABC434006C4434 /* FeedTableViewController.swift in Sources */,
 				34A387871FABCE7D006C4434 /* Download.swift in Sources */,
 				34A387C11FBD5442006C4434 /* FilterSideBarTableViewCell.swift in Sources */,
 				34A387911FAE7FD0006C4434 /* VideoGameDataSource.swift in Sources */,
