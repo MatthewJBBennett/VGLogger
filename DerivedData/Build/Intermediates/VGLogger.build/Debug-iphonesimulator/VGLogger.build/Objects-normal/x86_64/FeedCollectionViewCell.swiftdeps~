@@ -6,6 +6,7 @@ provides-nominal:
 provides-member:
 - ["8VGLogger22FeedCollectionViewCellC", ""]
 provides-dynamic-lookup:
+- "gameRating"
 - "gameTitle"
 depends-top-level:
 - "FeedCollectionViewCell"
@@ -24,6 +25,7 @@ depends-member:
 - ["s9EquatableP", ""]
 - ["8VGLogger22FeedCollectionViewCellC", "UILabel"]
 - ["8VGLogger22FeedCollectionViewCellC", "deinit"]
+- ["8VGLogger22FeedCollectionViewCellC", "gameRating"]
 - ["8VGLogger22FeedCollectionViewCellC", "gameTitle"]
 - ["8VGLogger22FeedCollectionViewCellC", "init"]
 - !private ["s8HashableP", "init"]
@@ -31,6 +33,7 @@ depends-member:
 - !private ["So8NSCodingP", "init"]
 - ["So8NSCodingP", ""]
 - ["So8NSObjectC", "UILabel"]
+- ["So8NSObjectC", "gameRating"]
 - ["So8NSObjectC", "gameTitle"]
 - ["So8NSObjectC", "init"]
 - !private ["So16NSObjectProtocolP", "init"]
@@ -42,9 +45,11 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "init"]
 - ["So21UIAppearanceContainerP", ""]
 - ["So24UICollectionReusableViewC", "UILabel"]
+- ["So24UICollectionReusableViewC", "gameRating"]
 - ["So24UICollectionReusableViewC", "gameTitle"]
 - ["So24UICollectionReusableViewC", "init"]
 - ["So20UICollectionViewCellC", "UILabel"]
+- ["So20UICollectionViewCellC", "gameRating"]
 - ["So20UICollectionViewCellC", "gameTitle"]
 - ["So20UICollectionViewCellC", "init"]
 - ["So20UICollectionViewCellC", ""]
@@ -59,6 +64,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "init"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - ["So11UIResponderC", "UILabel"]
+- ["So11UIResponderC", "gameRating"]
 - ["So11UIResponderC", "gameTitle"]
 - ["So11UIResponderC", "init"]
 - !private ["So30UIResponderStandardEditActionsP", "init"]
@@ -66,6 +72,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "init"]
 - ["So18UITraitEnvironmentP", ""]
 - ["So6UIViewC", "UILabel"]
+- ["So6UIViewC", "gameRating"]
 - ["So6UIViewC", "gameTitle"]
 - ["So6UIViewC", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
@@ -126,4 +133,4 @@ depends-external:
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
 - "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
-interface-hash: "eb63b2e19c898935ec937327cd89b86a"
+interface-hash: "9918595697f8d1f016bf68570de7c8a1"

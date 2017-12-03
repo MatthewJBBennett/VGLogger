@@ -1,6 +1,6 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "71538d63d726cec0d8050e85ceb66389"
-build_time: [1512332590, 709840000]
+build_time: [1512332628, 400490000]
 inputs:
   "/Users/student/VGLogger/VGLogger/Search/SearchTableViewController.swift": [1512330240, 0]
   "/Users/student/VGLogger/VGLogger/Homepage/FeedCollectionViewCell.swift": [1512330385, 0]
@@ -13,7 +13,7 @@ inputs:
   "/Users/student/VGLogger/VGLogger/Search/VideoGameDetailedViewController.swift": [1512330240, 0]
   "/Users/student/VGLogger/VGLogger/Scanner/BarCodeTableViewCell.swift": [1512330240, 0]
   "/Users/student/VGLogger/VGLogger/Models/popularGame.swift": [1512330240, 0]
-  "/Users/student/VGLogger/VGLogger/Homepage/FeedViewController.swift": [1512332590, 0]
+  "/Users/student/VGLogger/VGLogger/Homepage/FeedViewController.swift": [1512332628, 0]
   "/Users/student/VGLogger/VGLogger/Homepage/FeedTableViewCells.swift": [1512330240, 0]
   "/Users/student/VGLogger/VGLogger/Download.swift": [1512330240, 0]
   "/Users/student/VGLogger/VGLogger/Models/VideoGameDataSource.swift": [1512330240, 0]
