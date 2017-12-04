@@ -15,7 +15,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var vg: VideoGame?
     //var pg: popularGame?
     var pg = popularGame()
-    let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
+    let apiKey = "8ea2aa61804af17b2028af0a36637232"
     //Popular Game
     var outputGameName = [String]()
     var outputRating = [String]()

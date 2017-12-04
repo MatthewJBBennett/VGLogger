@@ -14,7 +14,7 @@ class WishlistTableViewController: UITableViewController{
     
     @IBOutlet var wishlistView: UITableView!
     var wishlistDS: VideoGameDataSource?
-    let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
+    let apiKey = "8ea2aa61804af17b2028af0a36637232"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +114,6 @@ class WishlistTableViewController: UITableViewController{
             Alamofire.request(urlRequest).responseJSON { response in
                 if let JSON = response.result.value as? [AnyObject]  {
                     self.wishlistDS = VideoGameDataSource(dataSource: JSON)
-                    self.tableView.reloadData()
                 }
             }
         }
