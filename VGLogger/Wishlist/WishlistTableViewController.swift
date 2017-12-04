@@ -21,6 +21,7 @@ class WishlistTableViewController: UITableViewController{
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.title = "Wishlist"
     }
    
     override func viewDidAppear(_ animated: Bool) {

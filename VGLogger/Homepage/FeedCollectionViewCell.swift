@@ -8,7 +8,15 @@
 
 import UIKit
 
-class FeedCollectionViewCell: UICollectionViewCell {
+class FeedCollectionViewCell: UICollectionViewCell
+{
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var gameRating: UILabel!
+    @IBOutlet weak var gameImage: UIImageView!
+    
+//    override func viewDidLoad()
+//    {
+//        super.viewDidLoad()
+//        self.gameTitle.adjustsFontSizeToWidth = true        
+//    }
 }

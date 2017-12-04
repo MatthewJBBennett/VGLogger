@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>VGLogger</string>
+	<string>Alamofire</string>
+	<string>SQLCipher</string>
+	<string>Dispatch</string>
+	<string>SwiftyJSON</string>
+	<string>CoreServices</string>
+	<string>AVFoundation</string>
+	<string>SQLite3</string>
+	<string>SQLite</string>
+	<string>sqlite3</string>
+	<string>SQLiteObjc</string>
+	<string>XCTest</string>
+	<string>MobileCoreServices</string>
+	<string>SafariServices</string>
+	<string>CSQLite</string>
+	<string>UIKit</string>
+	<string>Foundation</string>
+	<string>SystemConfiguration</string>
+	<string>Hex</string>
+</array>
+</plist>
