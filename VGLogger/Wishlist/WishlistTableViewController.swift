@@ -9,6 +9,7 @@
 import UIKit
 import SQLite
 import Alamofire
+import Hex
 
 class WishlistTableViewController: UITableViewController{
     
@@ -18,6 +19,9 @@ class WishlistTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Wishlist"
+        self.tableView.backgroundColor = UIColor(hex: "#C0C5CD") // gray
+
         //wishlistView.register(UITableViewCell.self, forCellReuseIdentifier: "wishlistCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,16 +55,16 @@ class WishlistTableViewController: UITableViewController{
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WishlistCell", for: indexPath)
+        cell.backgroundColor = UIColor(hex: "#C0C5CD")
+
         let gameTitles = WishlistObject.wishlistDB.getTitleArray()
         let gameCovers = WishlistObject.wishlistDB.getCoverArray()
-        let gameIDs = WishlistObject.wishlistDB.getIDArray()
         
         let theCell = cell as? WishlistTableViewCell
         
         let wishlistTitle = gameTitles[indexPath.row]
         let wishlistCover = gameCovers[indexPath.row]
-        let wishlistID = gameIDs[indexPath.row]
-        apiCall(videoGameID: wishlistID)
+        
         theCell?.setWishlistCell(wishlistTitle, coverURL: wishlistCover)
         return cell
     }
@@ -111,24 +115,37 @@ class WishlistTableViewController: UITableViewController{
             urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
             urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
             
+
             Alamofire.request(urlRequest).responseJSON { response in
                 if let JSON = response.result.value as? [AnyObject]  {
                     self.wishlistDS = VideoGameDataSource(dataSource: JSON)
+                    self.tableView.reloadData()
                 }
+                print(response)
             }
         }
     }
 
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier ==  "ShowVideoGameDetails"{
+        
+        if segue.identifier ==  "WishlistDetailSegue"{
             let cell = sender as! WishlistTableViewCell
             if let indexPath = tableView.indexPath(for: cell), let ds = wishlistDS {
                 let detailedVC = segue.destination as! VideoGameDetailedViewController
-                detailedVC.videoGameForThisView(ds.videoGameAt(indexPath.row))
+                let gameIDs = WishlistObject.wishlistDB.getIDArray()
+                let wishlistID = gameIDs[indexPath.row ]
+                apiCall(videoGameID: wishlistID)
+                detailedVC.videoGameForThisView(ds.videoGameAt(1))
+                let backItem = UIBarButtonItem()
+                backItem.title = "Search"
+                backItem.tintColor = UIColor(hex: "#ffffff")
+                navigationItem.backBarButtonItem = backItem
             }
         }
     }
+ */
 
 }
