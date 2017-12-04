@@ -17,7 +17,7 @@ class WishlistDatabase: NSObject {
     let id = Expression<Int>("id")
     let title = Expression<String>("title")
     let coverURL = Expression<String?>("cover")
-     
+    
     let path = NSSearchPathForDirectoriesInDomains(
         .documentDirectory, .userDomainMask, true
         ).first!

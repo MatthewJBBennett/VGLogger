@@ -15,7 +15,7 @@ class WishlistTableViewController: UITableViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //wishlistView.register(UITableViewCell.self, forCellReuseIdentifier: "wishlistCell")
+        //wishlistView.register(UITableViewCell.self, forCellReuseIdentifier: "wishlistCell")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -95,14 +95,19 @@ class WishlistTableViewController: UITableViewController{
     }
     */
 
-    /*
     // MARK: - Navigation
 
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ShowVideoGameDetails"{
+            let cell = sender as! WishlistTableViewCell
+            if let indexPath = tableView.indexPath(for: cell){
+                let detailedVC = segue.destination as! VideoGameDetailedViewController
+                detailedVC.videoGameForThisView(VideoGame)
+            }
+        }
     }
-    */
+     */
 
 }
