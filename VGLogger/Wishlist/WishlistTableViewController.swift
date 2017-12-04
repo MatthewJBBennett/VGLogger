@@ -8,10 +8,13 @@
 
 import UIKit
 import SQLite
+import Alamofire
 
 class WishlistTableViewController: UITableViewController{
     
     @IBOutlet var wishlistView: UITableView!
+    var wishlistDS: VideoGameDataSource?
+    let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +53,14 @@ class WishlistTableViewController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "WishlistCell", for: indexPath)
         let gameTitles = WishlistObject.wishlistDB.getTitleArray()
         let gameCovers = WishlistObject.wishlistDB.getCoverArray()
+        let gameIDs = WishlistObject.wishlistDB.getIDArray()
         
         let theCell = cell as? WishlistTableViewCell
+        
         let wishlistTitle = gameTitles[indexPath.row]
         let wishlistCover = gameCovers[indexPath.row]
+        let wishlistID = gameIDs[indexPath.row]
+        apiCall(videoGameID: wishlistID)
         theCell?.setWishlistCell(wishlistTitle, coverURL: wishlistCover)
         return cell
     }
@@ -96,18 +103,33 @@ class WishlistTableViewController: UITableViewController{
     */
 
     // MARK: - Navigation
-
-    /*
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowVideoGameDetails"{
-            let cell = sender as! WishlistTableViewCell
-            if let indexPath = tableView.indexPath(for: cell){
-                let detailedVC = segue.destination as! VideoGameDetailedViewController
-                detailedVC.videoGameForThisView(VideoGame)
+    
+    func apiCall(videoGameID: Int ) {
+        if let url = URL(string: "https://api-2445582011268.apicast.io/games/\(videoGameID)?fields=*"){
+            var urlRequest = URLRequest(url: url)
+            urlRequest.httpMethod = HTTPMethod.get.rawValue
+            urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
+            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+            
+            Alamofire.request(urlRequest).responseJSON { response in
+                if let JSON = response.result.value as? [AnyObject]  {
+                    self.wishlistDS = VideoGameDataSource(dataSource: JSON)
+                    self.tableView.reloadData()
+                }
             }
         }
     }
-     */
+
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  "ShowVideoGameDetails"{
+            let cell = sender as! WishlistTableViewCell
+            if let indexPath = tableView.indexPath(for: cell), let ds = wishlistDS {
+                let detailedVC = segue.destination as! VideoGameDetailedViewController
+                detailedVC.videoGameForThisView(ds.videoGameAt(indexPath.row))
+            }
+        }
+    }
 
 }
