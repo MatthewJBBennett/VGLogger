@@ -26,6 +26,7 @@ depends-top-level:
 - !private "print"
 depends-member:
 - !private ["s23BidirectionalCollectionP", "init"]
+- !private ["6SQLite7BindingP", "init"]
 - !private ["So15CALayerDelegateP", "Data"]
 - !private ["So15CALayerDelegateP", "UIImage"]
 - !private ["So15CALayerDelegateP", "URL"]
@@ -93,6 +94,7 @@ depends-member:
 - !private ["s9EquatableP", "setSelected"]
 - !private ["s9EquatableP", "text"]
 - ["s9EquatableP", ""]
+- !private ["6SQLite11ExpressibleP", "init"]
 - !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
 - !private ["s26ExpressibleByStringLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
@@ -108,6 +110,7 @@ depends-member:
 - !private ["s8HashableP", "setSelected"]
 - !private ["s8HashableP", "text"]
 - ["s8HashableP", ""]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
 - !private ["s25LosslessStringConvertibleP", "init"]
 - !private ["s10MirrorPathP", "init"]
 - !private ["s17MutableCollectionP", "init"]
@@ -349,6 +352,8 @@ depends-member:
 - ["So6UIViewC", "setWishlistCell"]
 - !private ["So6UIViewC", "text"]
 - !private ["10Foundation3URLV", "init"]
+- !private ["9Alamofire14URLConvertibleP", "init"]
+- !private ["6SQLite5ValueP", "init"]
 - ["8VGLogger21WishlistTableViewCellC", "Bool"]
 - !private ["8VGLogger21WishlistTableViewCellC", "Data"]
 - ["8VGLogger21WishlistTableViewCellC", "String"]
@@ -406,6 +411,7 @@ depends-member:
 - !private ["s16_SwiftStringViewP", "init"]
 depends-nominal:
 - !private "s23BidirectionalCollectionP"
+- !private "6SQLite7BindingP"
 - "So15CALayerDelegateP"
 - "s7CVarArgP"
 - !private "s10CollectionP"
@@ -418,10 +424,12 @@ depends-nominal:
 - !private "s9DecodableP"
 - !private "s9EncodableP"
 - "s9EquatableP"
+- !private "6SQLite11ExpressibleP"
 - !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - !private "s26ExpressibleByStringLiteralP"
 - !private "s33ExpressibleByUnicodeScalarLiteralP"
 - "s8HashableP"
+- !private "10SwiftyJSON17JSONSubscriptTypeP"
 - !private "s25LosslessStringConvertibleP"
 - !private "s10MirrorPathP"
 - !private "s17MutableCollectionP"
@@ -463,6 +471,8 @@ depends-nominal:
 - "So18UITraitEnvironmentP"
 - "So6UIViewC"
 - !private "10Foundation3URLV"
+- !private "9Alamofire14URLConvertibleP"
+- !private "6SQLite5ValueP"
 - "8VGLogger21WishlistTableViewCellC"
 - !private "s23_BidirectionalIndexableP"
 - "s37_DefaultCustomPlaygroundQuickLookableP"
@@ -505,6 +515,21 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite.swift-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite-Bridging.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"

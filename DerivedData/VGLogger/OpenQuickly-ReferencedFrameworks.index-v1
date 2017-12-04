@@ -5,15 +5,15 @@
 	<string>VGLogger</string>
 	<string>Alamofire</string>
 	<string>SQLCipher</string>
-	<string>SwiftyJSON</string>
 	<string>Dispatch</string>
+	<string>SwiftyJSON</string>
 	<string>CoreServices</string>
 	<string>AVFoundation</string>
 	<string>SQLite3</string>
 	<string>SQLite</string>
-	<string>XCTest</string>
 	<string>sqlite3</string>
 	<string>SQLiteObjc</string>
+	<string>XCTest</string>
 	<string>MobileCoreServices</string>
 	<string>SafariServices</string>
 	<string>CSQLite</string>

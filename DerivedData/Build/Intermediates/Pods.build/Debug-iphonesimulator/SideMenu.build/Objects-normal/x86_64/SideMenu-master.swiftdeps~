@@ -1,0 +1,8 @@
+version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
+options: "acc6eeac1ef32201f19bb6554a3d373b"
+build_time: [1512344373, 110941000]
+inputs:
+  "/Users/student/VGLogger/Pods/SideMenu/Pod/Classes/SideMenuManager.swift": [1512344000, 0]
+  "/Users/student/VGLogger/Pods/SideMenu/Pod/Classes/SideMenuTransition.swift": [1512344000, 0]
+  "/Users/student/VGLogger/Pods/SideMenu/Pod/Classes/UISideMenuNavigationController.swift": [1512344000, 0]
+  "/Users/student/VGLogger/Pods/SideMenu/Pod/Classes/UITableViewVibrantCell.swift": [1512344000, 0]

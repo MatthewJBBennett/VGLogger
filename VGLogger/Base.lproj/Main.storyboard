@@ -656,6 +656,7 @@
                     <connections>
                         <outlet property="newsTable" destination="COP-lZ-pww" id="FbJ-lX-tHc"/>
                         <outlet property="popularGameTable" destination="WNY-mj-EEm" id="EVJ-hi-hc7"/>
+                        <segue destination="Agp-yC-hPc" kind="show" identifier="VGDVSegue" id="Nph-Tx-MGi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCy-tJ-o2O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -670,6 +671,7 @@
         <image name="icons8-wish-list (1)" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Nph-Tx-MGi"/>
         <segue reference="SIV-0z-dXK"/>
     </inferredMetricsTieBreakers>
 </document>

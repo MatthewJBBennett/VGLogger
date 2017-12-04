@@ -25,6 +25,7 @@ depends-top-level:
 - !private ">"
 - !private "??"
 - !private "Alamofire"
+- !private "AnyObject"
 - !private "Array"
 - "AssignmentPrecedence"
 - "Bool"
@@ -73,6 +74,12 @@ depends-member:
 - !private ["s23BidirectionalCollectionP", "remove"]
 - !private ["s23BidirectionalCollectionP", "row"]
 - !private ["s23BidirectionalCollectionP", "subscript"]
+- !private ["6SQLite7BindingP", "_getBuiltinLogicValue"]
+- !private ["6SQLite7BindingP", "addingPercentEncoding"]
+- !private ["6SQLite7BindingP", "endIndex"]
+- !private ["6SQLite7BindingP", "index"]
+- ["6SQLite7BindingP", "init"]
+- !private ["6SQLite7BindingP", "remove"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["So15CALayerDelegateP", "activityIndicatorViewStyle"]
 - !private ["So15CALayerDelegateP", "addSubview"]
@@ -88,6 +95,7 @@ depends-member:
 - !private ["So15CALayerDelegateP", "indexPath"]
 - ["So15CALayerDelegateP", "init"]
 - !private ["So15CALayerDelegateP", "placeholder"]
+- !private ["So15CALayerDelegateP", "reloadData"]
 - !private ["So15CALayerDelegateP", "separatorStyle"]
 - !private ["So15CALayerDelegateP", "showsCancelButton"]
 - !private ["So15CALayerDelegateP", "startAnimating"]
@@ -115,6 +123,7 @@ depends-member:
 - !private ["s7CVarArgP", "URL"]
 - !private ["s7CVarArgP", "URLRequest"]
 - ["s7CVarArgP", "UserDefaults"]
+- !private ["s7CVarArgP", "VideoGameDataSource"]
 - !private ["s7CVarArgP", "activityIndicator"]
 - !private ["s7CVarArgP", "activityIndicatorViewStyle"]
 - !private ["s7CVarArgP", "addSubview"]
@@ -162,6 +171,7 @@ depends-member:
 - ["s7CVarArgP", "positionForBar"]
 - !private ["s7CVarArgP", "print"]
 - !private ["s7CVarArgP", "ratingParameter"]
+- !private ["s7CVarArgP", "reloadData"]
 - !private ["s7CVarArgP", "remove"]
 - !private ["s7CVarArgP", "resetParameters"]
 - ["s7CVarArgP", "searchBar"]
@@ -179,6 +189,7 @@ depends-member:
 - !private ["s7CVarArgP", "startAnimating"]
 - !private ["s7CVarArgP", "startIndicator"]
 - !private ["s7CVarArgP", "stopAnimating"]
+- !private ["s7CVarArgP", "stopIndicator"]
 - !private ["s7CVarArgP", "subscript"]
 - !private ["s7CVarArgP", "tableView"]
 - !private ["s7CVarArgP", "text"]
@@ -227,6 +238,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "URL"]
 - !private ["s28CustomDebugStringConvertibleP", "URLRequest"]
 - ["s28CustomDebugStringConvertibleP", "UserDefaults"]
+- !private ["s28CustomDebugStringConvertibleP", "VideoGameDataSource"]
 - !private ["s28CustomDebugStringConvertibleP", "activityIndicator"]
 - !private ["s28CustomDebugStringConvertibleP", "activityIndicatorViewStyle"]
 - !private ["s28CustomDebugStringConvertibleP", "addSubview"]
@@ -277,8 +289,11 @@ depends-member:
 - ["s28CustomDebugStringConvertibleP", "positionForBar"]
 - !private ["s28CustomDebugStringConvertibleP", "print"]
 - !private ["s28CustomDebugStringConvertibleP", "ratingParameter"]
+- !private ["s28CustomDebugStringConvertibleP", "reloadData"]
 - !private ["s28CustomDebugStringConvertibleP", "remove"]
 - !private ["s28CustomDebugStringConvertibleP", "resetParameters"]
+- !private ["s28CustomDebugStringConvertibleP", "responseJSON"]
+- !private ["s28CustomDebugStringConvertibleP", "result"]
 - !private ["s28CustomDebugStringConvertibleP", "row"]
 - ["s28CustomDebugStringConvertibleP", "searchBar"]
 - ["s28CustomDebugStringConvertibleP", "searchBarBookmarkButtonClicked"]
@@ -296,6 +311,7 @@ depends-member:
 - !private ["s28CustomDebugStringConvertibleP", "startAnimating"]
 - !private ["s28CustomDebugStringConvertibleP", "startIndicator"]
 - !private ["s28CustomDebugStringConvertibleP", "stopAnimating"]
+- !private ["s28CustomDebugStringConvertibleP", "stopIndicator"]
 - !private ["s28CustomDebugStringConvertibleP", "subscript"]
 - !private ["s28CustomDebugStringConvertibleP", "tableView"]
 - !private ["s28CustomDebugStringConvertibleP", "text"]
@@ -354,6 +370,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "URL"]
 - !private ["s23CustomStringConvertibleP", "URLRequest"]
 - ["s23CustomStringConvertibleP", "UserDefaults"]
+- !private ["s23CustomStringConvertibleP", "VideoGameDataSource"]
 - !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s23CustomStringConvertibleP", "activityIndicator"]
 - !private ["s23CustomStringConvertibleP", "activityIndicatorViewStyle"]
@@ -404,8 +421,11 @@ depends-member:
 - ["s23CustomStringConvertibleP", "positionForBar"]
 - !private ["s23CustomStringConvertibleP", "print"]
 - !private ["s23CustomStringConvertibleP", "ratingParameter"]
+- !private ["s23CustomStringConvertibleP", "reloadData"]
 - !private ["s23CustomStringConvertibleP", "remove"]
 - !private ["s23CustomStringConvertibleP", "resetParameters"]
+- !private ["s23CustomStringConvertibleP", "responseJSON"]
+- !private ["s23CustomStringConvertibleP", "result"]
 - !private ["s23CustomStringConvertibleP", "row"]
 - ["s23CustomStringConvertibleP", "searchBar"]
 - ["s23CustomStringConvertibleP", "searchBarBookmarkButtonClicked"]
@@ -422,6 +442,7 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "startAnimating"]
 - !private ["s23CustomStringConvertibleP", "startIndicator"]
 - !private ["s23CustomStringConvertibleP", "stopAnimating"]
+- !private ["s23CustomStringConvertibleP", "stopIndicator"]
 - !private ["s23CustomStringConvertibleP", "subscript"]
 - !private ["s23CustomStringConvertibleP", "tableView"]
 - !private ["s23CustomStringConvertibleP", "text"]
@@ -440,6 +461,8 @@ depends-member:
 - !private ["s23CustomStringConvertibleP", "view"]
 - !private ["s23CustomStringConvertibleP", "viewDidLoad"]
 - ["s23CustomStringConvertibleP", ""]
+- !private ["9Alamofire11DataRequestC", "responseJSON"]
+- !private ["9Alamofire12DataResponseV", "result"]
 - !private ["s9DecodableP", "_getBuiltinLogicValue"]
 - !private ["s9DecodableP", "addingPercentEncoding"]
 - !private ["s9DecodableP", "append"]
@@ -481,6 +504,7 @@ depends-member:
 - !private ["s9EquatableP", "URL"]
 - !private ["s9EquatableP", "URLRequest"]
 - ["s9EquatableP", "UserDefaults"]
+- !private ["s9EquatableP", "VideoGameDataSource"]
 - !private ["s9EquatableP", "_getBuiltinLogicValue"]
 - !private ["s9EquatableP", "activityIndicator"]
 - !private ["s9EquatableP", "activityIndicatorViewStyle"]
@@ -512,6 +536,7 @@ depends-member:
 - !private ["s9EquatableP", "esrbParameter"]
 - !private ["s9EquatableP", "genresOptions"]
 - !private ["s9EquatableP", "genresParameter"]
+- !private ["s9EquatableP", "get"]
 - !private ["s9EquatableP", "height"]
 - !private ["s9EquatableP", "hidesWhenStopped"]
 - !private ["s9EquatableP", "httpMethod"]
@@ -531,6 +556,8 @@ depends-member:
 - ["s9EquatableP", "positionForBar"]
 - !private ["s9EquatableP", "print"]
 - !private ["s9EquatableP", "ratingParameter"]
+- !private ["s9EquatableP", "rawValue"]
+- !private ["s9EquatableP", "reloadData"]
 - !private ["s9EquatableP", "remove"]
 - !private ["s9EquatableP", "resetParameters"]
 - !private ["s9EquatableP", "row"]
@@ -550,6 +577,7 @@ depends-member:
 - !private ["s9EquatableP", "startAnimating"]
 - !private ["s9EquatableP", "startIndicator"]
 - !private ["s9EquatableP", "stopAnimating"]
+- !private ["s9EquatableP", "stopIndicator"]
 - !private ["s9EquatableP", "tableView"]
 - !private ["s9EquatableP", "text"]
 - !private ["s9EquatableP", "textAlignment"]
@@ -569,6 +597,12 @@ depends-member:
 - !private ["s9EquatableP", "white"]
 - !private ["s9EquatableP", "width"]
 - ["s9EquatableP", ""]
+- !private ["6SQLite11ExpressibleP", "_getBuiltinLogicValue"]
+- !private ["6SQLite11ExpressibleP", "addingPercentEncoding"]
+- !private ["6SQLite11ExpressibleP", "endIndex"]
+- !private ["6SQLite11ExpressibleP", "index"]
+- ["6SQLite11ExpressibleP", "init"]
+- !private ["6SQLite11ExpressibleP", "remove"]
 - !private ["s25ExpressibleByArrayLiteralP", "append"]
 - !private ["s25ExpressibleByArrayLiteralP", "count"]
 - !private ["s25ExpressibleByArrayLiteralP", "init"]
@@ -590,6 +624,8 @@ depends-member:
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "index"]
 - ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
 - !private ["s33ExpressibleByUnicodeScalarLiteralP", "remove"]
+- !private ["9Alamofire10HTTPMethodO", "get"]
+- !private ["9Alamofire10HTTPMethodO", "rawValue"]
 - !private ["s8HashableP", "Alamofire"]
 - !private ["s8HashableP", "Bool"]
 - !private ["s8HashableP", "CGRect"]
@@ -605,6 +641,7 @@ depends-member:
 - !private ["s8HashableP", "URL"]
 - !private ["s8HashableP", "URLRequest"]
 - ["s8HashableP", "UserDefaults"]
+- !private ["s8HashableP", "VideoGameDataSource"]
 - !private ["s8HashableP", "_getBuiltinLogicValue"]
 - !private ["s8HashableP", "activityIndicator"]
 - !private ["s8HashableP", "activityIndicatorViewStyle"]
@@ -636,6 +673,7 @@ depends-member:
 - !private ["s8HashableP", "esrbParameter"]
 - !private ["s8HashableP", "genresOptions"]
 - !private ["s8HashableP", "genresParameter"]
+- !private ["s8HashableP", "get"]
 - !private ["s8HashableP", "hidesWhenStopped"]
 - !private ["s8HashableP", "httpMethod"]
 - !private ["s8HashableP", "identifier"]
@@ -654,6 +692,8 @@ depends-member:
 - ["s8HashableP", "positionForBar"]
 - !private ["s8HashableP", "print"]
 - !private ["s8HashableP", "ratingParameter"]
+- !private ["s8HashableP", "rawValue"]
+- !private ["s8HashableP", "reloadData"]
 - !private ["s8HashableP", "remove"]
 - !private ["s8HashableP", "resetParameters"]
 - !private ["s8HashableP", "row"]
@@ -672,6 +712,7 @@ depends-member:
 - !private ["s8HashableP", "startAnimating"]
 - !private ["s8HashableP", "startIndicator"]
 - !private ["s8HashableP", "stopAnimating"]
+- !private ["s8HashableP", "stopIndicator"]
 - !private ["s8HashableP", "tableView"]
 - !private ["s8HashableP", "text"]
 - !private ["s8HashableP", "textAlignment"]
@@ -691,6 +732,11 @@ depends-member:
 - !private ["s8HashableP", "white"]
 - ["s8HashableP", ""]
 - !private ["10Foundation9IndexPathV", "row"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "addingPercentEncoding"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "endIndex"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "index"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- !private ["10SwiftyJSON17JSONSubscriptTypeP", "remove"]
 - !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
 - !private ["s25LosslessStringConvertibleP", "addingPercentEncoding"]
 - !private ["s25LosslessStringConvertibleP", "endIndex"]
@@ -723,6 +769,7 @@ depends-member:
 - !private ["So8NSCodingP", "URL"]
 - !private ["So8NSCodingP", "URLRequest"]
 - ["So8NSCodingP", "UserDefaults"]
+- !private ["So8NSCodingP", "VideoGameDataSource"]
 - !private ["So8NSCodingP", "activityIndicator"]
 - !private ["So8NSCodingP", "activityIndicatorViewStyle"]
 - !private ["So8NSCodingP", "addSubview"]
@@ -764,6 +811,7 @@ depends-member:
 - ["So8NSCodingP", "positionForBar"]
 - !private ["So8NSCodingP", "print"]
 - !private ["So8NSCodingP", "ratingParameter"]
+- !private ["So8NSCodingP", "reloadData"]
 - !private ["So8NSCodingP", "remove"]
 - !private ["So8NSCodingP", "resetParameters"]
 - ["So8NSCodingP", "searchBar"]
@@ -780,6 +828,7 @@ depends-member:
 - !private ["So8NSCodingP", "startAnimating"]
 - !private ["So8NSCodingP", "startIndicator"]
 - !private ["So8NSCodingP", "stopAnimating"]
+- !private ["So8NSCodingP", "stopIndicator"]
 - !private ["So8NSCodingP", "tableView"]
 - !private ["So8NSCodingP", "text"]
 - !private ["So8NSCodingP", "textAlignment"]
@@ -817,6 +866,7 @@ depends-member:
 - !private ["So26NSExtensionRequestHandlingP", "URL"]
 - !private ["So26NSExtensionRequestHandlingP", "URLRequest"]
 - ["So26NSExtensionRequestHandlingP", "UserDefaults"]
+- !private ["So26NSExtensionRequestHandlingP", "VideoGameDataSource"]
 - !private ["So26NSExtensionRequestHandlingP", "activityIndicator"]
 - !private ["So26NSExtensionRequestHandlingP", "apiCall"]
 - !private ["So26NSExtensionRequestHandlingP", "apiKey"]
@@ -851,6 +901,7 @@ depends-member:
 - ["So26NSExtensionRequestHandlingP", "searchBarTextDidBeginEditing"]
 - ["So26NSExtensionRequestHandlingP", "searchBarTextDidEndEditing"]
 - !private ["So26NSExtensionRequestHandlingP", "startIndicator"]
+- !private ["So26NSExtensionRequestHandlingP", "stopIndicator"]
 - !private ["So26NSExtensionRequestHandlingP", "tableView"]
 - !private ["So26NSExtensionRequestHandlingP", "valueIds"]
 - !private ["So26NSExtensionRequestHandlingP", "videoGameForThisView"]
@@ -877,6 +928,7 @@ depends-member:
 - !private ["So16NSMutableCopyingP", "remove"]
 - !private ["So16NSMutableCopyingP", "urlQueryAllowed"]
 - !private ["So8NSObjectC", "Alamofire"]
+- !private ["So8NSObjectC", "AnyObject"]
 - ["So8NSObjectC", "Bool"]
 - !private ["So8NSObjectC", "CGRect"]
 - ["So8NSObjectC", "FilterSideBarTableViewCell"]
@@ -953,6 +1005,7 @@ depends-member:
 - ["So8NSObjectC", "prepare"]
 - !private ["So8NSObjectC", "print"]
 - ["So8NSObjectC", "ratingParameter"]
+- !private ["So8NSObjectC", "reloadData"]
 - !private ["So8NSObjectC", "remove"]
 - ["So8NSObjectC", "resetParameters"]
 - ["So8NSObjectC", "scrollViewWillBeginDragging"]
@@ -1003,6 +1056,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "URL"]
 - !private ["So16NSObjectProtocolP", "URLRequest"]
 - ["So16NSObjectProtocolP", "UserDefaults"]
+- !private ["So16NSObjectProtocolP", "VideoGameDataSource"]
 - !private ["So16NSObjectProtocolP", "activityIndicator"]
 - !private ["So16NSObjectProtocolP", "activityIndicatorViewStyle"]
 - !private ["So16NSObjectProtocolP", "addSubview"]
@@ -1048,6 +1102,7 @@ depends-member:
 - ["So16NSObjectProtocolP", "positionForBar"]
 - !private ["So16NSObjectProtocolP", "print"]
 - !private ["So16NSObjectProtocolP", "ratingParameter"]
+- !private ["So16NSObjectProtocolP", "reloadData"]
 - !private ["So16NSObjectProtocolP", "remove"]
 - !private ["So16NSObjectProtocolP", "resetParameters"]
 - ["So16NSObjectProtocolP", "searchBar"]
@@ -1065,6 +1120,7 @@ depends-member:
 - !private ["So16NSObjectProtocolP", "startAnimating"]
 - !private ["So16NSObjectProtocolP", "startIndicator"]
 - !private ["So16NSObjectProtocolP", "stopAnimating"]
+- !private ["So16NSObjectProtocolP", "stopIndicator"]
 - !private ["So16NSObjectProtocolP", "tableView"]
 - !private ["So16NSObjectProtocolP", "text"]
 - !private ["So16NSObjectProtocolP", "textAlignment"]
@@ -1109,13 +1165,19 @@ depends-member:
 - !private ["s26RangeReplaceableCollectionP", "remove"]
 - !private ["s26RangeReplaceableCollectionP", "subscript"]
 - !private ["s16RawRepresentableP", "center"]
+- !private ["s16RawRepresentableP", "get"]
 - !private ["s16RawRepresentableP", "none"]
+- !private ["s16RawRepresentableP", "rawValue"]
 - !private ["s16RawRepresentableP", "white"]
 - !private ["10Foundation20ReferenceConvertibleP", "addValue"]
 - !private ["10Foundation20ReferenceConvertibleP", "httpMethod"]
 - !private ["10Foundation20ReferenceConvertibleP", "init"]
 - !private ["10Foundation20ReferenceConvertibleP", "row"]
+- !private ["9Alamofire7RequestC", "responseJSON"]
+- !private ["9Alamofire8ResponseP", "result"]
+- !private ["9Alamofire6ResultO", "value"]
 - !private ["8VGLogger25SearchTableViewControllerC", "Alamofire"]
+- !private ["8VGLogger25SearchTableViewControllerC", "AnyObject"]
 - ["8VGLogger25SearchTableViewControllerC", "Bool"]
 - !private ["8VGLogger25SearchTableViewControllerC", "CGRect"]
 - ["8VGLogger25SearchTableViewControllerC", "FilterSideBarTableViewCell"]
@@ -1232,6 +1294,7 @@ depends-member:
 - !private ["So29UIAccessibilityIdentificationP", "indexPath"]
 - ["So29UIAccessibilityIdentificationP", "init"]
 - !private ["So29UIAccessibilityIdentificationP", "placeholder"]
+- !private ["So29UIAccessibilityIdentificationP", "reloadData"]
 - !private ["So29UIAccessibilityIdentificationP", "separatorStyle"]
 - !private ["So29UIAccessibilityIdentificationP", "showsCancelButton"]
 - !private ["So29UIAccessibilityIdentificationP", "startAnimating"]
@@ -1264,6 +1327,7 @@ depends-member:
 - !private ["So12UIAppearanceP", "indexPath"]
 - ["So12UIAppearanceP", "init"]
 - !private ["So12UIAppearanceP", "placeholder"]
+- !private ["So12UIAppearanceP", "reloadData"]
 - !private ["So12UIAppearanceP", "separatorStyle"]
 - !private ["So12UIAppearanceP", "showsCancelButton"]
 - !private ["So12UIAppearanceP", "startAnimating"]
@@ -1289,6 +1353,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "URL"]
 - !private ["So21UIAppearanceContainerP", "URLRequest"]
 - ["So21UIAppearanceContainerP", "UserDefaults"]
+- !private ["So21UIAppearanceContainerP", "VideoGameDataSource"]
 - !private ["So21UIAppearanceContainerP", "activityIndicator"]
 - !private ["So21UIAppearanceContainerP", "activityIndicatorViewStyle"]
 - !private ["So21UIAppearanceContainerP", "addSubview"]
@@ -1325,6 +1390,7 @@ depends-member:
 - ["So21UIAppearanceContainerP", "positionForBar"]
 - !private ["So21UIAppearanceContainerP", "print"]
 - !private ["So21UIAppearanceContainerP", "ratingParameter"]
+- !private ["So21UIAppearanceContainerP", "reloadData"]
 - !private ["So21UIAppearanceContainerP", "resetParameters"]
 - ["So21UIAppearanceContainerP", "searchBar"]
 - ["So21UIAppearanceContainerP", "searchBarBookmarkButtonClicked"]
@@ -1340,6 +1406,7 @@ depends-member:
 - !private ["So21UIAppearanceContainerP", "startAnimating"]
 - !private ["So21UIAppearanceContainerP", "startIndicator"]
 - !private ["So21UIAppearanceContainerP", "stopAnimating"]
+- !private ["So21UIAppearanceContainerP", "stopIndicator"]
 - !private ["So21UIAppearanceContainerP", "tableView"]
 - !private ["So21UIAppearanceContainerP", "text"]
 - !private ["So21UIAppearanceContainerP", "textAlignment"]
@@ -1378,6 +1445,7 @@ depends-member:
 - !private ["So24UIBarPositioningDelegateP", "URL"]
 - !private ["So24UIBarPositioningDelegateP", "URLRequest"]
 - ["So24UIBarPositioningDelegateP", "UserDefaults"]
+- !private ["So24UIBarPositioningDelegateP", "VideoGameDataSource"]
 - !private ["So24UIBarPositioningDelegateP", "activityIndicator"]
 - !private ["So24UIBarPositioningDelegateP", "apiCall"]
 - !private ["So24UIBarPositioningDelegateP", "apiKey"]
@@ -1410,13 +1478,14 @@ depends-member:
 - ["So24UIBarPositioningDelegateP", "searchBarTextDidBeginEditing"]
 - ["So24UIBarPositioningDelegateP", "searchBarTextDidEndEditing"]
 - !private ["So24UIBarPositioningDelegateP", "startIndicator"]
+- !private ["So24UIBarPositioningDelegateP", "stopIndicator"]
 - !private ["So24UIBarPositioningDelegateP", "tableView"]
 - !private ["So24UIBarPositioningDelegateP", "valueIds"]
 - !private ["So24UIBarPositioningDelegateP", "videogamesDS"]
 - !private ["So24UIBarPositioningDelegateP", "view"]
 - ["So24UIBarPositioningDelegateP", ""]
 - !private ["So7UIColorC", "black"]
-- ["So7UIColorC", "init"]
+- !private ["So7UIColorC", "init"]
 - !private ["So18UIContentContainerP", "Alamofire"]
 - !private ["So18UIContentContainerP", "Bool"]
 - !private ["So18UIContentContainerP", "CGRect"]
@@ -1432,6 +1501,7 @@ depends-member:
 - !private ["So18UIContentContainerP", "URL"]
 - !private ["So18UIContentContainerP", "URLRequest"]
 - ["So18UIContentContainerP", "UserDefaults"]
+- !private ["So18UIContentContainerP", "VideoGameDataSource"]
 - !private ["So18UIContentContainerP", "activityIndicator"]
 - !private ["So18UIContentContainerP", "apiCall"]
 - !private ["So18UIContentContainerP", "apiKey"]
@@ -1466,6 +1536,7 @@ depends-member:
 - ["So18UIContentContainerP", "searchBarTextDidBeginEditing"]
 - ["So18UIContentContainerP", "searchBarTextDidEndEditing"]
 - !private ["So18UIContentContainerP", "startIndicator"]
+- !private ["So18UIContentContainerP", "stopIndicator"]
 - !private ["So18UIContentContainerP", "tableView"]
 - !private ["So18UIContentContainerP", "valueIds"]
 - !private ["So18UIContentContainerP", "videoGameForThisView"]
@@ -1491,6 +1562,7 @@ depends-member:
 - !private ["So17UICoordinateSpaceP", "indexPath"]
 - ["So17UICoordinateSpaceP", "init"]
 - !private ["So17UICoordinateSpaceP", "placeholder"]
+- !private ["So17UICoordinateSpaceP", "reloadData"]
 - !private ["So17UICoordinateSpaceP", "separatorStyle"]
 - !private ["So17UICoordinateSpaceP", "showsCancelButton"]
 - !private ["So17UICoordinateSpaceP", "startAnimating"]
@@ -1504,6 +1576,7 @@ depends-member:
 - !private ["So23UIDataSourceTranslatingP", "bounds"]
 - !private ["So23UIDataSourceTranslatingP", "dequeueReusableCell"]
 - !private ["So23UIDataSourceTranslatingP", "indexPath"]
+- !private ["So23UIDataSourceTranslatingP", "reloadData"]
 - !private ["So23UIDataSourceTranslatingP", "separatorStyle"]
 - !private ["So13UIDynamicItemP", "activityIndicatorViewStyle"]
 - !private ["So13UIDynamicItemP", "addSubview"]
@@ -1519,6 +1592,7 @@ depends-member:
 - !private ["So13UIDynamicItemP", "indexPath"]
 - ["So13UIDynamicItemP", "init"]
 - !private ["So13UIDynamicItemP", "placeholder"]
+- !private ["So13UIDynamicItemP", "reloadData"]
 - !private ["So13UIDynamicItemP", "separatorStyle"]
 - !private ["So13UIDynamicItemP", "showsCancelButton"]
 - !private ["So13UIDynamicItemP", "startAnimating"]
@@ -1542,6 +1616,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "URL"]
 - !private ["So18UIFocusEnvironmentP", "URLRequest"]
 - ["So18UIFocusEnvironmentP", "UserDefaults"]
+- !private ["So18UIFocusEnvironmentP", "VideoGameDataSource"]
 - !private ["So18UIFocusEnvironmentP", "activityIndicator"]
 - !private ["So18UIFocusEnvironmentP", "activityIndicatorViewStyle"]
 - !private ["So18UIFocusEnvironmentP", "addSubview"]
@@ -1578,6 +1653,7 @@ depends-member:
 - ["So18UIFocusEnvironmentP", "positionForBar"]
 - !private ["So18UIFocusEnvironmentP", "print"]
 - !private ["So18UIFocusEnvironmentP", "ratingParameter"]
+- !private ["So18UIFocusEnvironmentP", "reloadData"]
 - !private ["So18UIFocusEnvironmentP", "resetParameters"]
 - ["So18UIFocusEnvironmentP", "searchBar"]
 - ["So18UIFocusEnvironmentP", "searchBarBookmarkButtonClicked"]
@@ -1593,6 +1669,7 @@ depends-member:
 - !private ["So18UIFocusEnvironmentP", "startAnimating"]
 - !private ["So18UIFocusEnvironmentP", "startIndicator"]
 - !private ["So18UIFocusEnvironmentP", "stopAnimating"]
+- !private ["So18UIFocusEnvironmentP", "stopIndicator"]
 - !private ["So18UIFocusEnvironmentP", "tableView"]
 - !private ["So18UIFocusEnvironmentP", "text"]
 - !private ["So18UIFocusEnvironmentP", "textAlignment"]
@@ -1618,6 +1695,7 @@ depends-member:
 - !private ["So11UIFocusItemP", "indexPath"]
 - ["So11UIFocusItemP", "init"]
 - !private ["So11UIFocusItemP", "placeholder"]
+- !private ["So11UIFocusItemP", "reloadData"]
 - !private ["So11UIFocusItemP", "separatorStyle"]
 - !private ["So11UIFocusItemP", "showsCancelButton"]
 - !private ["So11UIFocusItemP", "startAnimating"]
@@ -1649,6 +1727,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "URL"]
 - !private ["So30UIPasteConfigurationSupportingP", "URLRequest"]
 - ["So30UIPasteConfigurationSupportingP", "UserDefaults"]
+- !private ["So30UIPasteConfigurationSupportingP", "VideoGameDataSource"]
 - !private ["So30UIPasteConfigurationSupportingP", "activityIndicator"]
 - !private ["So30UIPasteConfigurationSupportingP", "activityIndicatorViewStyle"]
 - !private ["So30UIPasteConfigurationSupportingP", "addSubview"]
@@ -1685,6 +1764,7 @@ depends-member:
 - ["So30UIPasteConfigurationSupportingP", "positionForBar"]
 - !private ["So30UIPasteConfigurationSupportingP", "print"]
 - !private ["So30UIPasteConfigurationSupportingP", "ratingParameter"]
+- !private ["So30UIPasteConfigurationSupportingP", "reloadData"]
 - !private ["So30UIPasteConfigurationSupportingP", "resetParameters"]
 - ["So30UIPasteConfigurationSupportingP", "searchBar"]
 - ["So30UIPasteConfigurationSupportingP", "searchBarBookmarkButtonClicked"]
@@ -1700,6 +1780,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "startAnimating"]
 - !private ["So30UIPasteConfigurationSupportingP", "startIndicator"]
 - !private ["So30UIPasteConfigurationSupportingP", "stopAnimating"]
+- !private ["So30UIPasteConfigurationSupportingP", "stopIndicator"]
 - !private ["So30UIPasteConfigurationSupportingP", "tableView"]
 - !private ["So30UIPasteConfigurationSupportingP", "text"]
 - !private ["So30UIPasteConfigurationSupportingP", "textAlignment"]
@@ -1712,6 +1793,7 @@ depends-member:
 - !private ["So30UIPasteConfigurationSupportingP", "viewDidLoad"]
 - ["So30UIPasteConfigurationSupportingP", ""]
 - !private ["So11UIResponderC", "Alamofire"]
+- !private ["So11UIResponderC", "AnyObject"]
 - ["So11UIResponderC", "Bool"]
 - !private ["So11UIResponderC", "CGRect"]
 - ["So11UIResponderC", "FilterSideBarTableViewCell"]
@@ -1779,6 +1861,7 @@ depends-member:
 - ["So11UIResponderC", "prepare"]
 - !private ["So11UIResponderC", "print"]
 - ["So11UIResponderC", "ratingParameter"]
+- !private ["So11UIResponderC", "reloadData"]
 - ["So11UIResponderC", "resetParameters"]
 - ["So11UIResponderC", "scrollViewWillBeginDragging"]
 - ["So11UIResponderC", "searchBar"]
@@ -1821,6 +1904,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "URL"]
 - !private ["So30UIResponderStandardEditActionsP", "URLRequest"]
 - ["So30UIResponderStandardEditActionsP", "UserDefaults"]
+- !private ["So30UIResponderStandardEditActionsP", "VideoGameDataSource"]
 - !private ["So30UIResponderStandardEditActionsP", "activityIndicator"]
 - !private ["So30UIResponderStandardEditActionsP", "activityIndicatorViewStyle"]
 - !private ["So30UIResponderStandardEditActionsP", "addSubview"]
@@ -1857,6 +1941,7 @@ depends-member:
 - ["So30UIResponderStandardEditActionsP", "positionForBar"]
 - !private ["So30UIResponderStandardEditActionsP", "print"]
 - !private ["So30UIResponderStandardEditActionsP", "ratingParameter"]
+- !private ["So30UIResponderStandardEditActionsP", "reloadData"]
 - !private ["So30UIResponderStandardEditActionsP", "resetParameters"]
 - ["So30UIResponderStandardEditActionsP", "searchBar"]
 - ["So30UIResponderStandardEditActionsP", "searchBarBookmarkButtonClicked"]
@@ -1872,6 +1957,7 @@ depends-member:
 - !private ["So30UIResponderStandardEditActionsP", "startAnimating"]
 - !private ["So30UIResponderStandardEditActionsP", "startIndicator"]
 - !private ["So30UIResponderStandardEditActionsP", "stopAnimating"]
+- !private ["So30UIResponderStandardEditActionsP", "stopIndicator"]
 - !private ["So30UIResponderStandardEditActionsP", "tableView"]
 - !private ["So30UIResponderStandardEditActionsP", "text"]
 - !private ["So30UIResponderStandardEditActionsP", "textAlignment"]
@@ -1888,6 +1974,7 @@ depends-member:
 - !private ["So12UIScrollViewC", "bounds"]
 - !private ["So12UIScrollViewC", "dequeueReusableCell"]
 - !private ["So12UIScrollViewC", "indexPath"]
+- !private ["So12UIScrollViewC", "reloadData"]
 - !private ["So12UIScrollViewC", "separatorStyle"]
 - !private ["So20UIScrollViewDelegateP", "Alamofire"]
 - !private ["So20UIScrollViewDelegateP", "Bool"]
@@ -1904,6 +1991,7 @@ depends-member:
 - !private ["So20UIScrollViewDelegateP", "URL"]
 - !private ["So20UIScrollViewDelegateP", "URLRequest"]
 - ["So20UIScrollViewDelegateP", "UserDefaults"]
+- !private ["So20UIScrollViewDelegateP", "VideoGameDataSource"]
 - !private ["So20UIScrollViewDelegateP", "activityIndicator"]
 - !private ["So20UIScrollViewDelegateP", "apiCall"]
 - !private ["So20UIScrollViewDelegateP", "apiKey"]
@@ -1938,6 +2026,7 @@ depends-member:
 - ["So20UIScrollViewDelegateP", "searchBarTextDidBeginEditing"]
 - ["So20UIScrollViewDelegateP", "searchBarTextDidEndEditing"]
 - !private ["So20UIScrollViewDelegateP", "startIndicator"]
+- !private ["So20UIScrollViewDelegateP", "stopIndicator"]
 - !private ["So20UIScrollViewDelegateP", "tableView"]
 - !private ["So20UIScrollViewDelegateP", "valueIds"]
 - !private ["So20UIScrollViewDelegateP", "videogamesDS"]
@@ -1965,6 +2054,7 @@ depends-member:
 - !private ["So19UISearchBarDelegateP", "URL"]
 - !private ["So19UISearchBarDelegateP", "URLRequest"]
 - ["So19UISearchBarDelegateP", "UserDefaults"]
+- !private ["So19UISearchBarDelegateP", "VideoGameDataSource"]
 - !private ["So19UISearchBarDelegateP", "activityIndicator"]
 - !private ["So19UISearchBarDelegateP", "apiCall"]
 - !private ["So19UISearchBarDelegateP", "apiKey"]
@@ -1997,6 +2087,7 @@ depends-member:
 - ["So19UISearchBarDelegateP", "searchBarTextDidBeginEditing"]
 - ["So19UISearchBarDelegateP", "searchBarTextDidEndEditing"]
 - !private ["So19UISearchBarDelegateP", "startIndicator"]
+- !private ["So19UISearchBarDelegateP", "stopIndicator"]
 - !private ["So19UISearchBarDelegateP", "tableView"]
 - !private ["So19UISearchBarDelegateP", "valueIds"]
 - !private ["So19UISearchBarDelegateP", "videogamesDS"]
@@ -2008,6 +2099,7 @@ depends-member:
 - !private ["So35UISpringLoadedInteractionSupportingP", "dequeueReusableCell"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "indexPath"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "reloadData"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "separatorStyle"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "tintColor"]
 - !private ["So35UISpringLoadedInteractionSupportingP", "title"]
@@ -2026,6 +2118,7 @@ depends-member:
 - !private ["So16UIStateRestoringP", "URL"]
 - !private ["So16UIStateRestoringP", "URLRequest"]
 - ["So16UIStateRestoringP", "UserDefaults"]
+- !private ["So16UIStateRestoringP", "VideoGameDataSource"]
 - !private ["So16UIStateRestoringP", "activityIndicator"]
 - !private ["So16UIStateRestoringP", "apiCall"]
 - !private ["So16UIStateRestoringP", "apiKey"]
@@ -2060,6 +2153,7 @@ depends-member:
 - ["So16UIStateRestoringP", "searchBarTextDidBeginEditing"]
 - ["So16UIStateRestoringP", "searchBarTextDidEndEditing"]
 - !private ["So16UIStateRestoringP", "startIndicator"]
+- !private ["So16UIStateRestoringP", "stopIndicator"]
 - !private ["So16UIStateRestoringP", "tableView"]
 - !private ["So16UIStateRestoringP", "valueIds"]
 - !private ["So16UIStateRestoringP", "videoGameForThisView"]
@@ -2074,11 +2168,13 @@ depends-member:
 - !private ["So11UITableViewC", "bounds"]
 - !private ["So11UITableViewC", "dequeueReusableCell"]
 - !private ["So11UITableViewC", "indexPath"]
+- !private ["So11UITableViewC", "reloadData"]
 - !private ["So11UITableViewC", "separatorStyle"]
 - !private ["So15UITableViewCellC", "backgroundColor"]
 - !private ["So15UITableViewCellC", "useVideoGame"]
 - !private ["SC29UITableViewCellSeparatorStyleO", "none"]
 - !private ["So21UITableViewControllerC", "Alamofire"]
+- !private ["So21UITableViewControllerC", "AnyObject"]
 - ["So21UITableViewControllerC", "Bool"]
 - !private ["So21UITableViewControllerC", "CGRect"]
 - ["So21UITableViewControllerC", "FilterSideBarTableViewCell"]
@@ -2167,6 +2263,7 @@ depends-member:
 - !private ["So21UITableViewDataSourceP", "URL"]
 - !private ["So21UITableViewDataSourceP", "URLRequest"]
 - ["So21UITableViewDataSourceP", "UserDefaults"]
+- !private ["So21UITableViewDataSourceP", "VideoGameDataSource"]
 - !private ["So21UITableViewDataSourceP", "activityIndicator"]
 - !private ["So21UITableViewDataSourceP", "apiCall"]
 - !private ["So21UITableViewDataSourceP", "apiKey"]
@@ -2201,6 +2298,7 @@ depends-member:
 - ["So21UITableViewDataSourceP", "searchBarTextDidBeginEditing"]
 - ["So21UITableViewDataSourceP", "searchBarTextDidEndEditing"]
 - !private ["So21UITableViewDataSourceP", "startIndicator"]
+- !private ["So21UITableViewDataSourceP", "stopIndicator"]
 - !private ["So21UITableViewDataSourceP", "tableView"]
 - !private ["So21UITableViewDataSourceP", "valueIds"]
 - !private ["So21UITableViewDataSourceP", "videogamesDS"]
@@ -2222,6 +2320,7 @@ depends-member:
 - !private ["So19UITableViewDelegateP", "URL"]
 - !private ["So19UITableViewDelegateP", "URLRequest"]
 - ["So19UITableViewDelegateP", "UserDefaults"]
+- !private ["So19UITableViewDelegateP", "VideoGameDataSource"]
 - !private ["So19UITableViewDelegateP", "activityIndicator"]
 - !private ["So19UITableViewDelegateP", "apiCall"]
 - !private ["So19UITableViewDelegateP", "apiKey"]
@@ -2256,6 +2355,7 @@ depends-member:
 - ["So19UITableViewDelegateP", "searchBarTextDidBeginEditing"]
 - ["So19UITableViewDelegateP", "searchBarTextDidEndEditing"]
 - !private ["So19UITableViewDelegateP", "startIndicator"]
+- !private ["So19UITableViewDelegateP", "stopIndicator"]
 - !private ["So19UITableViewDelegateP", "tableView"]
 - !private ["So19UITableViewDelegateP", "valueIds"]
 - !private ["So19UITableViewDelegateP", "videogamesDS"]
@@ -2283,6 +2383,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "URL"]
 - !private ["So18UITraitEnvironmentP", "URLRequest"]
 - ["So18UITraitEnvironmentP", "UserDefaults"]
+- !private ["So18UITraitEnvironmentP", "VideoGameDataSource"]
 - !private ["So18UITraitEnvironmentP", "activityIndicator"]
 - !private ["So18UITraitEnvironmentP", "activityIndicatorViewStyle"]
 - !private ["So18UITraitEnvironmentP", "addSubview"]
@@ -2319,6 +2420,7 @@ depends-member:
 - ["So18UITraitEnvironmentP", "positionForBar"]
 - !private ["So18UITraitEnvironmentP", "print"]
 - !private ["So18UITraitEnvironmentP", "ratingParameter"]
+- !private ["So18UITraitEnvironmentP", "reloadData"]
 - !private ["So18UITraitEnvironmentP", "resetParameters"]
 - ["So18UITraitEnvironmentP", "searchBar"]
 - ["So18UITraitEnvironmentP", "searchBarBookmarkButtonClicked"]
@@ -2334,6 +2436,7 @@ depends-member:
 - !private ["So18UITraitEnvironmentP", "startAnimating"]
 - !private ["So18UITraitEnvironmentP", "startIndicator"]
 - !private ["So18UITraitEnvironmentP", "stopAnimating"]
+- !private ["So18UITraitEnvironmentP", "stopIndicator"]
 - !private ["So18UITraitEnvironmentP", "tableView"]
 - !private ["So18UITraitEnvironmentP", "text"]
 - !private ["So18UITraitEnvironmentP", "textAlignment"]
@@ -2359,6 +2462,7 @@ depends-member:
 - !private ["So6UIViewC", "indexPath"]
 - ["So6UIViewC", "init"]
 - !private ["So6UIViewC", "placeholder"]
+- !private ["So6UIViewC", "reloadData"]
 - !private ["So6UIViewC", "separatorStyle"]
 - !private ["So6UIViewC", "showsCancelButton"]
 - !private ["So6UIViewC", "startAnimating"]
@@ -2368,6 +2472,7 @@ depends-member:
 - !private ["So6UIViewC", "textColor"]
 - !private ["So6UIViewC", "useVideoGame"]
 - !private ["So16UIViewControllerC", "Alamofire"]
+- !private ["So16UIViewControllerC", "AnyObject"]
 - ["So16UIViewControllerC", "Bool"]
 - !private ["So16UIViewControllerC", "CGRect"]
 - ["So16UIViewControllerC", "FilterSideBarTableViewCell"]
@@ -2442,12 +2547,27 @@ depends-member:
 - !private ["So16UIViewControllerC", "view"]
 - ["So16UIViewControllerC", "viewDidLoad"]
 - !private ["10Foundation3URLV", "init"]
+- !private ["9Alamofire14URLConvertibleP", "addingPercentEncoding"]
+- !private ["9Alamofire14URLConvertibleP", "endIndex"]
+- !private ["9Alamofire14URLConvertibleP", "index"]
+- ["9Alamofire14URLConvertibleP", "init"]
+- !private ["9Alamofire14URLConvertibleP", "remove"]
 - !private ["10Foundation10URLRequestV", "addValue"]
 - !private ["10Foundation10URLRequestV", "httpMethod"]
 - !private ["10Foundation10URLRequestV", "init"]
+- !private ["9Alamofire21URLRequestConvertibleP", "addValue"]
+- !private ["9Alamofire21URLRequestConvertibleP", "httpMethod"]
+- !private ["9Alamofire21URLRequestConvertibleP", "init"]
 - !private ["So12UserDefaultsC", "array"]
 - ["So12UserDefaultsC", "standard"]
 - !private ["So12UserDefaultsC", "value"]
+- !private ["6SQLite5ValueP", "_getBuiltinLogicValue"]
+- !private ["6SQLite5ValueP", "addingPercentEncoding"]
+- !private ["6SQLite5ValueP", "endIndex"]
+- !private ["6SQLite5ValueP", "index"]
+- ["6SQLite5ValueP", "init"]
+- !private ["6SQLite5ValueP", "remove"]
+- !private ["8VGLogger19VideoGameDataSourceC", "init"]
 - !private ["8VGLogger19VideoGameDataSourceC", "numVideoGames"]
 - !private ["8VGLogger19VideoGameDataSourceC", "videoGameAt"]
 - !private ["8VGLogger31VideoGameDetailedViewControllerC", "videoGameForThisView"]
@@ -2479,6 +2599,7 @@ depends-member:
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "indexPath"]
 - ["s37_DefaultCustomPlaygroundQuickLookableP", "init"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "placeholder"]
+- !private ["s37_DefaultCustomPlaygroundQuickLookableP", "reloadData"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "separatorStyle"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "showsCancelButton"]
 - !private ["s37_DefaultCustomPlaygroundQuickLookableP", "startAnimating"]
@@ -2559,6 +2680,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URL"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "URLRequest"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "UserDefaults"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "VideoGameDataSource"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activityIndicator"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "activityIndicatorViewStyle"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "addSubview"]
@@ -2604,6 +2726,7 @@ depends-member:
 - ["10Foundation27_KeyValueCodingAndObservingP", "positionForBar"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "print"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "ratingParameter"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "reloadData"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "remove"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "resetParameters"]
 - ["10Foundation27_KeyValueCodingAndObservingP", "searchBar"]
@@ -2621,6 +2744,7 @@ depends-member:
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "startAnimating"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "startIndicator"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "stopAnimating"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stopIndicator"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "tableView"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
 - !private ["10Foundation27_KeyValueCodingAndObservingP", "textAlignment"]
@@ -2679,6 +2803,7 @@ depends-member:
 depends-nominal:
 - !private "Sa"
 - "s23BidirectionalCollectionP"
+- "6SQLite7BindingP"
 - !private "Sb"
 - "So15CALayerDelegateP"
 - !private "SC6CGRectV"
@@ -2690,16 +2815,21 @@ depends-nominal:
 - "s29CustomPlaygroundQuickLookableP"
 - "s17CustomReflectableP"
 - "s23CustomStringConvertibleP"
+- !private "9Alamofire11DataRequestC"
+- !private "9Alamofire12DataResponseV"
 - "s9DecodableP"
 - "s9EncodableP"
 - "s9EquatableP"
+- "6SQLite11ExpressibleP"
 - !private "s25ExpressibleByArrayLiteralP"
 - !private "s27ExpressibleByBooleanLiteralP"
 - "s43ExpressibleByExtendedGraphemeClusterLiteralP"
 - "s26ExpressibleByStringLiteralP"
 - "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "9Alamofire10HTTPMethodO"
 - "s8HashableP"
 - !private "10Foundation9IndexPathV"
+- "10SwiftyJSON17JSONSubscriptTypeP"
 - "s25LosslessStringConvertibleP"
 - "s10MirrorPathP"
 - !private "s17MutableCollectionP"
@@ -2719,6 +2849,9 @@ depends-nominal:
 - "s26RangeReplaceableCollectionP"
 - !private "s16RawRepresentableP"
 - !private "10Foundation20ReferenceConvertibleP"
+- !private "9Alamofire7RequestC"
+- !private "9Alamofire8ResponseP"
+- !private "9Alamofire6ResultO"
 - "8VGLogger25SearchTableViewControllerC"
 - "s8SequenceP"
 - "SS"
@@ -2734,7 +2867,7 @@ depends-nominal:
 - !private "So9UIBarItemC"
 - "So16UIBarPositioningP"
 - "So24UIBarPositioningDelegateP"
-- "So7UIColorC"
+- !private "So7UIColorC"
 - "So18UIContentContainerP"
 - !private "So30UIContentSizeCategoryAdjustingP"
 - "So17UICoordinateSpaceP"
@@ -2766,8 +2899,11 @@ depends-nominal:
 - "So6UIViewC"
 - "So16UIViewControllerC"
 - !private "10Foundation3URLV"
+- "9Alamofire14URLConvertibleP"
 - !private "10Foundation10URLRequestV"
+- !private "9Alamofire21URLRequestConvertibleP"
 - "So12UserDefaultsC"
+- "6SQLite5ValueP"
 - !private "8VGLogger19VideoGameDataSourceC"
 - !private "8VGLogger31VideoGameDetailedViewControllerC"
 - !private "8VGLogger22VideoGameTableViewCellC"
@@ -2815,6 +2951,21 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite.swift-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite-Bridging.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Modules/module.modulemap"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"

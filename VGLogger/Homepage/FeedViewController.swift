@@ -9,17 +9,22 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SafariServices
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UICollectionViewDelegate, UICollectionViewDataSource
 {
     var vg: VideoGame?
+    var videogamesDS: VideoGameDataSource?
     //var pg: popularGame?
     var pg = popularGame()
-    let apiKey = "2c4b6af8bd50607b85c8bc1813cb8fa5"
+    var selectedIndexPath: NSIndexPath?
+    let apiKey = "8ea2aa61804af17b2028af0a36637232"
     //Popular Game
     var outputGameName = [String]()
     var outputRating = [String]()
     var outputGameImage = [String]()
+    var outputGameID = [Int]()
+    var outputGameURL = [String]()
     
     //News
     var outputAuthor = [String]()
@@ -84,7 +89,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let group = DispatchGroup()
             
-            if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc") {
+            if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=id,url,name,popularity,total_rating,cover&order=popularity:desc") {
                 var urlRequest = URLRequest(url: url)
                 urlRequest.httpMethod = HTTPMethod.get.rawValue
                 urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
@@ -97,7 +102,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         //Here we will loop through the array and parse each dictionary
                         for section in allSections
                         {
-                            if let name = section["name"] as? String, let cover = section["cover"] as? [String : Any], let imageUrl = cover["url"] as? String
+                            if let gameID = section["id"] as? Int, let gameUrl = section["url"] as? String, let name = section["name"] as? String, let cover = section["cover"] as? [String : Any], let imageUrl = cover["cloudinary_id"] as? String
                             {
                                 //                            for i in 0..<imageUrl.count
                                 //                            {
@@ -117,8 +122,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //                                        print(id)
 //                                    }
 //                                }
+                                self.outputGameID.append(gameID)
+                                self.outputGameURL.append(gameUrl)
+                                //print(self.outputGameURL)
                                 self.outputGameName.append(name)
-                                self.outputGameImage.append(imageUrl)
+                                //self.outputGameImage.append(imageUrl)
+                                self.outputGameImage.append("https://images.igdb.com/igdb/image/upload/t_cover_small_2x/" + imageUrl + ".jpg")
                                // self.outputRating.append("N/A")
                                 //print(self.outputGameName)
                                 //cell.gameTitleLabel?.text = outputGameName[indexPath.row]
@@ -154,22 +163,16 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
                 //group.leave()
             }
-            //print(self.outputGameName)
             // var temp = pg.getName()
             //cell.gameTitleLabel?.text = self.outputGameName[indexPath.row]
             //cell.gameTitleLabel?.text = categories[indexPath.row]
             //cell.gameTitleLabel?.text = pg?.name[indexPath.row]
             //cell.gameTitleLabel?.text = temp[indexPath.row]
-            //print(self.outputGameName)
             return cell
         }
         //News table
         else
         {
-            //            newsTable.layer.masksToBounds = true
-            //            newsTable.layer.borderColor = UIColor( red: 153/255, green: 153/255, blue:0/255, alpha: 1.0 ).cgColor
-            //            newsTable.layer.borderWidth = 2.0
-            
             let cell = tableView.dequeueReusableCell(withIdentifier : "newsCell", for : indexPath) as! NewsTableViewCell
             
             cell.contentView.layer.borderColor = UIColor.blue.cgColor
@@ -201,7 +204,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //                                }
                             }
                         }
-                        //print(self.outputArticleImage.count, "this many")
                     }
                     let outURL = URL(string: self.outputArticleImage[indexPath.row])
                     let data = try? Data(contentsOf: outURL!)
@@ -212,12 +214,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     cell.authorLabel?.text = self.outputAuthor[indexPath.row]
                     cell.articleTitleLabel?.text = self.outputArticle[indexPath.row]
                     // cell.articleImage?.image = UIImage(named: self.outputArticleImage[indexPath.row])
-                    //print(self.outputArticleImage)
                 }
-                //print(self.outputURL)
             }
-            //print(self.outputArticleImage)
-            
             //cell.articleTitleLabel?.text = articles[indexPath.row]
             //cell.authorLabel?.text = authors[indexPath.row]
             //cell.articleImage?.image = UIImage(named: "https://assets.vg247.com/current//2017/09/destiny_2_emb_strike_the_pyramidion_3.jpg")
@@ -238,29 +236,15 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let urlString = self.outputURL[indexPath.row]
             if let url = URL(string: urlString)
             {
-                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+              //  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                let config = SFSafariViewController.Configuration()
+                config.entersReaderIfAvailable = true
+                
+                let vc = SFSafariViewController(url: url, configuration: config)
+                present(vc, animated: true)
             }
         }
     }
-    
-    //Set header color
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-    //    {
-    //        if(tableView == newsTable)
-    //        {
-    //            let headerView = UIView()
-    //            headerView.backgroundColor = UIColor.red
-    //
-    //            return headerView
-    //        }
-    //        else
-    //        {
-    //            let headerView = UIView()
-    //            headerView.backgroundColor = UIColor.green
-    //            return headerView
-    //        }
-    //    }
-    
     
     //collectionView cell data
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -275,7 +259,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
         DispatchQueue.main.asyncAfter(deadline: when)
         {
-            //print(self.outputArticleImage)
+            cell.gameTitle?.adjustsFontSizeToFitWidth = true
             cell.gameTitle?.text = self.outputGameName[indexPath.row]
             cell.gameRating?.text = self.outputRating[indexPath.row]
 //            if let aimage = self.vg?.videoGameCoverImage()
@@ -292,16 +276,67 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
         //cell.gameRating?.text = self.outputRating[indexPath.row]
-        //print(self.outputGameName)
         //cell.gameTitle?.text = self.outputGameName[indexPath.row]
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-//    {
-//        performSegue(withIdentifier: "VGDVSegue", sender: nil)
-//    }
+   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        let urlString = self.outputGameURL[indexPath.row]
+        
+        if let url = URL(string: urlString)
+        {
+            //  UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
+
+//        if let url = URL(string: "https://api-2445582011268.apicast.io/games/" + "\(outputGameID[indexPath.row])" + "?fields=*")
+//        {
+//            var urlRequest = URLRequest(url: url)
+//            urlRequest.httpMethod = HTTPMethod.get.rawValue
+//            urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
+//            urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
+//
+//            Alamofire.request(urlRequest).responseJSON { response in
+//                if let JSON = response.result.value as? [AnyObject]  {
+//                    self.videogamesDS = VideoGameDataSource(dataSource: JSON)
+//                }
+//                //debugPrint(response)
+//                print(response)
+//            }
+//        }
+//        //print([indexPath.row])
+//        print(outputGameID[indexPath.row])
+//        let cell = collectionView.cellForItem(at: indexPath)
+//        //selectedIndexPath = indexPath.row
+//        performSegue(withIdentifier: "VGDVSegue", sender: cell)
+
+    }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+//    {
+//        //Segue to video game detailed view
+//        if segue.identifier == "VGDVSegue"
+//        {
+//            //let cell = sender as! FeedCollectionViewCell
+//
+//            //self.collectionview.registerClass(FeedCollectionViewCell.self, forCellWithReuseIdentifier: "VGDVSegue")
+//            if let indexPath = collectionView.indexPath(for: sender as! FeedCollectionViewCell), let ds = videogamesDS
+//            {
+//                let detailedVC = segue.destination as! VideoGameDetailedViewController
+//                detailedVC.videoGameForThisView(ds.videoGameAt(indexPath.row))
+//
+//                let backItem = UIBarButtonItem()
+//                backItem.title = "Back"
+//                backItem.tintColor = UIColor(hex: "#ffffff")
+//                navigationItem.backBarButtonItem = backItem
+//            }
+//        }
+//    }
     
     override func didReceiveMemoryWarning()
     {
