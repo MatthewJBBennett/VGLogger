@@ -19,12 +19,13 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //Popular Game
     var outputGameName = [String]()
     var outputRating = [String]()
+    var outputGameImage = [String]()
     
     //News
     var outputAuthor = [String]()
     var outputArticle = [String]()
     var outputURL = [String]()
-    var outputImage = [String]()
+    var outputArticleImage = [String]()
     
     @IBOutlet weak var newsTable: UITableView!
     @IBOutlet weak var popularGameTable: UITableView!
@@ -81,12 +82,15 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             cell.collectionview?.dataSource = self
             cell.collectionview?.reloadData()
             
+            let group = DispatchGroup()
+            
             if let url = URL(string: "https://api-2445582011268.apicast.io/games/?fields=name,popularity,total_rating,cover&order=popularity:desc") {
                 var urlRequest = URLRequest(url: url)
                 urlRequest.httpMethod = HTTPMethod.get.rawValue
                 urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
                 
+                group.enter()
                 Alamofire.request(urlRequest).responseJSON {response in
                     if let allSections = response.result.value as? [[String : Any]]
                     {
@@ -94,11 +98,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         for section in allSections
                         {
                             if let name = section["name"] as? String, let cover = section["cover"] as? [String : Any], let imageUrl = cover["url"] as? String
-                                //let rating = section["total_rating"] as? Float
-                                //guard let rating = section["total_rating"] as? String else{return}
                             {
-                                //let rating = section["total_rating"] as? Float
-                                //let outrating = Int(rating.rounded())   //Round the float rating up or down, then convert to int for output
                                 //                            for i in 0..<imageUrl.count
                                 //                            {
                                 //                                if imageUrl[i].contains("https")
@@ -106,26 +106,53 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                                 //
                                 //                                }
                                 //                            }
+//                                if let dictionary = cover as? Dictionary<String, AnyObject>
+//                                {
+//                                    let id = dictionary["cloudinary_id"] as? String
+//                                    let newUrl = "https://images.igdb.com/igdb/image/upload/t_cover_small_2x/" + id! + ".jpg"
+//                                    if let url = URL(string: newUrl),
+//                                        let data = try? Data(contentsOf: url),
+//                                        let image = UIImage(data: data)
+//                                    {
+//                                        print(id)
+//                                    }
+//                                }
                                 self.outputGameName.append(name)
+                                self.outputGameImage.append(imageUrl)
+                               // self.outputRating.append("N/A")
                                 //print(self.outputGameName)
                                 //cell.gameTitleLabel?.text = outputGameName[indexPath.row]
+                                if let rating = section["total_rating"] as? Float
+                                {
+                                    let outrating = Int(rating.rounded())   //Round the float rating up or down, then convert to int for output
+                                    
+                                    //self.outputGameName.append(name)
+                                    self.outputRating.append("\(outrating)" + "%")
+                                    //print(self.outputRating)
+                                }
+                                else
+                                {
+                                    self.outputRating.append("N/A")
+                                }
                             }
-                            //                            if let rating = section["total_rating"] as? Float //or maybe string
-                            //                            {
-                            //                                print(rating)
-                            //                            }
-                            //else append N/A
+//                            else{
+//                                self.outputRating.append("N/A")
+//                            }
+//                            if let rating = section["total_rating"] as? Float
+//                            {
+//                                let outrating = Int(rating.rounded())   //Round the float rating up or down, then convert to int for output
+//
+//                                //self.outputGameName.append(name)
+//                                self.outputRating.append("\(outrating)")
+//                            }
                         }
-                        //print(self.outputGameName)
                     }
-                    //cell.gameTitleLabel?.text = self.outputGameName[indexPath.row]
-                    //print(self.outputGameName)
+                    group.leave()
                 }
-                //                let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
-                //                DispatchQueue.main.asyncAfter(deadline: when) {
-                //                    print(self.outputGameName)
-                //                }
-                //print(self.outputGameName)
+                group.notify(queue: .main) {
+                    print("Finished all requests.")
+                }
+                //group.leave()
             }
             //print(self.outputGameName)
             // var temp = pg.getName()
@@ -136,6 +163,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             //print(self.outputGameName)
             return cell
         }
+        //News table
         else
         {
             //            newsTable.layer.masksToBounds = true
@@ -144,7 +172,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
             let cell = tableView.dequeueReusableCell(withIdentifier : "newsCell", for : indexPath) as! NewsTableViewCell
             
-            cell.contentView.layer.borderColor = UIColor.black.cgColor
+            cell.contentView.layer.borderColor = UIColor.blue.cgColor
             cell.contentView.layer.borderWidth = 1.0
             
             if let url = URL(string: "https://api-2445582011268.apicast.io/pulses/?fields=title,published_at,author,image,url&order=published_at:desc") {
@@ -153,7 +181,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 urlRequest.addValue(apiKey, forHTTPHeaderField: "user-key")
                 urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
                 
-                Alamofire.request(urlRequest).responseJSON {response in print(response)
+                Alamofire.request(urlRequest).responseJSON {response in
                     if let allSections = response.result.value as? [[String : Any]]
                     {
                         for section in allSections
@@ -163,31 +191,37 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                                 self.outputAuthor.append(author)
                                 self.outputArticle.append(title)
                                 self.outputURL.append(url)
-                                self.outputImage.append(image)
+                                self.outputArticleImage.append(image)
                                 //self.outputURL = URL(string: image)
-                                let outURL = URL(string: image)
-                                let data = try? Data(contentsOf: outURL!)
-                                if let imageData = data
-                                {
-                                    cell.articleImage?.image = UIImage(data: data!)
-                                }
+//                                let outURL = URL(string: image)
+//                                let data = try? Data(contentsOf: outURL!)
+//                                if let imageData = data
+//                                {
+//                                    cell.articleImage?.image = UIImage(data: data!)
+//                                }
                             }
                         }
-                        print(self.outputImage.count, "this many")
+                        //print(self.outputArticleImage.count, "this many")
+                    }
+                    let outURL = URL(string: self.outputArticleImage[indexPath.row])
+                    let data = try? Data(contentsOf: outURL!)
+                    if let imageData = data
+                    {
+                        cell.articleImage?.image = UIImage(data: data!)
                     }
                     cell.authorLabel?.text = self.outputAuthor[indexPath.row]
                     cell.articleTitleLabel?.text = self.outputArticle[indexPath.row]
-                    // cell.articleImage?.image = UIImage(named: self.outputImage[indexPath.row])
-                    //print(self.outputURL)
+                    // cell.articleImage?.image = UIImage(named: self.outputArticleImage[indexPath.row])
+                    //print(self.outputArticleImage)
                 }
                 //print(self.outputURL)
             }
-            //print(self.outputURL)
+            //print(self.outputArticleImage)
             
             //cell.articleTitleLabel?.text = articles[indexPath.row]
             //cell.authorLabel?.text = authors[indexPath.row]
             //cell.articleImage?.image = UIImage(named: "https://assets.vg247.com/current//2017/09/destiny_2_emb_strike_the_pyramidion_3.jpg")
-            cell.layer.borderColor = UIColor.red.cgColor
+            //cell.layer.borderColor = UIColor.red.cgColor
             return cell
         }
     }
@@ -231,7 +265,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //collectionView cell data
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 10
+        return 9
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -239,13 +273,34 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "feedCollectionViewCell", for: indexPath) as! FeedCollectionViewCell
         
         let when = DispatchTime.now() + 2 // change 2 to desired number of seconds
-        DispatchQueue.main.asyncAfter(deadline: when) {
+        DispatchQueue.main.asyncAfter(deadline: when)
+        {
+            //print(self.outputArticleImage)
             cell.gameTitle?.text = self.outputGameName[indexPath.row]
+            cell.gameRating?.text = self.outputRating[indexPath.row]
+//            if let aimage = self.vg?.videoGameCoverImage()
+//            {
+//                cell.gameImage?.image = aimage
+//            }
+            let outURL = URL(string: self.outputGameImage[indexPath.row])
+            let data = try? Data(contentsOf: outURL!)
+            if let imageData = data
+            {
+                cell.gameImage?.image = UIImage(data: data!)
+            }
+            //cell.gameImage?.image = UIImage(named: vg?.videoGameCoverImage())
         }
+        
+        //cell.gameRating?.text = self.outputRating[indexPath.row]
         //print(self.outputGameName)
         //cell.gameTitle?.text = self.outputGameName[indexPath.row]
         return cell
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+//    {
+//        performSegue(withIdentifier: "VGDVSegue", sender: nil)
+//    }
     
     
     override func didReceiveMemoryWarning()

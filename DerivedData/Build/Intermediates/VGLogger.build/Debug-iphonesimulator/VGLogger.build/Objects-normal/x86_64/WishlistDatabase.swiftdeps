@@ -1,0 +1,408 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WishlistDatabase"
+provides-nominal:
+- "8VGLogger16WishlistDatabaseC"
+provides-member:
+- ["8VGLogger16WishlistDatabaseC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "<-"
+- "AssignmentPrecedence"
+- "BooleanLiteralType"
+- "Connection"
+- "Expression"
+- "Int"
+- "NSObject"
+- "NSSearchPathForDirectoriesInDomains"
+- "String"
+- "StringLiteralType"
+- "Table"
+- "WishlistDatabase"
+depends-member:
+- !private ["Sa", "append"]
+- ["Sa", "first"]
+- !private ["Sa", "init"]
+- !private ["s23BidirectionalCollectionP", "append"]
+- ["s23BidirectionalCollectionP", "first"]
+- ["s23BidirectionalCollectionP", "init"]
+- ["6SQLite7BindingP", "init"]
+- !private ["s7CVarArgP", "Connection"]
+- ["s7CVarArgP", "Expression"]
+- !private ["s7CVarArgP", "Int"]
+- ["s7CVarArgP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["s7CVarArgP", "String"]
+- ["s7CVarArgP", "Table"]
+- !private ["s7CVarArgP", "append"]
+- !private ["s7CVarArgP", "coverURL"]
+- !private ["s7CVarArgP", "db"]
+- ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "id"]
+- ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "path"]
+- !private ["s7CVarArgP", "title"]
+- !private ["s7CVarArgP", "wishlist"]
+- ["s7CVarArgP", ""]
+- !private ["s10CollectionP", "append"]
+- ["s10CollectionP", "first"]
+- ["s10CollectionP", "init"]
+- ["s10ComparableP", "init"]
+- !private ["6SQLite10ConnectionC", "init"]
+- !private ["6SQLite10ConnectionC", "prepare"]
+- !private ["6SQLite10ConnectionC", "run"]
+- !private ["s28CustomDebugStringConvertibleP", "Connection"]
+- ["s28CustomDebugStringConvertibleP", "Expression"]
+- !private ["s28CustomDebugStringConvertibleP", "Int"]
+- ["s28CustomDebugStringConvertibleP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["s28CustomDebugStringConvertibleP", "String"]
+- ["s28CustomDebugStringConvertibleP", "Table"]
+- !private ["s28CustomDebugStringConvertibleP", "append"]
+- !private ["s28CustomDebugStringConvertibleP", "coverURL"]
+- !private ["s28CustomDebugStringConvertibleP", "db"]
+- ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "id"]
+- ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "path"]
+- !private ["s28CustomDebugStringConvertibleP", "title"]
+- !private ["s28CustomDebugStringConvertibleP", "wishlist"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- ["s29CustomPlaygroundQuickLookableP", "init"]
+- !private ["s17CustomReflectableP", "append"]
+- ["s17CustomReflectableP", "first"]
+- ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "Connection"]
+- ["s23CustomStringConvertibleP", "Expression"]
+- !private ["s23CustomStringConvertibleP", "Int"]
+- ["s23CustomStringConvertibleP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["s23CustomStringConvertibleP", "String"]
+- ["s23CustomStringConvertibleP", "Table"]
+- !private ["s23CustomStringConvertibleP", "append"]
+- !private ["s23CustomStringConvertibleP", "coverURL"]
+- !private ["s23CustomStringConvertibleP", "db"]
+- ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "id"]
+- ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "path"]
+- !private ["s23CustomStringConvertibleP", "prepare"]
+- !private ["s23CustomStringConvertibleP", "run"]
+- !private ["s23CustomStringConvertibleP", "title"]
+- !private ["s23CustomStringConvertibleP", "wishlist"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "append"]
+- ["s9DecodableP", "first"]
+- ["s9DecodableP", "init"]
+- !private ["s9EncodableP", "append"]
+- ["s9EncodableP", "first"]
+- ["s9EncodableP", "init"]
+- !private ["s9EquatableP", "Connection"]
+- ["s9EquatableP", "Expression"]
+- !private ["s9EquatableP", "Int"]
+- ["s9EquatableP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["s9EquatableP", "String"]
+- ["s9EquatableP", "Table"]
+- !private ["s9EquatableP", "coverURL"]
+- !private ["s9EquatableP", "db"]
+- ["s9EquatableP", "documentDirectory"]
+- !private ["s9EquatableP", "id"]
+- ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "path"]
+- !private ["s9EquatableP", "title"]
+- ["s9EquatableP", "userDomainMask"]
+- !private ["s9EquatableP", "wishlist"]
+- ["s9EquatableP", ""]
+- !private ["6SQLite11ExpressibleP", "create"]
+- ["6SQLite11ExpressibleP", "init"]
+- !private ["6SQLite11ExpressibleP", "insert"]
+- !private ["s25ExpressibleByArrayLiteralP", "append"]
+- ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- ["s25ExpressibleByArrayLiteralP", "userDomainMask"]
+- ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- ["s26ExpressibleByStringLiteralP", "init"]
+- ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- ["6SQLite10ExpressionV", "init"]
+- ["6SQLite14ExpressionTypeP", "init"]
+- !private ["6SQLite16FailableIteratorP", "run"]
+- !private ["s8HashableP", "Connection"]
+- ["s8HashableP", "Expression"]
+- !private ["s8HashableP", "Int"]
+- ["s8HashableP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["s8HashableP", "String"]
+- ["s8HashableP", "Table"]
+- !private ["s8HashableP", "coverURL"]
+- !private ["s8HashableP", "db"]
+- ["s8HashableP", "documentDirectory"]
+- !private ["s8HashableP", "id"]
+- ["s8HashableP", "init"]
+- !private ["s8HashableP", "path"]
+- !private ["s8HashableP", "title"]
+- !private ["s8HashableP", "wishlist"]
+- ["s8HashableP", ""]
+- !private ["s16IteratorProtocolP", "run"]
+- ["10SwiftyJSON17JSONSubscriptTypeP", "init"]
+- ["s25LosslessStringConvertibleP", "init"]
+- ["s10MirrorPathP", "init"]
+- !private ["s17MutableCollectionP", "append"]
+- ["s17MutableCollectionP", "first"]
+- !private ["s17MutableCollectionP", "init"]
+- ["So8NSCodingP", "init"]
+- ["So9NSCopyingP", "init"]
+- ["So21NSItemProviderReadingP", "init"]
+- ["So21NSItemProviderWritingP", "init"]
+- ["So16NSMutableCopyingP", "init"]
+- ["So8NSObjectC", "Connection"]
+- ["So8NSObjectC", "Expression"]
+- ["So8NSObjectC", "Int"]
+- ["So8NSObjectC", "NSSearchPathForDirectoriesInDomains"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "Table"]
+- ["So8NSObjectC", "coverURL"]
+- ["So8NSObjectC", "createDatabase"]
+- ["So8NSObjectC", "db"]
+- ["So8NSObjectC", "getCoverArray"]
+- ["So8NSObjectC", "getIDArray"]
+- ["So8NSObjectC", "getTitleArray"]
+- ["So8NSObjectC", "id"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "insertIntoDatabase"]
+- ["So8NSObjectC", "path"]
+- ["So8NSObjectC", "removeFromDatabase"]
+- ["So8NSObjectC", "title"]
+- ["So8NSObjectC", "wishlist"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "Connection"]
+- ["So16NSObjectProtocolP", "Expression"]
+- !private ["So16NSObjectProtocolP", "Int"]
+- ["So16NSObjectProtocolP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["So16NSObjectProtocolP", "String"]
+- ["So16NSObjectProtocolP", "Table"]
+- !private ["So16NSObjectProtocolP", "coverURL"]
+- !private ["So16NSObjectProtocolP", "db"]
+- !private ["So16NSObjectProtocolP", "id"]
+- ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "path"]
+- !private ["So16NSObjectProtocolP", "title"]
+- !private ["So16NSObjectProtocolP", "wishlist"]
+- ["So16NSObjectProtocolP", ""]
+- ["So14NSSecureCodingP", "init"]
+- ["So8NSStringC", "init"]
+- ["s9OptionSetP", "userDomainMask"]
+- !private ["6SQLite9QueryTypeP", "create"]
+- ["6SQLite9QueryTypeP", "init"]
+- !private ["6SQLite9QueryTypeP", "insert"]
+- !private ["s22RandomAccessCollectionP", "append"]
+- ["s22RandomAccessCollectionP", "first"]
+- !private ["s22RandomAccessCollectionP", "init"]
+- !private ["s26RangeReplaceableCollectionP", "append"]
+- ["s26RangeReplaceableCollectionP", "first"]
+- ["s26RangeReplaceableCollectionP", "init"]
+- ["s16RawRepresentableP", "documentDirectory"]
+- ["s16RawRepresentableP", "userDomainMask"]
+- !private ["6SQLite3RowV", "subscript"]
+- !private ["6SQLite10SchemaTypeP", "create"]
+- ["6SQLite10SchemaTypeP", "init"]
+- !private ["6SQLite10SchemaTypeP", "insert"]
+- ["So11FileManagerC19SearchPathDirectoryO", "documentDirectory"]
+- ["So11FileManagerC20SearchPathDomainMaskV", "userDomainMask"]
+- !private ["s8SequenceP", "append"]
+- ["s8SequenceP", "first"]
+- ["s8SequenceP", "init"]
+- !private ["s8SequenceP", "run"]
+- ["s10SetAlgebraP", "userDomainMask"]
+- !private ["6SQLite9StatementC", "run"]
+- ["SS", "init"]
+- ["s14StringProtocolP", "init"]
+- !private ["6SQLite5TableV", "create"]
+- ["6SQLite5TableV", "init"]
+- !private ["6SQLite5TableV", "insert"]
+- !private ["6SQLite12TableBuilderC", "column"]
+- ["s16TextOutputStreamP", "init"]
+- ["s20TextOutputStreamableP", "init"]
+- ["9Alamofire14URLConvertibleP", "init"]
+- ["6SQLite5ValueP", "init"]
+- ["8VGLogger16WishlistDatabaseC", "Connection"]
+- ["8VGLogger16WishlistDatabaseC", "Expression"]
+- ["8VGLogger16WishlistDatabaseC", "Int"]
+- ["8VGLogger16WishlistDatabaseC", "NSSearchPathForDirectoriesInDomains"]
+- ["8VGLogger16WishlistDatabaseC", "String"]
+- ["8VGLogger16WishlistDatabaseC", "Table"]
+- ["8VGLogger16WishlistDatabaseC", "coverURL"]
+- ["8VGLogger16WishlistDatabaseC", "createDatabase"]
+- ["8VGLogger16WishlistDatabaseC", "db"]
+- ["8VGLogger16WishlistDatabaseC", "deinit"]
+- ["8VGLogger16WishlistDatabaseC", "getCoverArray"]
+- ["8VGLogger16WishlistDatabaseC", "getIDArray"]
+- ["8VGLogger16WishlistDatabaseC", "getTitleArray"]
+- ["8VGLogger16WishlistDatabaseC", "id"]
+- ["8VGLogger16WishlistDatabaseC", "init"]
+- ["8VGLogger16WishlistDatabaseC", "insertIntoDatabase"]
+- ["8VGLogger16WishlistDatabaseC", "path"]
+- ["8VGLogger16WishlistDatabaseC", "removeFromDatabase"]
+- ["8VGLogger16WishlistDatabaseC", "title"]
+- ["8VGLogger16WishlistDatabaseC", "wishlist"]
+- !private ["s14_ArrayProtocolP", "append"]
+- ["s14_ArrayProtocolP", "first"]
+- !private ["s14_ArrayProtocolP", "init"]
+- !private ["s23_BidirectionalIndexableP", "append"]
+- ["s23_BidirectionalIndexableP", "first"]
+- ["s23_BidirectionalIndexableP", "init"]
+- !private ["s24_DestructorSafeContainerP", "append"]
+- ["s24_DestructorSafeContainerP", "first"]
+- !private ["s24_DestructorSafeContainerP", "init"]
+- ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- ["s39_ExpressibleByBuiltinUTF16StringLiteralP", "init"]
+- ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- ["s33_ExpressibleByStringInterpolationP", "init"]
+- ["s35_HasCustomAnyHashableRepresentationP", "init"]
+- !private ["s10_IndexableP", "append"]
+- ["s10_IndexableP", "first"]
+- ["s10_IndexableP", "init"]
+- !private ["s14_IndexableBaseP", "append"]
+- ["s14_IndexableBaseP", "first"]
+- ["s14_IndexableBaseP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Connection"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Expression"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Int"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "NSSearchPathForDirectoriesInDomains"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "String"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "Table"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "coverURL"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "db"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "id"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "path"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "title"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "wishlist"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "append"]
+- ["s17_MutableIndexableP", "first"]
+- !private ["s17_MutableIndexableP", "init"]
+- !private ["s21_ObjectiveCBridgeableP", "append"]
+- ["s21_ObjectiveCBridgeableP", "first"]
+- ["s21_ObjectiveCBridgeableP", "init"]
+- !private ["s22_RandomAccessIndexableP", "append"]
+- ["s22_RandomAccessIndexableP", "first"]
+- !private ["s22_RandomAccessIndexableP", "init"]
+- !private ["s26_RangeReplaceableIndexableP", "append"]
+- ["s26_RangeReplaceableIndexableP", "first"]
+- ["s26_RangeReplaceableIndexableP", "init"]
+- ["s16_SwiftStringViewP", "init"]
+depends-nominal:
+- "Sa"
+- "s23BidirectionalCollectionP"
+- "6SQLite7BindingP"
+- "s7CVarArgP"
+- "s10CollectionP"
+- "s10ComparableP"
+- !private "6SQLite10ConnectionC"
+- "s28CustomDebugStringConvertibleP"
+- "s29CustomPlaygroundQuickLookableP"
+- "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- "s9DecodableP"
+- "s9EncodableP"
+- "s9EquatableP"
+- "6SQLite11ExpressibleP"
+- "s25ExpressibleByArrayLiteralP"
+- "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- "s26ExpressibleByStringLiteralP"
+- "s33ExpressibleByUnicodeScalarLiteralP"
+- "6SQLite10ExpressionV"
+- "6SQLite14ExpressionTypeP"
+- !private "6SQLite16FailableIteratorP"
+- "s8HashableP"
+- !private "s16IteratorProtocolP"
+- "10SwiftyJSON17JSONSubscriptTypeP"
+- "s25LosslessStringConvertibleP"
+- "s10MirrorPathP"
+- "s17MutableCollectionP"
+- "So8NSCodingP"
+- "So9NSCopyingP"
+- "So21NSItemProviderReadingP"
+- "So21NSItemProviderWritingP"
+- "So16NSMutableCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "So14NSSecureCodingP"
+- "So8NSStringC"
+- "s9OptionSetP"
+- "6SQLite9QueryTypeP"
+- "s22RandomAccessCollectionP"
+- "s26RangeReplaceableCollectionP"
+- "s16RawRepresentableP"
+- !private "6SQLite3RowV"
+- "6SQLite10SchemaTypeP"
+- "So11FileManagerC19SearchPathDirectoryO"
+- "So11FileManagerC20SearchPathDomainMaskV"
+- "s8SequenceP"
+- "s10SetAlgebraP"
+- !private "6SQLite9StatementC"
+- "SS"
+- "s14StringProtocolP"
+- "6SQLite5TableV"
+- !private "6SQLite12TableBuilderC"
+- "s16TextOutputStreamP"
+- "s20TextOutputStreamableP"
+- "9Alamofire14URLConvertibleP"
+- "6SQLite5ValueP"
+- "8VGLogger16WishlistDatabaseC"
+- "s14_ArrayProtocolP"
+- "s23_BidirectionalIndexableP"
+- "s24_DestructorSafeContainerP"
+- "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+- "s39_ExpressibleByBuiltinUTF16StringLiteralP"
+- "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- "s33_ExpressibleByStringInterpolationP"
+- "s35_HasCustomAnyHashableRepresentationP"
+- "s10_IndexableP"
+- "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "s17_MutableIndexableP"
+- "s21_ObjectiveCBridgeableP"
+- "s22_RandomAccessIndexableP"
+- "s26_RangeReplaceableIndexableP"
+- "s16_SwiftStringViewP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/SwiftyJSON.swiftmodule/x86_64.swiftmodule"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/Alamofire.swiftmodule/x86_64.swiftmodule"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Modules/SQLite.swiftmodule/x86_64.swiftmodule"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Modules/Hex.swiftmodule/x86_64.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreMedia.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/simd.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/AVFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreAudio.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite.swift-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex-umbrella.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite-Bridging.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Headers/SwiftyJSON-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Headers/Alamofire-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Headers/SQLite-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex-Swift.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Headers/Hex.h"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/SQLite.swift/SQLite.framework/Modules/module.modulemap"
+- "/Users/student/VGLogger/DerivedData/Build/Products/Debug-iphonesimulator/Hex/Hex.framework/Modules/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+interface-hash: "6170bafcfc0ab021d66b2b54dae951ae"
