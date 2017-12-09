@@ -3,22 +3,22 @@
 <plist version="1.0">
 <array>
 	<string>VGLogger</string>
-	<string>Alamofire</string>
-	<string>SQLCipher</string>
-	<string>Dispatch</string>
-	<string>SwiftyJSON</string>
-	<string>CoreServices</string>
 	<string>AVFoundation</string>
+	<string>SwiftyJSON</string>
+	<string>Dispatch</string>
+	<string>SQLCipher</string>
+	<string>Alamofire</string>
+	<string>CoreServices</string>
 	<string>SQLite3</string>
 	<string>SQLite</string>
 	<string>sqlite3</string>
-	<string>SQLiteObjc</string>
 	<string>XCTest</string>
+	<string>SQLiteObjc</string>
 	<string>MobileCoreServices</string>
 	<string>SafariServices</string>
+	<string>Foundation</string>
 	<string>CSQLite</string>
 	<string>UIKit</string>
-	<string>Foundation</string>
 	<string>SystemConfiguration</string>
 	<string>Hex</string>
 </array>

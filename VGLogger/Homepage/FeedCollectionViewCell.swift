@@ -10,13 +10,8 @@ import UIKit
 
 class FeedCollectionViewCell: UICollectionViewCell
 {
+    //the game data is located within the collection view cell, not the table view cell
     @IBOutlet weak var gameTitle: UILabel!
     @IBOutlet weak var gameRating: UILabel!
     @IBOutlet weak var gameImage: UIImageView!
-    
-//    override func viewDidLoad()
-//    {
-//        super.viewDidLoad()
-//        self.gameTitle.adjustsFontSizeToWidth = true        
-//    }
 }

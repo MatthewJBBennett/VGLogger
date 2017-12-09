@@ -1,5 +1,5 @@
 version: "Apple Swift version 4.0 (swiftlang-900.0.65 clang-900.0.37)"
 options: "e1e9884fa7f648c9b160269c7ee6f666"
-build_time: [1512344387, 774314000]
+build_time: [1512417399, 963517000]
 inputs:
-  "/Users/student/VGLogger/Pods/Hex/Source/UIColor+Hex.swift": [1512344000, 0]
+  "/Users/student/VGLogger/Pods/Hex/Source/UIColor+Hex.swift": [1512417365, 0]
