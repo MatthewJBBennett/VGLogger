@@ -16,7 +16,6 @@ depends-top-level:
 - !private "+"
 - !private "=="
 - !private "Alamofire"
-- "Array"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
 - "CastingPrecedence"
@@ -558,9 +557,6 @@ depends-member:
 - ["8VGLogger18FeedViewControllerC", "VideoGame"]
 - ["8VGLogger18FeedViewControllerC", "VideoGameDataSource"]
 - ["8VGLogger18FeedViewControllerC", "apiKey"]
-- ["8VGLogger18FeedViewControllerC", "articles"]
-- ["8VGLogger18FeedViewControllerC", "authors"]
-- ["8VGLogger18FeedViewControllerC", "categories"]
 - ["8VGLogger18FeedViewControllerC", "collectionView"]
 - ["8VGLogger18FeedViewControllerC", "deinit"]
 - ["8VGLogger18FeedViewControllerC", "didReceiveMemoryWarning"]
@@ -607,7 +603,6 @@ depends-member:
 - ["8VGLogger18FeedViewControllerC", "selectedIndexPath"]
 - ["8VGLogger18FeedViewControllerC", "tableView"]
 - !private ["8VGLogger18FeedViewControllerC", "title"]
-- ["8VGLogger18FeedViewControllerC", "urlArray"]
 - ["8VGLogger18FeedViewControllerC", "vg"]
 - ["8VGLogger18FeedViewControllerC", "videogamesDS"]
 - ["8VGLogger18FeedViewControllerC", "viewDidLoad"]
@@ -906,14 +901,11 @@ depends-member:
 - ["So8NSObjectC", "apiKey"]
 - !private ["So8NSObjectC", "articleImage"]
 - !private ["So8NSObjectC", "articleTitleLabel"]
-- ["So8NSObjectC", "articles"]
 - !private ["So8NSObjectC", "asyncAfter"]
 - !private ["So8NSObjectC", "authorLabel"]
-- ["So8NSObjectC", "authors"]
 - !private ["So8NSObjectC", "blue"]
 - !private ["So8NSObjectC", "borderColor"]
 - !private ["So8NSObjectC", "borderWidth"]
-- ["So8NSObjectC", "categories"]
 - !private ["So8NSObjectC", "cgColor"]
 - ["So8NSObjectC", "collectionView"]
 - !private ["So8NSObjectC", "collectionview"]
@@ -977,7 +969,6 @@ depends-member:
 - ["So8NSObjectC", "tableView"]
 - !private ["So8NSObjectC", "text"]
 - !private ["So8NSObjectC", "title"]
-- ["So8NSObjectC", "urlArray"]
 - ["So8NSObjectC", "vg"]
 - ["So8NSObjectC", "videogamesDS"]
 - ["So8NSObjectC", "viewDidLoad"]
@@ -1667,10 +1658,7 @@ depends-member:
 - ["So11UIResponderC", "apiKey"]
 - !private ["So11UIResponderC", "articleImage"]
 - !private ["So11UIResponderC", "articleTitleLabel"]
-- ["So11UIResponderC", "articles"]
 - !private ["So11UIResponderC", "authorLabel"]
-- ["So11UIResponderC", "authors"]
-- ["So11UIResponderC", "categories"]
 - ["So11UIResponderC", "collectionView"]
 - !private ["So11UIResponderC", "collectionview"]
 - !private ["So11UIResponderC", "contentView"]
@@ -1728,7 +1716,6 @@ depends-member:
 - ["So11UIResponderC", "tableView"]
 - !private ["So11UIResponderC", "text"]
 - !private ["So11UIResponderC", "title"]
-- ["So11UIResponderC", "urlArray"]
 - ["So11UIResponderC", "vg"]
 - ["So11UIResponderC", "videogamesDS"]
 - ["So11UIResponderC", "viewDidLoad"]
@@ -2177,9 +2164,6 @@ depends-member:
 - ["So16UIViewControllerC", "VideoGame"]
 - ["So16UIViewControllerC", "VideoGameDataSource"]
 - ["So16UIViewControllerC", "apiKey"]
-- ["So16UIViewControllerC", "articles"]
-- ["So16UIViewControllerC", "authors"]
-- ["So16UIViewControllerC", "categories"]
 - ["So16UIViewControllerC", "collectionView"]
 - ["So16UIViewControllerC", "didReceiveMemoryWarning"]
 - ["So16UIViewControllerC", "downloadAssistant"]
@@ -2225,7 +2209,6 @@ depends-member:
 - ["So16UIViewControllerC", "selectedIndexPath"]
 - ["So16UIViewControllerC", "tableView"]
 - !private ["So16UIViewControllerC", "title"]
-- ["So16UIViewControllerC", "urlArray"]
 - ["So16UIViewControllerC", "vg"]
 - ["So16UIViewControllerC", "videogamesDS"]
 - ["So16UIViewControllerC", "viewDidLoad"]
@@ -2596,4 +2579,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
 - "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.0.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
-interface-hash: "97ba0765ee04ba99f1246a0c148857bf"
+interface-hash: "2747b1e11d44073abcce49b8cff9e1f7"
