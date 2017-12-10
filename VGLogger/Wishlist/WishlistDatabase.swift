@@ -9,11 +9,10 @@
 import UIKit
 import SQLite
 
-
-
 class WishlistDatabase: NSObject {
-    
+
     let wishlist = Table("wishlist")
+    //These expressions are the initializers for the database columns
     let id = Expression<Int>("id")
     let title = Expression<String>("title")
     let coverURL = Expression<String?>("cover")
@@ -27,6 +26,7 @@ class WishlistDatabase: NSObject {
     override init(){
         self.db = try! Connection("\(path)/db.sqlite3")
         super.init()
+        //Try to create the tables if they don't exist, ignore otherwise
         try? db.run(wishlist.create{ t in
             t.column(id, primaryKey: true)
             t.column(title)
@@ -34,9 +34,7 @@ class WishlistDatabase: NSObject {
         })
     }
     
-    func createDatabase(){
-    }
-    
+    //Database modification functions
     func insertIntoDatabase(gameID:Int, gameTitle:String, gameCover:String){
         let insert = wishlist.insert(id <- gameID, title <- gameTitle, coverURL <- gameCover)
         let _ = try! db.run(insert)
@@ -48,6 +46,7 @@ class WishlistDatabase: NSObject {
         
     }
     
+    //Getter functions for each column in the array
     func getTitleArray() -> [String]{
         var titleArray = [String]()
         for wishlistItem in try! db.prepare(wishlist){

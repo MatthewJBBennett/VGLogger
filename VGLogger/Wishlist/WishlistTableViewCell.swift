@@ -20,14 +20,13 @@ class WishlistTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
     func setWishlistCell(_ title: String, coverURL: String){
+        //Create the proper URL for the cover image of a particular game and set the data for each cell
         gameTitleLabel.text = title
         let newUrl = "https://images.igdb.com/igdb/image/upload/t_thumb_2x/" + coverURL + ".jpg"
-        print(newUrl)
         if let url = URL(string: newUrl), let data = try? Data(contentsOf: url), let image = UIImage(data: data){
                 gameCoverImage.image = image
         }

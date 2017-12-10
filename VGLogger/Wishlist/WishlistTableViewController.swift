@@ -72,6 +72,7 @@ class WishlistTableViewController: UITableViewController{
         if editingStyle == .delete {
             // Delete the row from the data source
             let gameIDs = WishlistObject.wishlistDB.getIDArray()
+            //The game also has to be removed from the persistent database
             WishlistObject.wishlistDB.removeFromDatabase(gameID: gameIDs[indexPath.row])
             tableView.deleteRows(at: [indexPath], with: .fade)
             tableView.reloadData()
