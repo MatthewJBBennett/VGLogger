@@ -31,7 +31,7 @@ class VideoGameDetailedViewController: UIViewController {
         self.view.backgroundColor = UIColor(hex: "#C0C5CD")
         // Do any additional setup after loading the view.
         self.scrollView.frame = self.view.bounds
-        scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.frame.height+2000)//CGSize(width: self.view.frame.width, height: self.view.frame.height+2000)
+        scrollView.contentSize = CGSize(width: self.view.bounds.width, height: self.view.frame.height+2000)//CGSize(width: self.view.frame.width, height: self.view.frame.height+2000ˀ
     }
     
     @objc func addShare() {

@@ -37,7 +37,7 @@ class WishlistDatabase: NSObject {
     //Database modification functions
     func insertIntoDatabase(gameID:Int, gameTitle:String, gameCover:String){
         let insert = wishlist.insert(id <- gameID, title <- gameTitle, coverURL <- gameCover)
-        let _ = try! db.run(insert)
+        let _ = try? db.run(insert)
     }
     
     func removeFromDatabase(gameID:Int){
